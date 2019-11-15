@@ -1,0 +1,14 @@
+.DS_Store
+._*
+*.sql
+*.log
+/upload/
+/.idea/
+/bitrix/
+/local/logs/*
+/Nginx-*.conf
+/PHP-*.conf
+/Nginx-*.conf
+/Apache-*.conf
+/login.php
+
