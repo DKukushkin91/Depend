@@ -340,12 +340,15 @@
     align-items: center;
     margin: 40px 0;
     flex-basis: 30%;
+    align-self: flex-end;
 }
 
 .buy-popup-icon {
     box-shadow: 0 26px 39px 0 rgba(0, 0, 0, .1);
     border-radius: 8px;
     margin-bottom: 37px;
+    max-height: 144px;
+    max-width: 100%;
 }
 
 .buy-popup-button {
@@ -519,6 +522,7 @@
     }
     .buy-popup-icon {
         margin-bottom: 15px;
+        max-height: 19vw;
     }
 }
 
