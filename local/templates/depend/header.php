@@ -12,7 +12,7 @@
 
         gtag('config', 'UA-134188906-1');
     </script>
-
+    <meta name="yandex-verification" content="b3ba88f04276e1df" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Google Tag Manager -->
 	<script>
@@ -70,6 +70,7 @@
 	?>
 </head>
 <body>
+<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(38929830, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/38929830" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
 <!-- Google Tag Manager (noscript) -->
 <noscript>
 	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WKR59N" height="0" width="0" style="display: none; visibility: hidden"></iframe>
