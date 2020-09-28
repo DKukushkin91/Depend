@@ -14,7 +14,6 @@ $APPLICATION->AddChainItem('О недержании', '/advices/cure/');
 	<section class="content-top-banner">
 		<div class="banner-text">
 			<h1>Забота о близком</h1>
-<!--			<div class="banner-text__subtitle">Присоединитесь к Сообществу Depend® Получите полезную информацию и специальные предложения от Depend.</div>-->
 		</div>
 	</section>
 	<?

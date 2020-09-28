@@ -4,13 +4,12 @@ $APPLICATION->SetTitle("О компании");
 $APPLICATION->AddChainItem('О компании', '/about/');
 ?>
 
-<section class="about">
-    <section class="content-top-banner">
+<div class="about">
+    <div class="content-top-banner">
         <div class="banner-text">
             <h1>О компании</h1>
-<!--            <div class="banner-text__subtitle">Главная > О компании</div>-->
         </div>
-    </section>
+    </div>
 	<?
 	$APPLICATION->IncludeComponent("bitrix:breadcrumb","",Array(
 			"START_FROM" => '0',
@@ -20,7 +19,7 @@ $APPLICATION->AddChainItem('О компании', '/about/');
 	);
 	?>
     <article>
-        <section class="about-top">
+        <div class="about-top">
             <div class="about-top-img">
                 <img src="<?= SITE_TEMPLATE_PATH?>/img/Kimberly-Clark-big-logo.svg" alt="">
             </div>
@@ -28,17 +27,14 @@ $APPLICATION->AddChainItem('О компании', '/about/');
                 <div class="contacts-telephone">
                     <h3>Звоните по бесплатному номеру:</h3>
                     <div class="contacts-telephone__number">8 (800) 200-57-57</div>
-                    <?/*
-                    <div class="contacts-telephone__link">Или воспользуйтесь <a href="../feedback">формой обратной связи</a></div>
-                    */?>
                 </div>
                 <div class="contacts-address">
                     <h3>Юридический адрес:</h3>
                     <a href="https://yandex.ru/maps/-/CBFaRCHQpB" class="contacts-address__text" target="_blank"><span>ООО&nbsp;«Кимберли-Кларк», Россия, Московская&nbsp;обл., г.&nbsp;Ступино, 142800, ул.&nbsp;Ситенка, вл.&nbsp;15</span></a>
                 </div>
             </div>
-        </section>
-        <section class="about-bottom">
+        </div>
+        <div class="about-bottom">
             <h2 class="about-bottom__h2">Мы производим продукты первой необходимости для&nbsp;лучшей жизни людей во&nbsp;всём мире.</h2>
             <p class="about-bottom__text">«Кимберли-Кларк» – международная корпорация с&nbsp;великой историей, производящая продукцию для&nbsp;личной, профессиональной и&nbsp;промышленной гигиены.<br>
                 На протяжении своей более чем 140-летней истории компания «Кимберли-Кларк» производит инновационные продукты, полностью отвечающие предпочтениям и&nbsp;ожиданиям потребителей. Всё, что производит Компания – от&nbsp;бумажной продукции до&nbsp;средств личной гигиены, от&nbsp;защитной одежды до&nbsp;приспособлений по&nbsp;уходу за&nbsp;домом и&nbsp;спецпомещениями – создаётся ради повышения качества жизни и&nbsp;сохранения здоровья людей.
@@ -56,8 +52,8 @@ $APPLICATION->AddChainItem('О компании', '/about/');
             <div class="about-bottom__title">Компания в цифрах:</div>
             <img class="about-bottom__img" src="<?= SITE_TEMPLATE_PATH?>/img/company-in-digits.svg" alt="">
             <img class="about-bottom__img_mobile" src="<?= SITE_TEMPLATE_PATH?>/img/company-in-digits-mob.svg" alt="">
-        </section>
+        </div>
     </article>
-</section>
+</div>
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

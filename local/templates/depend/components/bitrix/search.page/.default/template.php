@@ -16,7 +16,6 @@ $APPLICATION->AddChainItem('Поиск', '/search/');
     <section class="content-top-banner">
         <div class="banner-text">
             <h1>Поиск</h1>
-<!--            <div class="banner-text__subtitle">Главная > Поиск</div>-->
         </div>
     </section>
 	<?
@@ -62,7 +61,6 @@ $APPLICATION->AddChainItem('Поиск', '/search/');
         </section>
     </article>
 </section>
-<!--<script src="/bitrix/js/fgsoft.autoloader/autoloader.plugin.js"></script>-->
 <script>
     (function($){
         history.pushState({}, '', '/search/?q=' + $('.js-search-q').val() + '&s=');

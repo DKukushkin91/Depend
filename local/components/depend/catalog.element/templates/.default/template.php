@@ -17,10 +17,6 @@
 <section class="content-top-banner">
     <div class="banner-text">
         <h1><?= $product['NAME'] ?></h1>
-        <div class="banner-text__subtitle">
-<!--            <span>Продукция&emsp;>&emsp;</span>-->
-<!--            <span>--><?//= $product['NAME'] ?><!--</span>-->
-        </div>
     </div>
 </section>
 <?
@@ -32,7 +28,6 @@ $APPLICATION->IncludeComponent("bitrix:breadcrumb","",Array(
 );
 ?>
 <section class="main-prod-card">
-<!--    <h2>Прокладки Depend Ultra Mini для женщин</h2>-->
     <div class="flex-product-card">
         <div class="product-photo">
             <div class="photo-selector">

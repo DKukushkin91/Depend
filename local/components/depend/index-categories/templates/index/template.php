@@ -1,8 +1,8 @@
-<section class="main-categories">
+<div class="main-categories">
 	<? foreach($arResult['items'] as $item): ?>
     <div class="main-categories-item">
         <div class="categories__image">
-            <img src="<?= $item['PREVIEW_PICTURE']; ?>" alt="">
+            <img src="<?= $item['PREVIEW_PICTURE']; ?>" alt="<?= $item['NAME']; ?>">
         </div>
         <div class="categories-text">
             <div class="categories-text__title">
@@ -12,4 +12,4 @@
         </div>
     </div>
 	<? endforeach; ?>
-</section>
+</div>

@@ -37,7 +37,7 @@
 				)
 			);?>
             <div class="search-mobile-window">
-                <form action="" method="get" name="mobile-search" class="js-mobile-search">
+                <form action="#" method="get" name="mobile-search" class="js-mobile-search">
                     <input type="text" class="js-search-q" placeholder="Что вы хотите найти?" required>
                     <input type="submit" value="Найти">
                 </form>
@@ -53,3 +53,4 @@
         </nav>
     </div>
 </header>
+

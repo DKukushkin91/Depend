@@ -19,22 +19,23 @@
 
 
     ?>
-<section class="content-top-banner">
+<div class="content-top-banner">
     <div class="banner-text">
-		<?
-		$rsSections = CIBlockSection::GetList(array(),array('IBLOCK_ID' => 1, '=CODE' => $_GET['category']));
-		if ($arSection = $rsSections->Fetch())
-		{
-			$sectionName = $arSection['NAME'];
+
+        <?
+        $rsSections = CIBlockSection::GetList(array(),array('IBLOCK_ID' => 1, '=CODE' => $arParams['section_code']));
+        if ($arSection = $rsSections->Fetch())
+        {
+            $sectionName = $arSection['NAME'];
+        }
+        if ($_GET['category'] === null) {
+			$sectionName = 'Продукция';
 		}
-		if ($_GET['category'] === null) {
-			$sectionName = 'Вся продукция';
-		}
-		?>
-        <h1><?= $sectionName;?></h1>
-<!--        <div class="banner-text__subtitle">Продукция</div>-->
+        ?>
+        <h2>Продукция</h2>
+        
     </div>
-</section>
+</div>
 <?
 $APPLICATION->IncludeComponent("bitrix:breadcrumb","",Array(
 		"START_FROM" => '0',
@@ -43,7 +44,7 @@ $APPLICATION->IncludeComponent("bitrix:breadcrumb","",Array(
 	)
 );
 ?>
-<section class="content-products-tabs tabs">
+<div class="content-products-tabs tabs">
     <nav class="tabs-inner">
         <div class="mobile-arrow"></div>
         <a data-id="0" data-code="" class="js-subcats-click tabs__item top <?if ($_SERVER['REQUEST_URI'] === '/catalog/'): ?>active <? else:?><?endif;?>" onclick="ga('send','event','DP','DPALL','all');">Вся продукция</a>
@@ -51,7 +52,7 @@ $APPLICATION->IncludeComponent("bitrix:breadcrumb","",Array(
         <a data-id="2" data-code="vpityvayushchee-bele-dlya-zhenshchin/"  class="js-subcats-click tabs__item <?if (strpos($_SERVER['REQUEST_URI'], '/vpityvayushchee-bele-dlya-zhenshchin/') == true): ?>active <? else:?><?endif;?>" onclick="ga('send','event','DP','DPBW','belwomen');">Впитывающее белье для женщин</a>
         <a data-id="3" data-code="vpityvayushchee-bele-dlya-muzhchin/"  class="js-subcats-click tabs__item <?if (strpos($_SERVER['REQUEST_URI'], '/vpityvayushchee-bele-dlya-muzhchin/') == true): ?>active <? else:?><?endif;?>" onclick="ga('send','event','DP','DPPM','belman');">Впитывающее белье для мужчин</a>
     </nav>
-</section>
+</div>
 <article class="content-products">
 <?$APPLICATION->IncludeComponent(
 	"depend:catalog.category",
@@ -59,6 +60,8 @@ $APPLICATION->IncludeComponent("bitrix:breadcrumb","",Array(
 	Array(
 		'filter' => false,
 		'section_code' => htmlspecialchars(strip_tags(trim($_GET['category']))),
+        "SET_STATUS_404" => "Y",
+        "SHOW_404" => "Y"
 	),
 	false
 );
@@ -78,7 +81,7 @@ $APPLICATION->IncludeComponent("bitrix:breadcrumb","",Array(
     </div>
 </div>
 <? endif; */?>
-<script type="text/javascript">
+<script>
     window.catalogCategoryConfig = {
         ajaxPath: '<?= $this->GetFolder() ?>/ajax.php',
         category: '<?= $arResult['section']['CODE'] ?>',

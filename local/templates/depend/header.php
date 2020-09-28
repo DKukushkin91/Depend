@@ -1,7 +1,7 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="ru-RU">
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134188906-1"></script>
@@ -12,8 +12,8 @@
 
         gtag('config', 'UA-134188906-1');
     </script>
-    <meta name="yandex-verification" content="b3ba88f04276e1df" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="yandex-verification" content="46a6b60cc0f981dd" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
 	<!-- Google Tag Manager -->
 	<script>
 		(function(w,d,s,l,i){
@@ -27,7 +27,7 @@
 	</script>
 	<!-- End Google Tag Manager -->
     <!-- Rating Mail.ru counter -->
-    <script type="text/javascript">
+    <script>
         var _tmr = window._tmr || (window._tmr = []);
         _tmr.push({id: "3147409", type: "pageView", start: (new Date()).getTime(), pid: "USER_ID"});
         (function (d, w, id) {
@@ -39,7 +39,7 @@
         })(document, window, "topmailru-code");
     </script>
     <!-- //Rating Mail.ru counter -->
-	<script type="text/javascript" src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH.'/js/jquery.min.js');?>"></script>
+	<script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH.'/js/jquery.min.js');?>"></script>
     <title><?$APPLICATION->ShowTitle()?></title>
 	<?
 	CJSCore::Init(array('ajax'));
@@ -67,10 +67,11 @@
     $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/jquery.mask.js');
     $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/slick.min.js');
     $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/jquery.magnific-popup.min.js');
-	?>
+    ?>
+    <link rel="shortcut icon" type="image/x-icon" href="<?=SITE_TEMPLATE_PATH?>/img/favicon.ico">
 </head>
 <body>
-<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(38929830, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/38929830" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+<!-- Yandex.Metrika counter --> <script> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(38929830, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/38929830" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
 <!-- Google Tag Manager (noscript) -->
 <noscript>
 	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WKR59N" height="0" width="0" style="display: none; visibility: hidden"></iframe>

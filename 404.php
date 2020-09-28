@@ -1,6 +1,8 @@
 <?
+CHTTP::SetStatus('404 Not Found');
+@define('ERROR_404', 'Y');
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Depend");
+$APPLICATION->SetTitle("Страница не найдена");
 $res = CIBlockSection::GetList([], [
     'IBLOCK_ID' => 4,
     'ACTIVE' => 'Y'

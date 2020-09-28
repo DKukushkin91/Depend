@@ -14,7 +14,7 @@
     align-items: center;
 }
 
-.banner-text h1 {
+.banner-text h1, .banner-text h2 {
     font-family: 'MuseoCyrl';
     font-size: 34px;
     color: #FFFFFF;
@@ -44,6 +44,13 @@
 
 .content-products-group {
     margin-top: 60px;
+}
+
+.content-products-group h1{
+    font-family: 'MuseoCyrl';
+    color: #424242;
+    font-size: 2em;
+    margin: 0.67em 0;
 }
 
 .content-products-group:last-child {
@@ -140,7 +147,7 @@
         height: 130px;
     }
 
-    .banner-text h1 {
+    .banner-text h1, .banner-text h2 {
         font-size: 24px;
     }
 

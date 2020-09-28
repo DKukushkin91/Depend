@@ -12,7 +12,7 @@
         ?>
 
         <div class="buy-popup-item">
-            <img src="<?= $image;?>" class="buy-popup-icon">
+            <img src="<?= $image;?>" class="buy-popup-icon" alt="<?= $item['NAME']; ?>">
             <a target="_blank" href="<?= $item['PROPERTIES']['LINK']['VALUE']; ?>" class="buy-popup-button">Смотреть каталог</a>
         </div>
 	<? endforeach; ?>

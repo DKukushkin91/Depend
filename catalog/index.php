@@ -5,7 +5,10 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
     "depend:catalog.category",
     ".default",
     Array(
-        'section_code' => false
+        'section_code' => false,
+        "SET_STATUS_404" => "Y",
+        "SHOW_404" => "Y",
+        "MESSAGE_404" => ""
     ),
     false
 );?>

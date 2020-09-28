@@ -2,12 +2,16 @@
     width: 100%;
 }
 
-.detailed-article h2 {
+.detailed-article-content h2, .detailed-article-content h1 {
     max-width: 90%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
     text-align: center;
+    font-family: 'MuseoCyrl';
+    color: #424242;
+    font-size: 2em;
+    margin: 0.67em 0;
 }
 
 .detailed-article img {
@@ -71,7 +75,7 @@
         font-size: 16px;
     }
 
-    .detailed-article h2 {
+    .detailed-article-content h2, .detailed-article-content h1 {
         font-size: 24px;
     }
 

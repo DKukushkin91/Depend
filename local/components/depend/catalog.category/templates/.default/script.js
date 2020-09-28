@@ -28,8 +28,8 @@ $(document).ready(function() {
     $(".js-category-load").load('/local/components/depend/catalog.category/templates/.default/ajax.php', data, function () {
       history.replaceState({}, '', '/catalog/' + code);
       window.catalogCategoryConfig.category = code;
-      var bannerText = $('.js-category-load h2').text();
-      $('.banner-text h1').text(bannerText);
+      var bannerText = $('.js-category-load h1').text();
+      $('.banner-text h2').text(bannerText);
     });
 
   });

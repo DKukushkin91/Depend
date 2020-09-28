@@ -69,22 +69,22 @@ if ($arParams['section_code'] === '') {
     $sectionName = 'Вся продукция';
 }
 ?>
-            <section class="content-products-group js-category-load">
-                <h2><?= $sectionName?></h2>
-                <section class="content-group-items ">
+            <div class="content-products-group js-category-load">
+                <h1><?= $sectionName?></h1>
+                <div class="content-group-items ">
 					<? foreach($arResult['items'] as $index => $item):?>
-                    <section class="product-card">
+                    <div class="product-card">
                         <a href="<?=$item['DETAIL_PAGE_URL']?>">
                             <div class="product-card-top">
-                                <img class="product-card-top__image" src="<?= $item['PREVIEW_PICTURE']?>">
-                                <div class="product-card-top__descr"><?=$item['NAME'] ?></div>
+                                <img class="product-card-top__image" src="<?= $item['PREVIEW_PICTURE']?>" alt="<?=$item['NAME']?>">
+                                <div class="product-card-top__descr"><?=$item['NAME']?></div>
                             </div>
                             <div class="product-card-bottom">
                                 <span class="product-card-bottom__btn btn">Подробнее</span>
                             </div>
                         </a>
-                    </section>
+                    </div>
                     <? endforeach;?>
-                </section>
-            </section>
+                </div>
+            </div>
 

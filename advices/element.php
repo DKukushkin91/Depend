@@ -1,20 +1,7 @@
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetTitle("");
 ?>
-<section class="detailed-article">
-	<section class="content-top-banner">
-		<div class="banner-text">
-			<h1>Полезные советы</h1>
-<!--			<div class="banner-text__subtitle">Главная > О недержании > Полезные советы</div>-->
-		</div>
-	</section>
-	<?
-	$APPLICATION->IncludeComponent("bitrix:breadcrumb","",Array(
-			"START_FROM" => '0',
-			"PATH" => "",
-			"SITE_ID" => "s1"
-		)
-	);
-	?>
+<div class="detailed-article">
 	<?$APPLICATION->IncludeComponent("bitrix:news.detail","advice_detail",Array(
 			"DISPLAY_DATE" => "Y",
 			"DISPLAY_NAME" => "Y",
@@ -78,7 +65,7 @@
 		)
 	);
 	?>
-</section>
+</div>
 
 
 <? require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

@@ -1,7 +1,7 @@
-<section class="main-slider">
+<div class="main-slider">
 <? foreach($arResult['items'] as $index => $item): ?>
-    <a class="main-slider-item <?= !empty($item['PROPERTY_VIDEO_MP']) ? 'js-popup-show' : '' ?>" <? if (!empty($item['PROPERTY_VIDEO_MP'])): ?> href="#main-video" <? endif; ?> <? if (!empty($item['PROPERTY_LINK_VALUE'])): ?> target="_blank" href="<?= $item['PROPERTY_LINK_VALUE']; ?>" <?endif;?>>
-        <style type="text/css">
+    <div>
+        <style>
             @media only screen and (max-width: 1921px) {
                 .main-slider-video__preview-<?= $index ?> {
                     background-image: url(<?= $item['PROPERTY_IMAGE_1920'] ?>) !important;
@@ -43,18 +43,20 @@
                 }
             }
         </style>
-        <div class="main-slider-video__preview-<?=$index;?>">
-        </div>
-		<? if (!empty($item['PROPERTY_VIDEO_MP'])): ?>
-        <div class="main-slider-video__icon"></div>
-		<? endif; ?>
-        <? if (!empty($item['PROPERTY_VIDEO_MP'])): ?>
-        <div class="main-slider-video zoom-anim-dialog mfp-hide" id="main-video">
-            <video class="main-slider-video__item" controls>
-                <source src="<?= $item['PROPERTY_VIDEO_MP']; ?>" type="video/mp4">
-            </video>
-        </div>
-        <? endif; ?>
-    </a>
+        <a class="main-slider-item <?= !empty($item['PROPERTY_VIDEO_MP']) ? 'js-popup-show' : '' ?>" <? if (!empty($item['PROPERTY_VIDEO_MP'])): ?> href="#main-video" <? endif; ?> <? if (!empty($item['PROPERTY_LINK_VALUE'])): ?> target="_blank" href="<?= $item['PROPERTY_LINK_VALUE']; ?>" <?endif;?>>        
+            <div class="main-slider-video__preview-<?=$index;?>">
+            </div>
+            <? if (!empty($item['PROPERTY_VIDEO_MP'])): ?>
+            <div class="main-slider-video__icon"></div>
+            <? endif; ?>
+            <? if (!empty($item['PROPERTY_VIDEO_MP'])): ?>
+            <div class="main-slider-video zoom-anim-dialog mfp-hide" id="main-video">
+                <video class="main-slider-video__item" controls>
+                    <source src="<?= $item['PROPERTY_VIDEO_MP']; ?>" type="video/mp4">
+                </video>
+            </div>
+            <? endif; ?>
+        </a>
+    </div>
     <? endforeach; ?>
-</section>
+</div>
