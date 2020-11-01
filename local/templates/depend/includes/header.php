@@ -1,4 +1,5 @@
 <header>
+    <!--noindex-->
     <div class="header-top">
         <a href="/">
             <img src="<?=SITE_TEMPLATE_PATH?>/img/depend-logo.png" class="depend-logo-desktop" alt="Depend">
@@ -8,6 +9,7 @@
         <div class="top-separator"></div>
         <a href="/search/" class="top-search"><span class="icon-search-desktop"></span>Поиск</a>
     </div>
+    <!--/noindex-->
     <div class="header-green">
         <a href="/">
             <img src="<?=SITE_TEMPLATE_PATH?>/img/depend-logo.png" class="depend-logo-mobile" alt="Depend">

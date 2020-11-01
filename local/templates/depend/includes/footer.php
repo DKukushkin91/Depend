@@ -19,9 +19,11 @@
             <a href="/advices/poleznye-sovety/">Полезные советы</a>
             <a href="/advices/">Все статьи</a>
         </div>
-        <div class="footer-kc-logo"><img src="<?=SITE_TEMPLATE_PATH?>/img/kimberly-clark-logo.png" class="kimberly-clark-logo" alt=""></div>
+		<!--noindex-->
+        <div class="footer-kc-logo"><img src="<?=SITE_TEMPLATE_PATH?>/img/kimberly-clark-logo.png" class="kimberly-clark-logo" alt=""></div>    	
         <div class="footer-col-copyrights">&reg; KCWW. Все права защищены.<br>&reg; Зарегистрированный товарный знак Кимберли-Кларк Уэрлдуайд, Инк или его аффилированных лиц. Все наименования, логотипы и&nbsp;торговые марки являются собственностью Kimberly-Clark Worldwide.Inc</div>
         <div class="footer-col-copyrights">Посещение нашего сайта и использование представленной на&nbsp;нем информации регулируются Правовыми положениями. Пожалуйста, ознакомьтесь с&nbsp;нашей Политикой конфиденциальности.</div>
+		<!--/noindex-->
     </div>
 
     <div id="where-can-buy" class="buy-popup zoom-anim-dialog mfp-hide">
