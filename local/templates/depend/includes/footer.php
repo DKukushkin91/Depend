@@ -6,12 +6,12 @@
         </div>
         <div class="footer-col-links">
             <span>Для&nbsp;женщин</span>
-            <a href="/catalog/prokladki/">Прокладки для&nbsp;женщин</a>
-            <a href="/catalog/vpit-women/">Впитывающее белье для&nbsp;женщин</a>
+            <a href="/catalog/prokladki-dlya-zhenshchin/">Прокладки для&nbsp;женщин</a>
+            <a href="/catalog/vpityvayushchee-bele-dlya-zhenshchin/">Впитывающее белье для&nbsp;женщин</a>
         </div>
         <div class="footer-col-links">
             <span>Для&nbsp;мужчин</span>
-            <a href="/catalog/vpit-men/">Впитывающее белье для&nbsp;мужчин</a>
+            <a href="/catalog/vpityvayushchee-bele-dlya-muzhchin/">Впитывающее белье для&nbsp;мужчин</a>
         </div>
         <div class="footer-col-links">
             <span>О&nbsp;недержании</span>
