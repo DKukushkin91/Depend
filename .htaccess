@@ -10,8 +10,9 @@ ErrorDocument 404 /404.php
 <IfModule mod_rewrite.c>
   Options +FollowSymLinks
   RewriteEngine On
-  RewriteCond %{HTTP_HOST} ^depend.ru
-  RewriteRule ^(.*)$https://www.depend.ru/$1 [R=301,L]  
+  
+  RewriteCond %{HTTP_HOST} ^depend\.ru$ [NC]
+  RewriteRule (.*) https://www.depend.ru/$1 [R=301,L]
   
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-l
