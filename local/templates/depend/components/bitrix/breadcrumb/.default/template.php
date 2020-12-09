@@ -10,7 +10,7 @@ global $APPLICATION;
 if(empty($arResult))
     return "";
 
-$strReturn = '<div class="breadcrumbs breadcrumbs"><div class="breadcrumbs-inner">';
+$strReturn = '<div class="breadcrumbs breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList"><div class="breadcrumbs-inner">';
 $itemSize = count($arResult);
 for($index = 0; $index < $itemSize; $index++)
 {
@@ -26,19 +26,21 @@ for($index = 0; $index < $itemSize; $index++)
 	if($arResult[$index]["LINK"] <> "" && $index != $itemSize-1)
 	{
 		$strReturn .= '
-			<span class="breadcrumbs__item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"'.$child.$nextRef.'>
+			<span class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
 				'.$arrow.'
-				<a href="'.$arResult[$index]["LINK"].'" class="breadcrumbs__link" title="'.$title.'" itemprop="url">
-					<span class="breadcrumbs__text" itemprop="title">'.$title.'</span>
+				<a href="'.$arResult[$index]["LINK"].'" class="breadcrumbs__link" title="'.$title.'" itemprop="item">
+					<span class="breadcrumbs__text" itemprop="name">'.$title.'</span>
 				</a>
+				<meta itemprop="position" content="'.($index + 1).'" />
 			</span>';
 	}
 	else
 	{
 		$strReturn .= '
-			<span class="breadcrumbs__item active">
+			<span class="breadcrumbs__item active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
 				'.$arrow.'
-				<span class="breadcrumbs__text">'.$title.'</span>
+				<a itemprop="item" href="'.$arResult[$index]["LINK"].'"><span itemprop="name" class="breadcrumbs__text">'.$title.'</span></a>
+				<meta itemprop="position" content="'.($index + 1).'" />
 			</span>';
 	}
 }

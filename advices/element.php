@@ -1,5 +1,4 @@
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("");
 ?>
 <div class="detailed-article">
 	<?$APPLICATION->IncludeComponent("bitrix:news.detail","advice_detail",Array(

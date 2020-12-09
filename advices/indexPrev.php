@@ -1,6 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Depend");
+$APPLICATION->SetPageProperty("title", "О недержании - Depend.ru");
 $res = CIBlockSection::GetList([], [
 	'IBLOCK_ID' => 4,
 	'ACTIVE' => 'Y'

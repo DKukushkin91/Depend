@@ -33,6 +33,11 @@
   border: none;
 }
 
+.breadcrumbs__item.active a{
+  pointer-events: none;
+  cursor: default;
+}
+
 @media only screen and (max-width: 1229px) {
   .breadcrumbs {
     padding: 15px 0px;

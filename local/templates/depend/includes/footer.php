@@ -25,7 +25,7 @@
         <div class="footer-col-copyrights">Посещение нашего сайта и использование представленной на&nbsp;нем информации регулируются Правовыми положениями. Пожалуйста, ознакомьтесь с&nbsp;нашей Политикой конфиденциальности.</div>
 		<!--/noindex-->
     </div>
-
+	<?if ($APPLICATION->GetCurDir() == '/catalog/prokladki-dlya-zhenshchin/' || $APPLICATION->GetCurDir() == '/catalog/vpityvayushchee-bele-dlya-zhenshchin/' || $APPLICATION->GetCurDir() == '/catalog/vpityvayushchee-bele-dlya-muzhchin/'):?>
     <div id="where-can-buy" class="buy-popup zoom-anim-dialog mfp-hide">
         <h2>Где&nbsp;купить?</h2>
         <p>Ищите нашу продукцию на&nbsp;полках аптек и&nbsp;супермаркетов,<br>а&nbsp;также в&nbsp;онлайн-магазинах:</p>
@@ -92,4 +92,6 @@
 			);
 		?>
     </div>
+	<?else:?>
+	<?endif;?>
 </footer>

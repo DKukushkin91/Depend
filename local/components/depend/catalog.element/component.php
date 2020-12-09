@@ -21,7 +21,7 @@ if ($productRes) {
 	}
 
 	$section = CIBlockSection::GetByID($product['IBLOCK_SECTION_ID'])->GetNext();
-
+    $previmg = CFile::ResizeImageGet($product['PREVIEW_PICTURE'], array(), BX_RESIZE_IMAGE_PROPORTIONAL_ALT, false);
 
 
     //характеристики
@@ -41,9 +41,12 @@ if ($productRes) {
 	$APPLICATION->SetPageProperty("keywords",  $seoRes['ELEMENT_META_KEYWORDS']);
 	$APPLICATION->SetTitle($seoRes['ELEMENT_META_TITLE']);
 
-	$APPLICATION->AddChainItem('Продукция', '/catalog/all/');
     $APPLICATION->AddChainItem($section['NAME'], $section['SECTION_PAGE_URL']);
     $APPLICATION->AddChainItem($product['NAME'], $product['DETAIL_PAGE_URL']);
+
+    
+    $APPLICATION->AddHeadString('<meta property="og:description" content="'.$seoRes['ELEMENT_META_DESCRIPTION'].'"/>');
+    $APPLICATION->AddHeadString('<meta property="og:image" content="https://www.depend.ru'.$previmg['src'].'"/>');
 //    $APPLICATION->SetTitle($product['NAME']);
 
     $product['props'] = $props;

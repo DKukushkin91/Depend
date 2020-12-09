@@ -1,6 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Depend");
+$APPLICATION->SetPageProperty("description", "О недержании - Depend.ru");
+$APPLICATION->SetPageProperty("title", "О недержании - Depend.ru");
 $res = CIBlockSection::GetList([], [
 	'IBLOCK_ID' => 4,
 	'ACTIVE' => 'Y'
@@ -9,6 +10,8 @@ while ($ob = $res->GetNext()) {
 	$sections[] = $ob;
 }
 ?>
+<?$APPLICATION->AddHeadString('<meta property="og:description" content="О недержании - Depend.ru"/>');?>
+<?$APPLICATION->AddHeadString('<meta property="og:image" content="https://www.depend.ru/upload/iblock/8d5/8d51b78ecd8ca654937117ec8037c88f.jpg"/>');?>
 <section class="advices">
 	<section class="content-top-banner">
 		<div class="banner-text">

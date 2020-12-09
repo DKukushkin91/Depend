@@ -43,6 +43,19 @@ $APPLICATION->IncludeComponent("bitrix:breadcrumb","",Array(
 		"SITE_ID" => "s1"
 	)
 );
+$ipropValues = new \Bitrix\Iblock\InheritedProperty\SectionValues(1, $arSection['ID']);
+if ($arSection['ID']){
+$seoRes = $ipropValues->getValues();
+$APPLICATION->SetPageProperty("title", $seoRes['ELEMENT_META_TITLE']);
+$APPLICATION->SetPageProperty("description",  $seoRes['ELEMENT_META_DESCRIPTION']);
+$APPLICATION->SetPageProperty("keywords",  $seoRes['ELEMENT_META_KEYWORDS']);
+$APPLICATION->SetTitle($seoRes['ELEMENT_META_TITLE']);
+$APPLICATION->AddHeadString('<meta property="og:description" content="'.$seoRes["ELEMENT_META_DESCRIPTION"].'"/>');
+$APPLICATION->AddHeadString('<meta property="og:image" content="https://www.depend.ru/upload/iblock/8d5/8d51b78ecd8ca654937117ec8037c88f.jpg"/>');
+}
+else{
+    $APPLICATION->SetPageProperty("title", "Вся продукция - Depend.ru");    
+}
 ?>
 <div class="content-products-tabs tabs">
     <nav class="tabs-inner">

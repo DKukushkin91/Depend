@@ -1,6 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-?>3<?
+?><?
 $APPLICATION->IncludeComponent(
     "depend:catalog.category",
     ".default",
@@ -12,6 +12,5 @@ $APPLICATION->IncludeComponent(
     ),
     false
 );
-$APPLICATION->AddChainItem('Продукция', '/catalog/all/');
 ?>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

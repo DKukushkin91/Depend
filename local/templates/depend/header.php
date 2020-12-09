@@ -1,5 +1,9 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 ?>
+<?
+$rsSites = CSite::GetByID(SITE_ID);
+$arSite = $rsSites->Fetch();
+?>
 <!DOCTYPE html>
 <html lang="ru-RU">
 <head>
@@ -13,7 +17,8 @@
         gtag('config', 'UA-134188906-1');
     </script>
     <meta name="yandex-verification" content="46a6b60cc0f981dd" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <link rel="canonical" href="<?echo "https://".$_SERVER['SERVER_NAME'].$APPLICATION->GetCurPage(true);?>"/>
 	<!-- Google Tag Manager -->
 	<script>
 		(function(w,d,s,l,i){
@@ -41,8 +46,17 @@
     <!-- //Rating Mail.ru counter -->
 	<script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH.'/js/jquery.min.js');?>"></script>
     <title><?$APPLICATION->ShowTitle()?></title>
+  
+
 	<?
-	CJSCore::Init(array('ajax'));
+    CJSCore::Init(array('ajax'));
+    ?>
+<div itemscope= "https://schema.org/">
+    <meta property="og:site_name" content="<?=$arSite['SITE_NAME']?>"/>  
+    <meta property="og:url" content="<?echo "https://".$_SERVER['SERVER_NAME'].$APPLICATION->GetCurPage(true);?>"/>  
+    <meta property="og:type" content="<?if ($APPLICATION->GetCurPage(false) == '/advices/'):?>article<?else:?>website<?endif;?>" />
+    <meta property="og:title" content="<?$APPLICATION->ShowTitle()?>" />   
+    <?
 	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/main.css');
     $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/styles.css');
     $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/products.css');
@@ -68,7 +82,9 @@
     $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/slick.min.js');
     $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/jquery.magnific-popup.min.js');
     ?>
-    <link rel="shortcut icon" type="image/x-icon" href="<?=SITE_TEMPLATE_PATH?>/img/favicon.ico">
+
+</div>
+    <link rel="shortcut icon" type="image/png" href="<?=SITE_TEMPLATE_PATH?>/img/android-chrome-512x512.png">
 </head>
 <body>
 <!-- Yandex.Metrika counter --> <script> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(38929830, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/38929830" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->

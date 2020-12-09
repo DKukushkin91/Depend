@@ -1,8 +1,12 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("О компании");
+$APPLICATION->SetPageProperty("description", "Мы производим продукты первой необходимости для лучшей жизни людей во всём мире. - Depend.ru");
+$APPLICATION->SetTitle("О компании - Depend.ru");
 $APPLICATION->AddChainItem('О компании', '/about/');
 ?>
+
+<?$APPLICATION->AddHeadString('<meta property="og:description" content="Мы производим продукты первой необходимости для лучшей жизни людей во всём мире. - Depend.ru');?>
+<?$APPLICATION->AddHeadString('<meta property="og:image" content="/local/templates/depend/img/products-banner.jpg');?>
 
 <div class="about">
     <div class="content-top-banner">

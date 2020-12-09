@@ -11,6 +11,8 @@ while ($ob = $res->GetNext()) {
 $APPLICATION->AddChainItem('О недержании', '/advices/good_advices/');
 
 ?>
+<?$APPLICATION->AddHeadString('<meta property="og:description" content="Статьи с полезными советами о том, как контролировать недержание, как обратится к врачу за помощью - Depend"/>');?>
+<?$APPLICATION->AddHeadString('<meta property="og:image" content="https://www.depend.ru/upload/iblock/8d5/8d51b78ecd8ca654937117ec8037c88f.jpg"/>');?>
 <section class="advices">
 	<section class="content-top-banner">
 		<div class="banner-text">
