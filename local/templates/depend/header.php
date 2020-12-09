@@ -18,6 +18,12 @@ $arSite = $rsSites->Fetch();
     </script>
     <meta name="yandex-verification" content="46a6b60cc0f981dd" />
     <meta name="viewport" content="width=device-width, initial-scale=1">  
+
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="/local/templates/depend/img/favicon32.ico">
+	<link rel="icon" type="image/x-icon" sizes="16x16" href="/local/templates/depend/img/favicon16.ico">
+	<link rel="shortcut icon" type="image/x-icon" href="/local/templates/depend/img/favicon.ico">
+    <link rel="shortcut icon" type="image/png" href="/local/templates/depend/img/android-chrome-512x512.png">
+
     <link rel="canonical" href="<?echo "https://".$_SERVER['SERVER_NAME'].$APPLICATION->GetCurPage(true);?>"/>
 	<!-- Google Tag Manager -->
 	<script>
