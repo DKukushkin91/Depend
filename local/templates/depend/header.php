@@ -24,7 +24,7 @@ $arSite = $rsSites->Fetch();
 	<link rel="shortcut icon" type="image/x-icon" href="/local/templates/depend/img/favicon.ico">
     <link rel="shortcut icon" type="image/png" href="/local/templates/depend/img/android-chrome-512x512.png">
 
-    <link rel="canonical" href="<?echo "https://".$_SERVER['SERVER_NAME'].$APPLICATION->GetCurPage(true);?>"/>
+    <link rel="canonical" href="<?echo "https://".$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];?>">
 	<!-- Google Tag Manager -->
 	<script>
 		(function(w,d,s,l,i){
@@ -59,7 +59,7 @@ $arSite = $rsSites->Fetch();
     ?>
 <div itemscope= "https://schema.org/">
     <meta property="og:site_name" content="<?=$arSite['SITE_NAME']?>"/>  
-    <meta property="og:url" content="<?echo "https://".$_SERVER['SERVER_NAME'].$APPLICATION->GetCurPage(true);?>"/>  
+    <meta property="og:url" content="<?echo "https://".$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];?>"/>  
     <meta property="og:type" content="<?if ($APPLICATION->GetCurPage(false) == '/advices/'):?>article<?else:?>website<?endif;?>" />
     <meta property="og:title" content="<?$APPLICATION->ShowTitle()?>" />   
     <?
