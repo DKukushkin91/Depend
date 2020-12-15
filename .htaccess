@@ -15,10 +15,13 @@ ErrorDocument 404 /404.php
   RewriteRule (.*) https://www.depend.ru/$1 [R=301,L]
 
   Redirect 301 /catalog/vpit-women/ https://www.depend.ru/catalog/vpityvayushchee-bele-dlya-zhenshchin/
+  Redirect 301 /catalog/vpit-women https://www.depend.ru/catalog/vpityvayushchee-bele-dlya-zhenshchin/
   Redirect 301 /catalog/vpit-men/ https://www.depend.ru/catalog/vpityvayushchee-bele-dlya-muzhchin/
+  Redirect 301 /catalog/vpit-men https://www.depend.ru/catalog/vpityvayushchee-bele-dlya-muzhchin/
   Redirect 301 /catalog/all/ https://www.depend.ru/catalog/
   Redirect 301 /catalog/all https://www.depend.ru/catalog/
   Redirect 301 /catalog/prokladki/ https://www.depend.ru/catalog/prokladki-dlya-zhenshchin/
+  Redirect 301 /catalog/prokladki https://www.depend.ru/catalog/prokladki-dlya-zhenshchin/
 
 
 
