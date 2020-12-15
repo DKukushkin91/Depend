@@ -4,7 +4,8 @@ $APPLICATION->SetPageProperty("description", "Вся продукция - Depend
 $APPLICATION->SetTitle("Вся продукция - Depend.ru");
 ?>
 <?$APPLICATION->AddHeadString('<meta property="og:description" content="Вся продукция - Depend.ru"/>');?>
-<?$APPLICATION->AddHeadString('<meta property="og:image" content="https://www.depend.ru/upload/iblock/8d5/8d51b78ecd8ca654937117ec8037c88f.jpg"/>');?>
+<?$APPLICATION->AddHeadString('<meta property="og:image" content="https://www.depend.ru/local/templates/depend/img/depend-logo.png"/>');?>
+<?$APPLICATION->AddHeadString('<meta property="og:title" content="Вся продукция - Depend.ru">');?>
 <?$APPLICATION->IncludeComponent(
     "depend:catalog.category",
     ".default",

@@ -52,16 +52,11 @@ $arSite = $rsSites->Fetch();
     <!-- //Rating Mail.ru counter -->
 	<script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH.'/js/jquery.min.js');?>"></script>
     <title><?$APPLICATION->ShowTitle()?></title>
-  
 
 	<?
     CJSCore::Init(array('ajax'));
     ?>
 <div itemscope= "https://schema.org/">
-    <meta property="og:site_name" content="<?=$arSite['SITE_NAME']?>"/>  
-    <meta property="og:url" content="<?echo "https://".$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];?>"/>  
-    <meta property="og:type" content="<?if ($APPLICATION->GetCurPage(false) == '/advices/'):?>article<?else:?>website<?endif;?>" />
-    <meta property="og:title" content="<?$APPLICATION->ShowTitle()?>" />   
     <?
 	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/main.css');
     $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/styles.css');
@@ -89,6 +84,9 @@ $arSite = $rsSites->Fetch();
     $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/jquery.magnific-popup.min.js');
     ?>
 
+	<? $APPLICATION->AddHeadString('<meta property="og:site_name" content="'.$arSite['SITE_NAME'].'">');?>
+    <? $APPLICATION->AddHeadString('<meta property="og:type" content="website">');?>
+
 </div>
     <link rel="shortcut icon" type="image/png" href="<?=SITE_TEMPLATE_PATH?>/img/android-chrome-512x512.png">
 </head>
@@ -112,5 +110,5 @@ $arSite = $rsSites->Fetch();
 <div class="page-inner">
 	<? $APPLICATION->IncludeFile('includes/header.php', [], []) ?>
     <main>
-
-
+    
+    

@@ -16,6 +16,7 @@ $APPLICATION->IncludeComponent("bitrix:breadcrumb","",Array(
 
 <?$APPLICATION->AddHeadString('<meta property="og:description" content="'.ucfirst($arResult['PREVIEW_TEXT']).'"/>');?>
 <?$APPLICATION->AddHeadString('<meta property="og:image" content="'.ucfirst($arResult['DETAIL_PICTURE']['SRC']).'"/>');?>
+<?$APPLICATION->AddHeadString('<meta property="og:title" content="'.ucfirst($arResult['NAME']).'"/>');?>
 
 <article>
     <div class="detailed-article-content">        
