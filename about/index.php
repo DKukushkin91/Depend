@@ -1,12 +1,13 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetPageProperty("description", "Мы производим продукты первой необходимости для лучшей жизни людей во всём мире. - Depend.ru");
-$APPLICATION->SetTitle("О компании - Depend.ru");
+$APPLICATION->SetPageProperty("description", " Звоните и пишите по интересующим вас вопросам - информация о компании, контакты для связи, номер горячей линии 8 (800) 200-57-57 | Depend.ru");
+$APPLICATION->SetTitle("О бренде Depend, контакты, как с нами связаться | Depend.ru");
 $APPLICATION->AddChainItem('О компании', '/about/');
 ?>
 
-<?$APPLICATION->AddHeadString('<meta property="og:description" content="Мы производим продукты первой необходимости для лучшей жизни людей во всём мире. - Depend.ru');?>
+<?$APPLICATION->AddHeadString('<meta property="og:description" content=" Звоните и пишите по интересующим вас вопросам - информация о компании, контакты для связи, номер горячей линии 8 (800) 200-57-57 | Depend.ru');?>
 <?$APPLICATION->AddHeadString('<meta property="og:image" content="/local/templates/depend/img/products-banner.jpg');?>
+<?$APPLICATION->AddHeadString('<meta property="og:title" content="О бренде Depend, контакты, как с нами связаться | Depend.ru">');?>
 
 <div class="about">
     <div class="content-top-banner">

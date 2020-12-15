@@ -1,11 +1,12 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetPageProperty("description", "Depend - комфортная защита на каждый день - Depend.ru");
-$APPLICATION->SetPageProperty("title", "Depend прокладки - Depend.ru");
+$APPLICATION->SetPageProperty("description", "Урологические товары и впитывающее белье Depend, следите за новинками на официальном сайте бренда Депенд | Depend.ru
+");
+$APPLICATION->SetPageProperty("title", "Урологические товары и впитывающее белье Depend - официальный сайт бренда Депенд | Depend.ru");
 ?>
-<?$APPLICATION->AddHeadString('<meta property="og:description" content="Depend - комфортная защита на каждый день - Depend.ru"/>');?>
+<?$APPLICATION->AddHeadString('<meta property="og:description" content="Урологические товары и впитывающее белье Depend, следите за новинками на официальном сайте бренда Депенд | Depend.ru"/>');?>
 <?$APPLICATION->AddHeadString('<meta property="og:image" content="https://www.depend.ru/local/templates/depend/img/depend-logo.png"/>');?>
-<?$APPLICATION->AddHeadString('<meta property="og:title" content="Depend прокладки - Depend.ru">');?>
+<?$APPLICATION->AddHeadString('<meta property="og:title" content="Урологические товары и впитывающее белье Depend - официальный сайт бренда Депенд | Depend.ru">');?>
 
 <div class="main-page">
 	<?$APPLICATION->IncludeComponent("depend:index-slider", 'index', [

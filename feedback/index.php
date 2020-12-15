@@ -1,6 +1,11 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetPageProperty("description", "Задавайте интересующие вас вопросы, наша команда ответит в кратчайшие сроки, после получения запроса - Depend.ru");
+$APPLICATION->SetTitle("Обратная связь | Depend.ru");
 ?>
+<?$APPLICATION->AddHeadString('<meta property="og:description" content="Задавайте интересующие вас вопросы, наша команда ответит в кратчайшие сроки, после получения запроса - Depend.ru"/>');?>
+<?$APPLICATION->AddHeadString('<meta property="og:image" content="https://www.depend.ru/local/templates/depend/img/depend-logo.png"/>');?>
+<?$APPLICATION->AddHeadString('<meta property="og:title" content="Обратная связь | Depend.ru">');?>
 
 <section class="feedback">
     <section class="content-top-banner">

@@ -1,7 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetPageProperty("description", "О недержании - Depend.ru");
-$APPLICATION->SetPageProperty("title", "О недержании - Depend.ru");
+$APPLICATION->SetPageProperty("description", "Узнайте, как себя поддержать, если вы столкнулись с проблемой недержании мочи. Материалы о полезных тренировках, как жить с болезнью недержания мочи | Depend.ru");
+$APPLICATION->SetPageProperty("title", "Полезные рекомендации, советы и помощь при недержании мочи | Depend.ru");
 $res = CIBlockSection::GetList([], [
 	'IBLOCK_ID' => 4,
 	'ACTIVE' => 'Y'
@@ -10,9 +10,9 @@ while ($ob = $res->GetNext()) {
 	$sections[] = $ob;
 }
 ?>
-<?$APPLICATION->AddHeadString('<meta property="og:description" content="О недержании - Depend.ru"/>');?>
+<?$APPLICATION->AddHeadString('<meta property="og:description" content="Узнайте, как себя поддержать, если вы столкнулись с проблемой недержании мочи. Материалы о полезных тренировках, как жить с болезнью недержания мочи | Depend.ru"/>');?>
 <?$APPLICATION->AddHeadString('<meta property="og:image" content="https://www.depend.ru/local/templates/depend/img/depend-logo.png"/>');?>
-<?$APPLICATION->AddHeadString('<meta property="og:title" content="О недержании - Depend.ru">');?>
+<?$APPLICATION->AddHeadString('<meta property="og:title" content="Полезные рекомендации, советы и помощь при недержании мочи | Depend.ru">');?>
 <section class="advices">
 	<section class="content-top-banner">
 		<div class="banner-text">

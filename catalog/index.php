@@ -1,11 +1,11 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetPageProperty("description", "Вся продукция - Depend.ru");
-$APPLICATION->SetTitle("Вся продукция - Depend.ru");
+$APPLICATION->SetPageProperty("description", "Все о продукции Depend, предметы гигиены для мужчин и женщин при недержании мочи Депенд | Depend.ru");
+$APPLICATION->SetTitle("Продукция Depend, предметы гигиены для мужчин и женщин при недержании мочи Депенд | Depend.ru");
 ?>
-<?$APPLICATION->AddHeadString('<meta property="og:description" content="Вся продукция - Depend.ru"/>');?>
+<?$APPLICATION->AddHeadString('<meta property="og:description" content="Все о продукции Depend, предметы гигиены для мужчин и женщин при недержании мочи Депенд | Depend.ru"/>');?>
 <?$APPLICATION->AddHeadString('<meta property="og:image" content="https://www.depend.ru/local/templates/depend/img/depend-logo.png"/>');?>
-<?$APPLICATION->AddHeadString('<meta property="og:title" content="Вся продукция - Depend.ru">');?>
+<?$APPLICATION->AddHeadString('<meta property="og:title" content="Продукция Depend, предметы гигиены для мужчин и женщин при недержании мочи Депенд | Depend.ru">');?>
 <?$APPLICATION->IncludeComponent(
     "depend:catalog.category",
     ".default",
