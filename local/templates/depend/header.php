@@ -21,6 +21,7 @@ $arSite = $rsSites->Fetch();
 
     <link rel="icon" type="image/x-icon" sizes="32x32" href="/local/templates/depend/img/favicon32.ico">
 	<link rel="icon" type="image/x-icon" sizes="16x16" href="/local/templates/depend/img/favicon16.ico">
+    <link rel="icon" type="image/png" sizes="120x120"  href="/local/templates/depend/img/120x120.png">
 	<link rel="shortcut icon" type="image/x-icon" href="/local/templates/depend/img/favicon.ico">
     <link rel="shortcut icon" type="image/png" href="/local/templates/depend/img/android-chrome-512x512.png">
 
