@@ -1,7 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetPageProperty("description", "Все о продукции Depend, предметы гигиены для мужчин и женщин при недержании мочи Депенд | Depend.ru");
-$APPLICATION->SetTitle("Продукция Depend, предметы гигиены для мужчин и женщин при недержании мочи Депенд | Depend.ru");
+$APPLICATION->SetPageProperty("title", "Продукция Depend, предметы гигиены для мужчин и женщин при недержании мочи Депенд | Depend.ru");
 ?>
 <?$APPLICATION->AddHeadString('<meta property="og:description" content="Все о продукции Depend, предметы гигиены для мужчин и женщин при недержании мочи Депенд | Depend.ru"/>');?>
 <?$APPLICATION->AddHeadString('<meta property="og:image" content="https://www.depend.ru/local/templates/depend/img/depend-logo.png"/>');?>
