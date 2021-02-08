@@ -17,7 +17,6 @@ $arSite = $rsSites->Fetch();
         gtag('config', 'UA-134188906-1');
     </script>
     <meta name="yandex-verification" content="46a6b60cc0f981dd" />
-    <meta name="yandex-verification" content="2b81a85614dc3c81" />
     <meta name="viewport" content="width=device-width, initial-scale=1">  
 
     <link rel="icon" type="image/x-icon" sizes="32x32" href="/local/templates/depend/img/favicon32.ico">
