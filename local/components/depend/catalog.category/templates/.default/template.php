@@ -1,24 +1,4 @@
-<?php
-    // $arResult['categories'] - список категорий
-    // $arResult['products'] - список товаров
-    // var_dump($arResult['categories']);
-?>
-<?/* $APPLICATION->IncludeComponent('tradeup:catalog.category.top', '', [
-    'section' => $arResult['section']
-]); */?>
 
-
-    <?/*$APPLICATION->IncludeComponent("depend:top-image", 'index', [
-            'IBLOCK_ID' => 1
-        ]
-    );
-
-
-
-        */
-
-
-    ?>
 <div class="content-top-banner">
     <div class="banner-text">
 
@@ -35,7 +15,7 @@
         <h2>Продукция</h2>
         
     </div>
-</div>
+</div> 
 <?
 $APPLICATION->IncludeComponent("bitrix:breadcrumb","",Array(
 		"START_FROM" => '0',
@@ -50,6 +30,11 @@ $APPLICATION->SetPageProperty("title", $seoRes['SECTION_META_TITLE']);
 $APPLICATION->SetPageProperty("description",  $seoRes['SECTION_META_DESCRIPTION']);
 $APPLICATION->SetPageProperty("keywords",  $seoRes['SECTION_META_KEYWORDS']);
 $APPLICATION->SetTitle($seoRes['SECTION_META_TITLE']);
+
+$APPLICATION->AddHeadString('<meta property="og:description" content="'.$seoRes['SECTION_META_DESCRIPTION'].'"/>');
+$APPLICATION->AddHeadString('<meta property="og:image" content="https://www.depend.ru/local/templates/depend/img/depend-logo.png"/>');
+$APPLICATION->AddHeadString('<meta property="og:title" content="'.ucfirst($seoRes['SECTION_META_TITLE']).'"/>');
+$APPLICATION->AddHeadString('<meta property="og:type" content="website">');
 }
 ?>
 

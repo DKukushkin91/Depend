@@ -8,6 +8,7 @@ $APPLICATION->AddChainItem('О компании', '/about/');
 <?$APPLICATION->AddHeadString('<meta property="og:description" content=" Звоните и пишите по интересующим вас вопросам - информация о компании, контакты для связи, номер горячей линии 8 (800) 200-57-57 | Depend.ru');?>
 <?$APPLICATION->AddHeadString('<meta property="og:image" content="/local/templates/depend/img/products-banner.jpg');?>
 <?$APPLICATION->AddHeadString('<meta property="og:title" content="О бренде Depend, контакты, как с нами связаться | Depend.ru">');?>
+<?$APPLICATION->AddHeadString('<meta property="og:type" content="website">');?>
 
 <div class="about">
     <div class="content-top-banner">

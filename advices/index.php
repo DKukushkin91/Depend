@@ -13,6 +13,7 @@ while ($ob = $res->GetNext()) {
 <?$APPLICATION->AddHeadString('<meta property="og:description" content="Узнайте, как себя поддержать, если вы столкнулись с проблемой недержании мочи. Материалы о полезных тренировках, как жить с болезнью недержания мочи | Depend.ru"/>');?>
 <?$APPLICATION->AddHeadString('<meta property="og:image" content="https://www.depend.ru/local/templates/depend/img/depend-logo.png"/>');?>
 <?$APPLICATION->AddHeadString('<meta property="og:title" content="Полезные рекомендации, советы и помощь при недержании мочи | Depend.ru">');?>
+<?$APPLICATION->AddHeadString('<meta property="og:type" content="website">');?>
 <section class="advices">
 	<section class="content-top-banner">
 		<div class="banner-text">

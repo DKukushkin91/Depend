@@ -17,6 +17,7 @@ $arSite = $rsSites->Fetch();
         gtag('config', 'UA-134188906-1');
     </script>
     <meta name="yandex-verification" content="46a6b60cc0f981dd" />
+    <meta name="yandex-verification" content="2b81a85614dc3c81" />
     <meta name="viewport" content="width=device-width, initial-scale=1">  
 
     <link rel="icon" type="image/x-icon" sizes="32x32" href="/local/templates/depend/img/favicon32.ico">
@@ -86,7 +87,7 @@ $arSite = $rsSites->Fetch();
     ?>
 
 	<? $APPLICATION->AddHeadString('<meta property="og:site_name" content="'.$arSite['SITE_NAME'].'">');?>
-    <? $APPLICATION->AddHeadString('<meta property="og:type" content="website">');?>
+    <? $APPLICATION->AddHeadString('<meta property="og:url" content="https://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'].'">');?>
 
 </div>
     <link rel="shortcut icon" type="image/png" href="<?=SITE_TEMPLATE_PATH?>/img/android-chrome-512x512.png">
@@ -98,7 +99,7 @@ $arSite = $rsSites->Fetch();
 	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WKR59N" height="0" width="0" style="display: none; visibility: hidden"></iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
-<!-- Rating Mail.ru counter -->
+<!-- Rating Mail.ru counter --> 
 <noscript>
     <div>
         <img src="https://top-fwz1.mail.ru/counter?id=3147409;js=na" style="border:0;position:absolute;left:-9999px;" alt="Top.Mail.Ru" />

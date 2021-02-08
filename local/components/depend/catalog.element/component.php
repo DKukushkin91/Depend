@@ -48,6 +48,7 @@ if ($productRes) {
     $APPLICATION->AddHeadString('<meta property="og:description" content="'.$seoRes['ELEMENT_META_DESCRIPTION'].'"/>');
     $APPLICATION->AddHeadString('<meta property="og:image" content="https://www.depend.ru'.$previmg['src'].'"/>');
     $APPLICATION->AddHeadString('<meta property="og:title" content="'.ucfirst($product['NAME']).'"/>');
+    $APPLICATION->AddHeadString('<meta property="og:type" content="website">');
 //    $APPLICATION->SetTitle($product['NAME']);
 
     $product['props'] = $props;

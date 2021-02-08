@@ -5,14 +5,15 @@ $res = CIBlockSection::GetList([], [
 	'IBLOCK_ID' => 4,
 	'ACTIVE' => 'Y'
 ], false, [], false);
-while ($ob = $res->GetNext()) {
+while ($ob = $res->GetNext()) { 
 	$sections[] = $ob;
 }
 $APPLICATION->AddChainItem('О недержании', '/advices/cure/');
 ?>
-<?$APPLICATION->AddHeadString('<meta property="og:description" content="Полезные статьи про заботу о близких с недержанием, рекомендации, мифы, хитрости - Depend"/>');?>
+<?$APPLICATION->AddHeadString('<meta property="og:description" content="Полезные статьи про заботу о близких с недержанием, рекомендации, мифы, хитрости - Depend');?>
 <?$APPLICATION->AddHeadString('<meta property="og:image" content="https://www.depend.ru/upload/iblock/8d5/8d51b78ecd8ca654937117ec8037c88f.jpg"/>');?>
-<?$APPLICATION->AddHeadString('<meta property="og:title" content="Забота о близком - Depend.ru"/>');?>
+<?$APPLICATION->AddHeadString('<meta property="og:title" content="Забота о близком - Depend.ru');?>
+<?$APPLICATION->AddHeadString('<meta property="og:type" content="website">');?>
 <section class="advices">
 	<section class="content-top-banner">
 		<div class="banner-text">

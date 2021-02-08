@@ -6,6 +6,7 @@ $APPLICATION->SetPageProperty("title", "Продукция Depend, предме�
 <?$APPLICATION->AddHeadString('<meta property="og:description" content="Все о продукции Depend, предметы гигиены для мужчин и женщин при недержании мочи Депенд | Depend.ru"/>');?>
 <?$APPLICATION->AddHeadString('<meta property="og:image" content="https://www.depend.ru/local/templates/depend/img/depend-logo.png"/>');?>
 <?$APPLICATION->AddHeadString('<meta property="og:title" content="Продукция Depend, предметы гигиены для мужчин и женщин при недержании мочи Депенд | Depend.ru">');?>
+<?$APPLICATION->AddHeadString('<meta property="og:type" content="website">');?>
 <?$APPLICATION->IncludeComponent(
     "depend:catalog.category",
     ".default",

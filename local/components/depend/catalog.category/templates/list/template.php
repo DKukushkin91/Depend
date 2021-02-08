@@ -68,10 +68,6 @@ if ($arSection = $rsSections->Fetch())
 if ($arParams['section_code'] === '') {
     $sectionName = 'Вся продукция';
 }
-
-$APPLICATION->AddHeadString('<meta property="og:description" content="'. $arSection['NAME'].'"/>');
-$APPLICATION->AddHeadString('<meta property="og:image" content="https://www.depend.ru/local/templates/depend/img/depend-logo.png"/>');
-$APPLICATION->AddHeadString('<meta property="og:title"  content="'. $arSection['NAME'].'"/>');
 ?>
             <div class="content-products-group js-category-load">
                 <h1><?= $sectionName?></h1>
