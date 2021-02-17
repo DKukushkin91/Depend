@@ -1,4 +1,6 @@
 User-agent: Yandex
+Disallow: /*index.html
+Disallow: /*index.php
 Disallow: /?cmpid
 Disallow: /feedback
 Disallow: /search/?q
@@ -38,7 +40,6 @@ Disallow: /gde-kupit-produkciyu-depend/?
 Disallow: /products/where-to-buy
 Disallow: /*.docx
 Disallow: /womens-solutions
-Disallow: /,
 Disallow: /shops
 Disallow: /*&utm_source=
 Disallow: /mens-solutions
@@ -57,6 +58,8 @@ Allow: /upload/resize_cache/
 Allow: /upload/uf/
 
 User-agent: Googlebot
+Disallow: /index.html
+Disallow: /index.php
 Disallow: /?cmpid
 Disallow: /feedback
 Disallow: /search/?q
@@ -96,7 +99,6 @@ Disallow: /gde-kupit-produkciyu-depend/?
 Disallow: /products/where-to-buy
 Disallow: /*.docx
 Disallow: /womens-solutions
-Disallow: /,
 Disallow: /shops
 Disallow: /*&utm_source=
 Disallow: /mens-solutions
@@ -115,6 +117,8 @@ Allow: /upload/resize_cache/
 Allow: /upload/uf/
 
 User-agent: *
+Disallow: /index.html
+Disallow: /index.php
 Disallow: /?cmpid
 Disallow: /feedback
 Disallow: /search/?q
@@ -154,7 +158,6 @@ Disallow: /gde-kupit-produkciyu-depend/?
 Disallow: /products/where-to-buy
 Disallow: /*.docx
 Disallow: /womens-solutions
-Disallow: /,
 Disallow: /shops
 Disallow: /*&utm_source=
 Disallow: /mens-solutions
