@@ -5,7 +5,8 @@ $APPLICATION->IncludeComponent(
     "depend:catalog.element",
     "",
     Array(
-        'element_code' => htmlspecialchars(strip_tags(trim($_GET['element'])))
+        
+			"ELEMENT_CODE" => $_REQUEST["element"],
     ),
     false
 );
