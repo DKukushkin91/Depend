@@ -1,6 +1,4 @@
 User-agent: Yandex
-Disallow: /*index.html
-Disallow: /*index.php
 Disallow: /?cmpid
 Disallow: /feedback
 Disallow: /search/?q
@@ -34,13 +32,12 @@ Disallow: /*?count
 Disallow: /*?action
 Disallow: /access.log
 Disallow: /*?set_filter=*
-Disallow: /*?q=*
-Disallow: /*?
 Disallow: /gde-kupit-produkciyu-depend/?
 Disallow: /products/where-to-buy
 Disallow: /*.docx
 Disallow: /womens-solutions
 Disallow: /shops
+Disallow: /*&utm_source=
 Disallow: /mens-solutions
 Disallow: /*.mp4
 Disallow: /products/get-samples
@@ -55,11 +52,8 @@ Allow: /upload/iblock/
 Allow: /upload/medialibrary/
 Allow: /upload/resize_cache/
 Allow: /upload/uf/
-Allow: /*&utm_source=
 
 User-agent: Googlebot
-Disallow: /index.html
-Disallow: /index.php
 Disallow: /?cmpid
 Disallow: /feedback
 Disallow: /search/?q
@@ -93,13 +87,12 @@ Disallow: /*?count
 Disallow: /*?action
 Disallow: /access.log
 Disallow: /*?set_filter=*
-Disallow: /*?q=*
-Disallow: /*?
 Disallow: /gde-kupit-produkciyu-depend/?
 Disallow: /products/where-to-buy
 Disallow: /*.docx
 Disallow: /womens-solutions
 Disallow: /shops
+Disallow: /*&utm_source=
 Disallow: /mens-solutions
 Disallow: /*.mp4
 Disallow: /products/get-samples
@@ -114,11 +107,8 @@ Allow: /upload/iblock/
 Allow: /upload/medialibrary/
 Allow: /upload/resize_cache/
 Allow: /upload/uf/
-Allow: /*&utm_source=
 
 User-agent: *
-Disallow: /index.html
-Disallow: /index.php
 Disallow: /?cmpid
 Disallow: /feedback
 Disallow: /search/?q
@@ -152,13 +142,12 @@ Disallow: /*?count
 Disallow: /*?action
 Disallow: /access.log
 Disallow: /*?set_filter=*
-Disallow: /*?q=*
-Disallow: /*?
 Disallow: /gde-kupit-produkciyu-depend/?
 Disallow: /products/where-to-buy
 Disallow: /*.docx
 Disallow: /womens-solutions
 Disallow: /shops
+Disallow: /*&utm_source=
 Disallow: /mens-solutions
 Disallow: /*.mp4
 Disallow: /products/get-samples
@@ -173,6 +162,5 @@ Allow: /upload/iblock/
 Allow: /upload/medialibrary/
 Allow: /upload/resize_cache/
 Allow: /upload/uf/
-Allow: /*&utm_source=
 
 Sitemap: https://www.depend.ru/sitemap.xml
