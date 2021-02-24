@@ -70,7 +70,8 @@ if ($arParams['section_code'] === '') {
 }
 ?>
             <div class="content-products-group js-category-load">
-                <h1><?= $sectionName?></h1>
+                <h3 class="section-header" style="display:none;"><?= $sectionName?></h3>
+                <h2>Продукция</h2>
                 <div class="content-group-items ">
 					<? foreach($arResult['items'] as $index => $item):?>
                     <div class="product-card">

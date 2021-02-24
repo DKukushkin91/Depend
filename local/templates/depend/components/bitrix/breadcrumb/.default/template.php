@@ -39,7 +39,7 @@ for($index = 0; $index < $itemSize; $index++)
 		$strReturn .= '
 			<span class="breadcrumbs__item active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
 				'.$arrow.'
-				<a itemprop="item" href="'.$arResult[$index]["LINK"].'"><span itemprop="name" class="breadcrumbs__text">'.$title.'</span></a>
+				<span itemprop="name" class="breadcrumbs__text">'.$title.'</span>
 				<meta itemprop="position" content="'.($index + 1).'" />
 			</span>';
 	}

@@ -12,7 +12,7 @@
 			$sectionName = 'Продукция';
 		}
         ?>
-        <h2>Продукция</h2>
+        <h1><?= $sectionName?></h1>
         
     </div>
 </div> 
