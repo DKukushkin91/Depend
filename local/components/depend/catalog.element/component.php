@@ -1,6 +1,7 @@
 <?php
 $arResult = [];
-$code = htmlspecialchars(trim(strip_tags($arParams['element_code'])));
+$code = htmlspecialchars(trim(strip_tags($arParams['ELEMENT_CODE'])));
+$code = substr($code,0,-1);
 $productRes = CIBlockElement::GetList([], [
     'IBLOCK_ID' => 1,
     'CODE' => $code,
