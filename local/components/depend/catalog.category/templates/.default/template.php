@@ -45,6 +45,7 @@ $APPLICATION->AddHeadString('<meta property="og:type" content="website">');
         <a data-id="1" data-code="prokladki-dlya-zhenshchin/"  class="js-subcats-click tabs__item <?if (strpos($_SERVER['REQUEST_URI'], '/prokladki-dlya-zhenshchin/') == true): ?>active <? else:?><?endif;?>" onclick="ga('send','event','DP','DPPW','prwomen');">Прокладки для женщин</a>
         <a data-id="2" data-code="vpityvayushchee-bele-dlya-zhenshchin/"  class="js-subcats-click tabs__item <?if (strpos($_SERVER['REQUEST_URI'], '/vpityvayushchee-bele-dlya-zhenshchin/') == true): ?>active <? else:?><?endif;?>" onclick="ga('send','event','DP','DPBW','belwomen');">Впитывающее белье для женщин</a>
         <a data-id="3" data-code="vpityvayushchee-bele-dlya-muzhchin/"  class="js-subcats-click tabs__item <?if (strpos($_SERVER['REQUEST_URI'], '/vpityvayushchee-bele-dlya-muzhchin/') == true): ?>active <? else:?><?endif;?>" onclick="ga('send','event','DP','DPPM','belman');">Впитывающее белье для мужчин</a>
+        <a data-id="10" data-code="poslerodovye-prokladki/"  class="js-subcats-click tabs__item <?if (strpos($_SERVER['REQUEST_URI'], '/poslerodovye-prokladki/') == true): ?>active <? else:?><?endif;?>" onclick="ga('send','event','DP','DPPM','vpit');">Послеродовые прокладки</a>
     </nav>
 </div>
 <article class="content-products">
