@@ -8,6 +8,7 @@
             <span>Для&nbsp;женщин</span>
             <a href="/catalog/prokladki-dlya-zhenshchin/">Прокладки для&nbsp;женщин</a>
             <a href="/catalog/vpityvayushchee-bele-dlya-zhenshchin/">Впитывающее белье для&nbsp;женщин</a>
+            <a href="/catalog/poslerodovye-prokladki/">Послеродовые прокладки</a>
         </div>
         <div class="footer-col-links">
             <span>Для&nbsp;мужчин</span>
