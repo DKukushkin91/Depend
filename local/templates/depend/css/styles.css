@@ -718,7 +718,7 @@ footer a {
     color: #797979;
     padding-right: 4.5%;
 }
-.footer-col-copyrights{
+.footer-col-copyrights a{
     font-size: 10px;
     color: #004da6;
     line-height: unset;
