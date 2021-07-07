@@ -718,7 +718,12 @@ footer a {
     color: #797979;
     padding-right: 4.5%;
 }
-
+.footer-col-copyrights{
+    font-size: 10px;
+    color: #004da6;
+    line-height: unset;
+    display: inline;
+}
 @media all and (max-width: 1280px) {
     .footer-wrapper {
         padding: 47px 47px 23px;
