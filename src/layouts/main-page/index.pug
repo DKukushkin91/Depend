@@ -1,0 +1,88 @@
+extends ../../template/_layout
+
+block pageVar
+	-
+		page = 'main-page';
+
+block path
+	-
+		baseDir = '/f';
+
+block page
+	section.main-page
+		.container.main-page__container
+			.main-page__slider.js-main-slider
+				.main-page__slider-wrap.swiper-wrapper
+					.main-page__slide.swiper-slide
+						.main-page__slide-img
+							img(src=`${baseDir}/img/slider-img.jpg`, alt="")
+						.main-page__slide-content
+							h2.main-page__slide-title Depend — комфортная защита на каждый день
+							p.main-page__slide-text Прокладки и впитывающее белье Depend можно подобрать для любой степени недержания.
+							a.main-page__slide-link(href="#") Подробнее
+					.main-page__slide.swiper-slide
+						.main-page__slide-img
+							img(src=`${baseDir}/img/slider-img-2.jpg`, alt="")
+						.main-page__slide-content
+							h2.main-page__slide-title Живите в привычном ритме вместе с Depend!
+							p.main-page__slide-text Продукты Depend для разной степени недержания позволят вам продолжать активно проводить время.
+							a.main-page__slide-link(href="#") Подробнее
+				.main-page__slider-pagination.js-slider-pagination
+	section.preview-catalog
+		.container
+			.preview-catalog__wrap
+				.preview-catalog__img
+					img(src=`${baseDir}/img/depend-prod.png`, alt="")
+				.preview-catalog__content
+					h2.preview-catalog__title Выберите подходящую продукцию:
+					ul.preview-catalog__list
+						li.preview-catalog__item
+							a.preview-catalog__link(href="#") Для мужчин
+						li.preview-catalog__item
+							a.preview-catalog__link(href="#") Для женщин
+						li.preview-catalog__item
+							a.preview-catalog__link(href="#") После родов
+	section.preview-info
+		.container.preview-info__container
+			.preview-info__wrap
+				h2.preview-info__title О недержании
+				.preview-info__slider.js-info-slider
+					ul.preview-info__slider-list.swiper-wrapper
+						li.preview-info__item.swiper-slide
+							a.preview-info__link(href="#")
+							.preview-info__inner
+								.preview-info__img
+									img(src=`${baseDir}/img/preview-1.jpg`, alt="")
+								.preview-info__content
+									h3.preview-info__s-title Почему полезно пить при недержании
+									p.preview-info__text Когда речь заходит о здоровом образе жизни, большинство сразу думает о питании. Но как часто вы задумываетесь о том, что пьете? Оказывается, это важно для того, чтобы держать мочевой пузырь под контролем
+						li.preview-info__item.swiper-slide
+							a.preview-info__link(href="#")
+							.preview-info__inner
+								.preview-info__img
+									img(src=`${baseDir}/img/preview-2.jpg`, alt="")
+								.preview-info__content
+									h3.preview-info__s-title Урологические прокладки: в чем отличие и как выбрать
+									p.preview-info__text С проблемой недержания уже давно справляется взрослая гигиена. Однако немногие до сих пор понимают отличие урологической прокладки от обычной женской для критических дней. А разница ощутимая.
+						li.preview-info__item.swiper-slide
+							a.preview-info__link(href="#")
+							.preview-info__inner
+								.preview-info__img
+									img(src=`${baseDir}/img/preview-3.jpg`, alt="")
+								.preview-info__content
+									h3.preview-info__s-title Как справиться с недержанием: 5 ежедневных хитростей
+									p.preview-info__text Избавить свою жизнь от дополнительного стресса можно с помощью новых привычек, связанных с контролем недержания.
+				a.preview-info__b-link(href="#") Все статьи
+	section.preview-shops
+		.container
+			.preview-shops__wrap
+				.preview-shops__img
+					img(src=`${baseDir}/img/buy.jpg`, alt="")
+				.preview-shops__content
+					h2.preview-shops__title Купить
+					p.preview-shops__text Вы можете купить продукцию Depend в магазинах вашего города или онлайн
+					a.preview-shops__link(href="#") Где купить
+	section.recomindation
+		.container.recomendation__container
+			h2.recomendation__title Каждый день приносит новые возможности
+			p.recomendation__text Попробуйте выработать эти простые привычки и обретите жизнь заново! Прокладки и впитывающее белье Depend можно подобрать для любой степени недержания.

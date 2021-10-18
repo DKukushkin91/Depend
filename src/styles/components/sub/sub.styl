@@ -1,0 +1,32 @@
+.sub
+	width: 100%
+	height: 100vh
+	background-color #FAF8F2
+
+	&__container
+		height: 100%
+
+	&__list
+		width: 100%
+		height 100%
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content center
+		padding 0
+		margin 0
+		list-style: none
+
+	&__item
+		&:not(:last-child)
+			margin-bottom 15px
+
+	&__link
+		fz-18()
+		font-family: $Noto
+		text-decoration: none
+		color: $green
+		border-bottom 1px solid transparent
+
+		&:hover
+			border-color: $green

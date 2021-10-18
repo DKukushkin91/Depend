@@ -1,0 +1,16 @@
+extends ../template/_layout
+
+block pageVar
+	-
+		page = 'index';
+
+block path
+	-
+		baseDir = '/f';
+
+block page
+	section.sub
+		.container.sub__container
+			ul.sub__list
+				li.sub__item
+					a(href="main-page/index.html").sub__link Главная страница

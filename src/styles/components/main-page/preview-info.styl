@@ -1,0 +1,99 @@
+.preview-info
+	width: 100%
+
+	&__container
+		padding: 0
+		overflow: hidden
+
+	&__wrap
+		display: flex
+		flex-direction: column
+		width: 100%
+		padding 0 15px
+		padding-bottom 40px
+
+	&__title
+		fz-20()
+		line-height 120%
+		font-weight bold
+		color: $l-black
+		width: 100%
+		text-align: center
+		padding-bottom 20px
+
+	&__slider
+		width: 90%
+
+	&__slider-list
+		width: 100%
+		list-style: none
+		padding 0
+		padding-bottom 20px
+		margin 0
+		display: grid !important
+		grid-template-columns: repeat(3, auto)
+
+	&__item
+		max-width: 308px
+		position relative
+		border-radius: 12px
+
+	&__link
+		position absolute
+		width: 100%
+		height: 100%
+		top 0
+		left 0
+		border-radius: inherit
+
+	&__inner
+		border-radius: inherit
+		display: flex
+		flex-direction: column
+		height: 100%
+
+	&__img
+		width: 100%
+		border-top-left-radius: inherit
+		border-top-right-radius: inherit
+
+		& img
+			border-top-left-radius: inherit
+			border-top-right-radius: inherit
+
+	&__content
+		width: 100%
+		padding: 20px
+		background-color: $l-gray
+		border-bottom-left-radius: inherit
+		border-bottom-right-radius: inherit
+		flex: 1
+
+	&__s-title
+		fz-16()
+		line-height 120%
+		color: $m-black
+		font-family $Noto
+		font-weight bold
+		text-align: left
+		padding-bottom 10px
+
+	&__text
+		fz-12()
+		color: $m-black
+		font-family $Noto
+		font-weight normal
+		text-align left
+
+	&__b-link
+		fz-14()
+		text-decoration: none
+		font-family: $Noto
+		color: $white
+		background-color: $purple
+		padding: 10px 20px 11px
+		display: block
+		max-width: 136px
+		text-align: center
+		border-radius: 20px
+		margin: 0 auto
