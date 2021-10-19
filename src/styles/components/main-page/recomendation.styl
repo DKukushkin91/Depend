@@ -4,7 +4,7 @@
 	&__container
 		padding: 0
 		padding: 40px 33px
-		background-image: url('/f/img/m-losung-bg.jpg');
+		background-image: url('/f/img/m-losung-bg.jpg')
 		background-position: left
 		background-size: cover
 		background-repeat: no-repeat
@@ -12,6 +12,15 @@
 		text-align: center
 		min-height: 614px
 		margin-bottom: 40px
+
+		@media $laptop
+			min-height: auto
+			margin-bottom 80px
+			padding 112px 64px
+			background-image: url('/f/img/losung-bg.jpg')
+			background-position 0 0
+			max-width 1180px
+			border-radius: 20px
 
 		&:before
 			content: ''
@@ -23,6 +32,7 @@
 			width: 100%
 			height: 100%
 			z-index 0
+			border-radius: inherit
 
 	&__title
 		fz-24()
@@ -33,6 +43,9 @@
 		padding-bottom 20px
 		position relative
 
+		@media $laptop
+			max-width: 455px
+
 	&__text
 		fz-13()
 		font-family $Noto
@@ -40,6 +53,9 @@
 		font-weight normal
 		position relative
 		padding 0 25px
+
+		@media $laptop
+			max-width: 455px
 
 		&::before
 			content: ''

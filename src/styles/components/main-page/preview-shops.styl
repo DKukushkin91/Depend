@@ -2,6 +2,9 @@
 	width: 100%
 	padding-bottom 40px
 
+	@media $laptop
+		padding-bottom 80px
+
 	&__wrap
 		width: 100%
 		display: flex
@@ -20,14 +23,28 @@
 			border-radius: inherit
 			min-height: inherit
 
+			@media $md
+				height: 100%
+
+		@media $md
+			flex: 1 1 50%
+
 	&__content
 		flex: 1 0 30%
 		border-radius: inherit
 		width: 100%
-		min-height 227px
 		background-color: $buy-gray
 		padding: 40px 30px
 		text-align: center
+
+		@media $md
+			flex 1 1 50%
+
+		@media $laptop
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: center
 
 	&__title
 		fz-24()

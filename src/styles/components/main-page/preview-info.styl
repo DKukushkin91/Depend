@@ -12,6 +12,14 @@
 		padding 0 15px
 		padding-bottom 40px
 
+		@media $laptop
+			padding: 0 50px
+			padding-bottom 80px
+
+		& .swiper
+			width: 100%
+			overflow: visible
+
 	&__title
 		fz-20()
 		line-height 120%
@@ -21,22 +29,44 @@
 		text-align: center
 		padding-bottom 20px
 
+		@media $laptop
+			text-align: left
+
 	&__slider
-		width: 90%
+		width: 100%
+
+		& .swiper-wrapper
+			display: grid
+			width: 100%
+			grid-auto-flow: column
+
+			@media $max-md
+				grid-template-columns: minmax(auto, 308px)
+
+			@media $md
+				grid-template-columns: minmax(auto, 373px)
+
+			@media $laptop
+				justify-content: space-between
 
 	&__slider-list
-		width: 100%
 		list-style: none
 		padding 0
-		padding-bottom 20px
 		margin 0
-		display: grid !important
-		grid-template-columns: repeat(3, auto)
+		padding-bottom 20px
+
+		@media $laptop
+			padding-bottom 30px
 
 	&__item
-		max-width: 308px
 		position relative
 		border-radius: 12px
+
+		@media $max-md
+			max-width: 308px
+
+		@media $md
+			max-width: 373px
 
 	&__link
 		position absolute
@@ -45,6 +75,9 @@
 		top 0
 		left 0
 		border-radius: inherit
+
+		@media $laptop
+			display none
 
 	&__inner
 		border-radius: inherit
@@ -69,6 +102,10 @@
 		border-bottom-right-radius: inherit
 		flex: 1
 
+		@media $laptop
+			display: flex
+			flex-direction: column
+
 	&__s-title
 		fz-16()
 		line-height 120%
@@ -85,6 +122,12 @@
 		font-weight normal
 		text-align left
 
+		@media $laptop
+			flex: 1
+
+			&:not(:last-child)
+				padding-bottom: 20px
+
 	&__b-link
 		fz-14()
 		text-decoration: none
@@ -97,3 +140,19 @@
 		text-align: center
 		border-radius: 20px
 		margin: 0 auto
+
+		@media $laptop
+			margin: 0
+
+	&__p-link
+		display: none
+
+		@media $laptop
+			text-decoration: none
+			display: block
+			font-size: 14px
+			line-height 21px
+			text-align: left
+			font-family: $Noto
+			font-weight 600
+			color: $green

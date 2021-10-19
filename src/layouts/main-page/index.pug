@@ -11,7 +11,7 @@ block path
 block page
 	section.main-page
 		.container.main-page__container
-			.main-page__slider.js-main-slider
+			.main-page__slider.swiper.js-main-slider
 				.main-page__slider-wrap.swiper-wrapper
 					.main-page__slide.swiper-slide
 						.main-page__slide-img
@@ -28,6 +28,9 @@ block page
 							p.main-page__slide-text Продукты Depend для разной степени недержания позволят вам продолжать активно проводить время.
 							a.main-page__slide-link(href="#") Подробнее
 				.main-page__slider-pagination.js-slider-pagination
+				.main-page__slider-navigation
+					button.main-page__slider-prev-btn.js-slider-prev
+					button.main-page__slider-next-btn.js-slider-next
 	section.preview-catalog
 		.container
 			.preview-catalog__wrap
@@ -46,7 +49,7 @@ block page
 		.container.preview-info__container
 			.preview-info__wrap
 				h2.preview-info__title О недержании
-				.preview-info__slider.js-info-slider
+				.preview-info__slider.swiper.js-info-slider
 					ul.preview-info__slider-list.swiper-wrapper
 						li.preview-info__item.swiper-slide
 							a.preview-info__link(href="#")
@@ -56,6 +59,7 @@ block page
 								.preview-info__content
 									h3.preview-info__s-title Почему полезно пить при недержании
 									p.preview-info__text Когда речь заходит о здоровом образе жизни, большинство сразу думает о питании. Но как часто вы задумываетесь о том, что пьете? Оказывается, это важно для того, чтобы держать мочевой пузырь под контролем
+									a.preview-info__p-link(href="#") Читать полностью
 						li.preview-info__item.swiper-slide
 							a.preview-info__link(href="#")
 							.preview-info__inner
@@ -64,6 +68,7 @@ block page
 								.preview-info__content
 									h3.preview-info__s-title Урологические прокладки: в чем отличие и как выбрать
 									p.preview-info__text С проблемой недержания уже давно справляется взрослая гигиена. Однако немногие до сих пор понимают отличие урологической прокладки от обычной женской для критических дней. А разница ощутимая.
+									a.preview-info__p-link(href="#") Читать полностью
 						li.preview-info__item.swiper-slide
 							a.preview-info__link(href="#")
 							.preview-info__inner
@@ -72,6 +77,7 @@ block page
 								.preview-info__content
 									h3.preview-info__s-title Как справиться с недержанием: 5 ежедневных хитростей
 									p.preview-info__text Избавить свою жизнь от дополнительного стресса можно с помощью новых привычек, связанных с контролем недержания.
+									a.preview-info__p-link(href="#") Читать полностью
 				a.preview-info__b-link(href="#") Все статьи
 	section.preview-shops
 		.container
