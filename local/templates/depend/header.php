@@ -1,4 +1,6 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+use Bitrix\Main\Page\Asset;
+use Bitrix\Main\Application;
 ?>
 <?
 $rsSites = CSite::GetByID(SITE_ID);
@@ -53,7 +55,32 @@ $arSite = $rsSites->Fetch();
     </script>
     <!-- //Rating Mail.ru counter -->
 	<script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH.'/js/jquery.min.js');?>"></script>
-    <title><?$APPLICATION->ShowTitle()?></title>
+    
+	<?
+    // получить СЕО данные текущей страницы
+    $seoTextThisPage = Helpers::getSeoTextsPageByUrlPage( $APPLICATION->GetCurDir() );
+
+    if(!empty($seoTextThisPage['title'])){ ?>
+        <title><?=$seoTextThisPage['title']?></title>
+        <meta property="og:title" content="<?=$seoTextThisPage['title']?>">   
+    <?} else {?>
+        <title>
+            <?$APPLICATION->ShowTitle()?>
+        </title>
+        <meta property="og:title" content="<?$APPLICATION->ShowTitle()?>">   
+    <?}
+
+    if(!empty($seoTextThisPage['description'])){ ?>
+        <meta name="description" content="<?=$seoTextThisPage['description']?>">
+        <meta property="og:description" content="<?=$seoTextThisPage['description']?>">     
+    <?} else {
+        $APPLICATION->ShowMeta("description");?>      
+        <meta property="og:description" content="<?=$APPLICATION->ShowProperty('description');?>">     
+    <?}
+
+    if(!empty($seoTextThisPage['keywords'])){ ?>
+        <meta name="keywords" content="<?=$seoTextThisPage['keywords']?>">
+    <?} else {$APPLICATION->ShowMeta("keywords");}?>
 
 	<?
     CJSCore::Init(array('ajax'));
@@ -87,20 +114,19 @@ $arSite = $rsSites->Fetch();
     ?>
 
 	<? $APPLICATION->AddHeadString('<meta property="og:site_name" content="'.$arSite['SITE_NAME'].'">');?>
-    <? $APPLICATION->AddHeadString('<meta property="og:url" content="https://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'].'">');?>
+    <? $APPLICATION->AddHeadString('<meta property="og:type" content="website">');?>
 
 </div>
     <link rel="shortcut icon" type="image/png" href="<?=SITE_TEMPLATE_PATH?>/img/android-chrome-512x512.png">
 </head>
 <body>
-<!-- Yandex.Metrika counter --> <script> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(71550604, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true }); </script> 
-<noscript><div><img src="https://mc.yandex.ru/watch/71550604" style=" position:absolute; left:-9999px; alt=''" /></div></noscript> <!-- /Yandex.Metrika counter -->
+<!-- Yandex.Metrika counter --> <script> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(38929830, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/38929830" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
 <!-- Google Tag Manager (noscript) -->
 <noscript>
 	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WKR59N" height="0" width="0" style="display: none; visibility: hidden"></iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
-<!-- Rating Mail.ru counter --> 
+<!-- Rating Mail.ru counter -->
 <noscript>
     <div>
         <img src="https://top-fwz1.mail.ru/counter?id=3147409;js=na" style="border:0;position:absolute;left:-9999px;" alt="Top.Mail.Ru" />
