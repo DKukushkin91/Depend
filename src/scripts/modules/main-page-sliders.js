@@ -7,7 +7,7 @@ export const getMainPageSliders = () => {
 			pagination: {
 				el: '.js-slider-pagination',
 			},
-			slidePerView: 1,
+			slidesPerView: 1,
 			spaceBetween: 15,
 			breakpoints: {
 				900: {
@@ -23,16 +23,7 @@ export const getMainPageSliders = () => {
 
 	if(infoSlider){
 		new Swiper(infoSlider, {
-			slidePerView: 1,
-			cssMode: true,
-			spaceBetween: 20,
-			breakpoints: {
-				900: {
-					direction: 'horizontal',
-					freeMode: true,
-					mousewheel: true,
-				},
-			}
+			slidesPerView: 'auto',
 		})
 	}
 }
