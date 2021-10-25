@@ -12,7 +12,7 @@ class Helpers{
         
         $result = array();
 
-        $iblockId = CIBlockTools::GetIBlockId( 'seo_crave' );
+        $iblockId = CIBlockTools::GetIBlockId( 'seo_depend' );
         $cacheTime = 604800;
         $cacheID = 'getAllSeoText_'.$iblockId;
         $cachePath = "/getAllSeoText/";
