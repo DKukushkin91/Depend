@@ -7,7 +7,7 @@ $rsSites = CSite::GetByID(SITE_ID);
 $arSite = $rsSites->Fetch();
 ?>
 <!DOCTYPE html>
-<html lang="ru-RU">
+<html lang="ru-RU" prefix="og: https://ogp.me/ns#">
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134188906-1"></script>
