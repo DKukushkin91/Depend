@@ -69,9 +69,15 @@
 			width: 93.4px
 
 	&__menu
-		display: none
+		position: absolute
+		opacity: 0
+		transition: transform 0.5s ease 0s;
+		transform: translateX(-120%);
 
 		@media $xl
+			position: static
+			opacity: 1
+			transform: none
 			display: flex
 			flex-direction: row
 			align-items: center
@@ -79,6 +85,8 @@
 			width: 100%
 
 	&__menu--open
+		opacity: 1
+		transform: translateX(0%);
 		display: flex
 		flex-direction: column
 		justify-content: space-around
@@ -91,6 +99,9 @@
 		background-color: #F9F9F8
 		padding: 15px
 		padding-bottom 60px
+
+		@media $laptop
+			left: -50px
 
 	&__tel-link
 		fz-18()
