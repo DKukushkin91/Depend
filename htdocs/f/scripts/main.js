@@ -36,7 +36,8 @@ var getMainPageSliders = function getMainPageSliders() {
 
   if (infoSlider) {
     new Swiper(infoSlider, {
-      slidesPerView: 'auto'
+      slidesPerView: 'auto',
+      spaceBetween: 20
     });
   }
 };

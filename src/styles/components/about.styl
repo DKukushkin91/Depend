@@ -1,0 +1,183 @@
+.about
+	width: 100%
+
+	&__container
+		padding: 0
+
+	&__wrap
+		width: 100%
+		padding-bottom 80px
+
+	&__btn-list
+		list-style: none
+		padding 0
+		padding-bottom 40px
+		margin 0
+		display flex
+		flex-direction: row
+		flex-wrap: wrap
+		align-items: center
+		justify-content: center
+
+	&__btn-item
+		&:not(:last-child)
+			margin-right 20px
+
+	&__btn
+		background 0
+		border: 0
+		border-radius: 0
+		cursor pointer
+		display: block
+		color $m-gray
+
+		&--active
+			color: $green
+			position relative
+
+			@media $laptop
+				&:before
+					content: ''
+					position absolute
+					width: 5px
+					height: 5px
+					border-radius: 50%
+					background: $purple
+					top: -8px
+					left: calc(50% - 2.5px)
+
+	&__btn-text
+		fz-13()
+		display: block
+		font-weight 500
+		line-height 120%
+		color inherit
+
+	&__list
+		width: 100%
+		list-style: none
+		padding 0
+		margin 0
+		display grid
+		grid-template-columns: repeat(auto-fill, minmax(290px, 343px))
+		column-gap: 20px
+		row-gap: 20px
+		padding-bottom 20px
+		justify-content: center
+
+		@media $laptop
+			column-gap: 30px
+			row-gap: 30px
+			grid-template-columns: repeat(auto-fill, minmax(343px, 373px))
+			padding-bottom 50px
+
+	&__item
+		width: 100%
+		border-radius: 12px
+		position relative
+
+	&__link
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+
+	&__img
+		border-radius: 0
+		border-top-left-radius: inherit
+		border-top-right-radius: inherit
+
+		& img
+			border-top-left-radius: inherit
+			border-top-right-radius: inherit
+
+	&__content
+		background-color: $l-gray
+		padding: 20px
+		border-bottom-left-radius: inherit
+		border-bottom-right-radius: inherit
+
+	&__text-wrap
+		text-align: left
+
+		&:not(:last-child)
+			padding-bottom 10px
+
+	&__sub-title
+		fz-16()
+		font-weight bold
+		line-height 120%
+		font-family $Noto
+		color: $burger-green
+
+		&:not(:last-child)
+			padding-bottom 10px
+
+	&__text
+		fz-12()
+		line-height 150%
+		font-weight normal
+		font-family $Noto
+		color: $m-black
+
+		&:not(:last-child)
+			padding-bottom 10px
+
+		@media $xl
+			line-height 21px
+
+	&__info-wrap
+		display flex
+		flex-direction: row
+		flex-wrap: wrap
+		align-items: flex-start
+		width: 100%
+
+	&__info
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+
+		&:not(:last-child)
+			margin-right: 15px
+
+		&--align
+			margin-left: auto
+
+	&__info-text
+		fz-12()
+		line-height 150%
+		font-family $Noto
+		color $m-gray
+		text-align: left
+		display: block
+		font-weight 600
+
+		&--weight
+			font-weight normal
+
+			&:not(:last-child)
+				margin-right 5px
+
+	&__icon
+		fill $n-gray
+		margin-right: 8px
+
+	&__preview-btn
+		border-radius: 20px
+		border 1px solid $purple
+		padding: 10px 20px 11px
+		display: block
+		margin: 0 auto
+		cursor pointer
+		background: 0
+
+	&__preview-btn-text
+		fz-14()
+		line-height 120%
+		font-family $Noto
+		font-weight 500
+		color: $purple
+		display: block
+

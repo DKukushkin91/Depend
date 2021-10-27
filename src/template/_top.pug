@@ -1,0 +1,31 @@
+block top
+	section.top(class=`top--${page}`)
+		if (page == 'main-page')
+			.container(class=`${page}__container`)
+				.top__slider.swiper.js-main-slider
+					.top__slider-wrap.swiper-wrapper
+						.top__slide.swiper-slide
+							.top__slide-img
+								img(src=`${baseDir}/img/slider-img.jpg`, alt="")
+							.top__slide-content
+								h2.top__slide-title Depend — комфортная защита на каждый день
+								p.top__slide-text Прокладки и впитывающее белье Depend можно подобрать для любой степени недержания.
+								a.top__slide-link(href="#") Подробнее
+						.top__slide.swiper-slide
+							.top__slide-img
+								img(src=`${baseDir}/img/slider-img-2.jpg`, alt="")
+							.top__slide-content
+								h2.top__slide-title Живите в привычном ритме вместе с Depend!
+								p.top__slide-text Продукты Depend для разной степени недержания позволят вам продолжать активно проводить время.
+								a.top__slide-link(href="#") Подробнее
+					.top__slider-pagination.js-slider-pagination
+					.top__slider-navigation
+						button.top__slider-prev-btn.js-slider-prev
+						button.top__slider-next-btn.js-slider-next
+		if (page == 'about')
+			.container(class=`${page}__container`)
+				.top__wrap
+					+breadcrumb(['Главная'], 'О недержании')
+					.top__img
+						img(src=`${baseDir}/img/about-img.jpg`, alt="")
+					h1.top__title=title

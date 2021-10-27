@@ -6,9 +6,15 @@ block path
 	-
 		var baseDir = '';
 
+block title
+	-
+		var title = '';
+
 block text
 	-
 		var topText = '';
+
+include ./_mixins
 
 doctype html
 html(lang='ru')
@@ -26,6 +32,8 @@ html(lang='ru')
 		.box
 			.box__content
 				include ./_header
+
+				include ./_top
 
 				main.main
 					block page

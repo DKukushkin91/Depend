@@ -16,9 +16,6 @@
 			padding: 0 50px
 			padding-bottom 80px
 
-		& .swiper
-			width: 100%
-
 	&__title
 		fz-20()
 		line-height 120%
@@ -35,21 +32,10 @@
 		width: 100%
 
 	& .swiper-wrapper
-		display: grid
 		width: 100%
-		grid-auto-flow: column
-		column-gap: 20px
-
-		@media $max-md
-			grid-auto-columns: 308px
-
-		@media $md
-			grid-auto-columns: 373px
-
-		@media $laptop
-			justify-content: space-between
 
 	&__slider-list
+		width: 100%
 		list-style: none
 		padding 0
 		margin 0
@@ -62,6 +48,9 @@
 		width: 100%
 		position relative
 		border-radius: 12px
+
+		&.swiper-slide
+			height: auto
 
 		@media $max-md
 			max-width: 308px

@@ -24,6 +24,7 @@ export const getMainPageSliders = () => {
 	if(infoSlider){
 		new Swiper(infoSlider, {
 			slidesPerView: 'auto',
+			spaceBetween: 20,
 		})
 	}
 }
