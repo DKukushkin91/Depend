@@ -8,7 +8,7 @@ $res = CIBlockSection::GetList([], [
 while ($ob = $res->GetNext()) {
 	$sections[] = $ob;
 } 
-$APPLICATION->AddChainItem('О недержании', '/advices/good_advices/');
+$APPLICATION->AddChainItem('О недержании', '/advices/poleznye-sovety/');
 
 ?>
 <?$APPLICATION->AddHeadString('<meta property="og:description" content="Статьи с полезными советами о том, как контролировать недержание, как обратится к врачу за помощью - Depend');?>

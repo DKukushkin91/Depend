@@ -20,9 +20,9 @@ while ($ob = $res->GetNext()) {
         <section class="advices-tabs tabs">
             <nav class="tabs-inner">
                 <div class="mobile-arrow"></div>
-                <a href="/advices/cure/" class="tabs__item active top" onclick="ga('send','event','DP','DPZOB','zabota');">Забота о близком</a>
-                <a href="/advices/good_advices/" class="tabs__item" onclick="ga('send','event','DP','DPSOV','sovet');">Полезные советы</a>
-                <a href="/advices/all/" class="tabs__item" onclick="ga('send','event','DP','DPALLART','allarticle');">Все статьи</a>
+                <a href="/advices/zabota-o-blizkom/" class="tabs__item active top" onclick="ga('send','event','DP','DPZOB','zabota');">Забота о близком</a>
+                <a href="/advices/poleznye-sovety/" class="tabs__item" onclick="ga('send','event','DP','DPSOV','sovet');">Полезные советы</a>
+                <a href="/advices/" class="tabs__item" onclick="ga('send','event','DP','DPALLART','allarticle');">Все статьи</a>
             </nav>
         </section>
         <? $APPLICATION->IncludeComponent("bitrix:news.list","advices-list",Array(
