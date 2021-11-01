@@ -36,7 +36,7 @@ $APPLICATION->AddChainItem('О компании', '/about/');
                 </div>
                 <div class="contacts-address">
                     <h3>Юридический адрес:</h3>
-                    <a href="https://yandex.ru/maps/-/CBFaRCHQpB" class="contacts-address__text" target="_blank"><span>ООО&nbsp;«Кимберли-Кларк», Россия, Московская&nbsp;обл., г.&nbsp;Ступино, 142800, ул.&nbsp;Ситенка, вл.&nbsp;15</span></a>
+                    <a rel="nofollow" href="https://yandex.ru/maps/-/CBFaRCHQpB" class="contacts-address__text" target="_blank"><span>ООО&nbsp;«Кимберли-Кларк», Россия, Московская&nbsp;обл., г.&nbsp;Ступино, 142800, ул.&nbsp;Ситенка, вл.&nbsp;15</span></a>
                 </div>
             </div>
         </div>

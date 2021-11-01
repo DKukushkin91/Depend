@@ -5,6 +5,8 @@ use Bitrix\Main\Application;
 <?
 $rsSites = CSite::GetByID(SITE_ID);
 $arSite = $rsSites->Fetch();
+global $isCatalog;
+$isCatalog = "false";
 ?>
 <!DOCTYPE html>
 <html lang="ru-RU" prefix="og: https://ogp.me/ns#">

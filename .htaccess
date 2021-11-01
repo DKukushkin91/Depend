@@ -21,7 +21,7 @@ ErrorDocument 404 /404.php
 
   # added by Jungo
   RewriteCond %{REQUEST_URI} ^(.*/[^/\.]+)$
-  RewriteRule ^(.*)$ http://%{HTTP_HOST}/$1/ [R=301,L]
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1/ [R=301,L]
   #
 
   RewriteCond %{HTTP_HOST} ^depend\.ru$ [NC]
@@ -36,8 +36,8 @@ ErrorDocument 404 /404.php
   Redirect 301 /advices/cure/ https://www.depend.ru/advices/zabota-o-blizkom/
 
   Redirect 301 /catalog/poslerodovye-prokladki/super/ https://www.depend.ru/catalog/prokladki-dlya-zhenshchin/super/
-  Redirect 301 /catalog/poslerodovye-prokladki/depend-ultra-vpit-female-m-l/ https://www.depend.ru/catalog/vpityvayushchee-bele-dlya-zhenshchin/depend-ultra-vpit-female-m-l
-  Redirect 301 /catalog/poslerodovye-prokladki/depend-ultra-vpit-female-l-xl/ https://www.depend.ru/catalog/vpityvayushchee-bele-dlya-zhenshchin/depend-ultra-vpit-female-l-xl
+  Redirect 301 /catalog/poslerodovye-prokladki/depend-ultra-vpit-female-m-l/ https://www.depend.ru/catalog/vpityvayushchee-bele-dlya-zhenshchin/depend-ultra-vpit-female-m-l/
+  Redirect 301 /catalog/poslerodovye-prokladki/depend-ultra-vpit-female-l-xl/ https://www.depend.ru/catalog/vpityvayushchee-bele-dlya-zhenshchin/depend-ultra-vpit-female-l-xl/
 
   RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
   RewriteRule ^index\.php$ https://www.depend.ru [R=301,L]
