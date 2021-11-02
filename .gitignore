@@ -1,12 +1,21 @@
 .DS_Store
-node_modules/
-dist/
-npm-debug.log
-yarn-error.log
+._*
+*.sql
+*.log
+/.idea/
+/Nginx-*.conf
+/PHP-*.conf
+/Nginx-*.conf
+/Apache-*.conf
+/login.php
+/local/logs/*
 
-# Editor directories and files
-.idea
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
+
+/.htaccess
+/bitrix*
+/upload/*
+/robots.txt
+/web.config
+
+sitemap.xml
+sitemap.xml.gz
