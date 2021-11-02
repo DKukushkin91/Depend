@@ -4,6 +4,7 @@ export const getMainPageSliders = () => {
 
 	if(mainSlider){
 		new Swiper(mainSlider, {
+			lazy: true,
 			pagination: {
 				el: '.js-slider-pagination',
 			},
@@ -23,6 +24,10 @@ export const getMainPageSliders = () => {
 
 	if(infoSlider){
 		new Swiper(infoSlider, {
+			lazy: {
+				loadPrevNext: true
+			},
+			watchSlidesProgress: true,
 			slidesPerView: 'auto',
 			spaceBetween: 20,
 		})

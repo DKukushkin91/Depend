@@ -35,8 +35,9 @@ a:not([class])
 // Make images easier to work with
 img,
 picture
-  width 100%
-  display block
+	width 100%
+	height auto
+	display block
 
 // Inherit fonts for inputs and buttons
 input,
@@ -99,3 +100,9 @@ input::placeholder
 
 		@media $laptop
 			top 70px
+
+//custom preloader
+.lazy-preloader.swiper-lazy-preloader
+	top 50%
+	border-color: $green
+	border-top-color: transparent

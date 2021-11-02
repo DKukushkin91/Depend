@@ -6,14 +6,16 @@ block top
 					.top__slider-wrap.swiper-wrapper
 						.top__slide.swiper-slide
 							.top__slide-img
-								img(src=`${baseDir}/img/slider-img.jpg`, alt="")
+								img.swiper-lazy(loading='lazy' data-src=`${baseDir}/img/slider-img.jpg`, alt="", width='1280', height='440')
+								.lazy-preloader.swiper-lazy-preloader
 							.top__slide-content
 								h2.top__slide-title Depend — комфортная защита на каждый день
 								p.top__slide-text Прокладки и впитывающее белье Depend можно подобрать для любой степени недержания.
 								a.top__slide-link(href="#") Подробнее
 						.top__slide.swiper-slide
 							.top__slide-img
-								img(src=`${baseDir}/img/slider-img-2.jpg`, alt="")
+								img.swiper-lazy(loading='lazy' data-src=`${baseDir}/img/slider-img-2.jpg`, alt="", width='1280', height='440')
+								.lazy-preloader.swiper-lazy-preloader
 							.top__slide-content
 								h2.top__slide-title Живите в привычном ритме вместе с Depend!
 								p.top__slide-text Продукты Depend для разной степени недержания позволят вам продолжать активно проводить время.
@@ -27,5 +29,5 @@ block top
 				.top__wrap
 					+breadcrumb(['Главная'], 'О недержании')
 					.top__img
-						img(src=`${baseDir}/img/about-img.jpg`, alt="")
+						img(src=`${baseDir}/img/about-img.jpg`, alt="", width='1280', height='440')
 					h1.top__title=title

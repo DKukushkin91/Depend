@@ -17,6 +17,7 @@ var getMainPageSliders = function getMainPageSliders() {
 
   if (mainSlider) {
     new Swiper(mainSlider, {
+      lazy: true,
       pagination: {
         el: '.js-slider-pagination'
       },
@@ -36,6 +37,10 @@ var getMainPageSliders = function getMainPageSliders() {
 
   if (infoSlider) {
     new Swiper(infoSlider, {
+      lazy: {
+        loadPrevNext: true
+      },
+      watchSlidesProgress: true,
       slidesPerView: 'auto',
       spaceBetween: 20
     });
