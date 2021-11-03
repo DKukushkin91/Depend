@@ -47,7 +47,24 @@ var getMainPageSliders = function getMainPageSliders() {
   }
 };
 
+var getItemSliders = function getItemSliders() {
+  var mainSlider = document.querySelector('.js-about-item-slider');
+
+  if (mainSlider) {
+    new Swiper(mainSlider, {
+      lazy: true,
+      pagination: {
+        el: '.js-about-item-pagination'
+      },
+      slidesPerView: 'auto',
+      spaceBetween: 15,
+      watchSlidesProgress: true
+    });
+  }
+};
+
 document.addEventListener('DOMContentLoaded', function () {
   getBurgerMenu();
   getMainPageSliders();
+  getItemSliders();
 });

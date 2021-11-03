@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<symbol id="search" viewBox="0 0 17 17">
     <g>
 			<circle cx="6.85714" cy="6.85714" r="5.85714" stroke-width="2"/>
@@ -12,5 +12,8 @@
   </symbol>
 	<symbol id="chat" viewBox="0 0 18 18">
 		<path fill-rule="evenodd" clip-rule="evenodd" d="M10 14H15C16.657 14 18 12.657 18 11V3C18 1.343 16.657 0 15 0H3C1.343 0 0 1.343 0 3V11C0 12.657 1.343 14 3 14H5V18L10 14Z"/>
+	</symbol>
+	<symbol id="b-heart" viewBox="0 0 30 28">
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M20.7556 2C25.6867 2 29 6.63556 29 10.96C29 19.7178 15.2489 26.8889 15 26.8889C14.7511 26.8889 1 19.7178 1 10.96C1 6.63556 4.31333 2 9.24444 2C12.0756 2 13.9267 3.41556 15 4.66C16.0733 3.41556 17.9244 2 20.7556 2Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 	</symbol>
 </svg>

@@ -1,0 +1,132 @@
+extends ../../../template/_layout
+
+block pageVar
+	-
+		page = 'about-item';
+
+block path
+	-
+		baseDir = '/f';
+
+block page
+	section.about-item
+		.container
+			.about-item__wrap
+				h1.about-item__title Что такое упражнения Кегеля, и зачем они нужны
+				.about-item__avatar-wrap
+					.about-item__avatar-box
+						.about-item__avatar-img
+							img(src=`${baseDir}/img/avatar.png`, alt="", width='60', height='60')
+						.about-item__avatar-content
+							span.about-item__avatar-text Александра Новикова
+							span.about-item__avatar-text.about-item__avatar-text--font Врач-уролог
+					.about-item__avatar-content.about-item__avatar-content--row
+						span.about-item__avatar-text.about-item__avatar-text--fw Время чтения:
+						span.about-item__avatar-text.about-item__avatar-text--color 20 мин
+				.about-item__title-img
+					img(src=`${baseDir}/img/item-img.jpg`, alt="", width='787', height='420')
+				.about-item__maintenance
+					h2.about-item__list-title Содержание:
+					ol.about-item__list
+						li.about-item__item
+							a(href='#').about-item__link Предисловие
+							ul.about-item__ul-list
+								li.about-item__item.about-item__item--ul
+									a(href='#').about-item__link Интимные мышцы
+						li.about-item__item
+							a(href='#').about-item__link Упражнения Кегеля
+							ul.about-item__ul-list
+								li.about-item__item.about-item__item--ul
+									a(href='#').about-item__link Правила выполнения упражнений
+								li.about-item__item.about-item__item--ul
+									a(href='#').about-item__link Таблица упражнений
+				p.about-item__text Большинство женщин мечтают об идеальной фигуре. Многие из них упорно занимаются спортом и добиваются поразительных результатов. Однако важно тренировать не только те группы мышц, которые отвечают за внешнюю красоту, но и те, которые не видны, ведь они не менее важны для женского здоровья, красоты и уверенности в себе, чем красивые ноги и рельефный пресс. Речь идет об интимных мышцах.
+				.about-item__content
+					h3.about-item__content-title.about-item__content-title--fz Интимные мышцы
+					p.about-item__text Интимные мышцы или мышцы тазового дна отвечают за расположение внутренних половых органов и прямой кишки, контролируют деятельность мочевого пузыря и препятствуют опущению матки. Состояние мышц таза влияет не только на физическое здоровье женщины, но и на ее уверенность в себе, ведь недержание мочи и болезненные неудобства во время полового акта сильно влияют на ее психологическое состояние.
+					blockquote.about-item__blockquote
+						p.about-item__bq-text Известно, что около 40% женщин испытывают дискомфорт из-за такой деликатной проблемы, как недержание мочи. Оно, несомненно, требует обращения к врачу и внимательного наблюдения, но есть и меры, которые каждая женщина может принять самостоятельно.
+						cite.about-item__cite
+							span.about-item__cite-text Александра Новикова
+							span.about-item__cite-text.about-item__cite-text--font Врач-уролог
+				.about-item__content
+					h2.about-item__content-title Упражнения Кегеля
+					p.about-item__text Чтобы избавиться от дискомфорта или избежать проблем в будущем, каждой женщине стоит включить в свой распорядок дня несколько простых упражнений, разработанных доктором-гинекологом Арнольдом Кегелем. Их цель — укрепление мышц таза. Упражнения Кегеля не являются панацеей, но точно помогут вам при:
+					ul.about-item__content-list
+						each val in ['расстройствах мочеиспускания;', 'недержании мочи при кашле, смехе или чихании;', 'внезапных и резких порывах к мочеиспусканию;', 'умеренном недержании газов и кала;', 'а также улучшат качество сексуальной жизни.']
+							li.about-item__content-item=val
+					.about-item__slider.swiper.js-about-item-slider
+						.about-item__slider-wrap.swiper-wrapper
+							.about-item__slide.swiper-slide
+								.about-item__slide-img
+									img.swiper-lazy(loading='lazy' data-src=`${baseDir}/img/item-slide.jpg`, alt="", width='787', height='350')
+									.lazy-preloader.swiper-lazy-preloader
+							.about-item__slide.swiper-slide
+								.about-item__slide-img
+									img.swiper-lazy(loading='lazy' data-src=`${baseDir}/img/slider-img.jpg`, alt="", width='787', height='350')
+									.lazy-preloader.swiper-lazy-preloader
+						.about-item__pagination.js-about-item-pagination
+						.about-item__navigation
+							button.about-item__slider-prev-btn.js-about-item-prev
+							button.about-item__slider-next-btn.js-about-item-next
+					.about-item__content
+						h3.about-item__content-title.about-item__content-title--fz Правила выполнения упражнений
+						p.about-item__text Известно, что около 40% женщин испытывают дискомфорт из-за такой деликатной проблемы, как недержание мочи. Оно, несомненно, требует обращения к врачу и внимательного наблюдения, но есть и меры, которые каждая женщина может принять самостоятельно.
+						p.about-item__text Вот несколько упражнений, которые вы сможете выполнять где угодно: дома, на работе и в дороге. Они помогут укрепить мышцы мочевого пузыря и вернуть им тонус в случае легкого недержания:
+						ol.about-item__ol-list
+							li.about-item__ol-item Примите любое удобное для вас положение (стоя, сидя или лежа). Сожмите интимные мышцы, а затем расслабьте их 10 раз подряд, передохните 5 секунд и повторите упражнение еще 4 раза.
+							li.about-item__ol-item Сожмите интимные мышцы с максимальной силой. Постарайтесь удерживать их напряженными в течение 5 секунд,а затем расслабьте. Повторите это упражнение 10 раз.
+							li.about-item__ol-item Сожмите интимные мышцы со средней силой. Постарайтесь продержать их в напряжении одну минуту. Если с первого раза у вас не получилось продержаться минуту, продолжайте тренировки, постепенно увеличивая время сжатия.
+							li.about-item__ol-item В положении стоя поставьте ноги на ширине плеч, немного наклонитесь вперед, руки положите на ягодицы. Держите ноги прямыми и активно сжимайте и расслабляйте мышцы таза.
+					.about-item__content
+						h3.about-item__content-title.about-item__content-title--fz Таблица упражнений
+						p.about-item__text При регулярных тренировках результат не заставит себя ждать. Если делать упражнения 3 раза в день, 4 дня в неделю, то через пару месяцев вы увидите результат. Одна тренировка займет у вас всего 5 минут.
+						table.about-item__table
+							thead.about-item__thead
+								tr.about-item__tr-head
+									td.about-item__td-head Упражнения
+									td.about-item__td-head 1 месяц
+									td.about-item__td-head 2 месяц
+									td.about-item__td-head 3 месяц
+							tbody.about-item__tbody
+								tr.about-item__tr-body
+									td.about-item__td-body(data-label='Медленные сжатия')
+										span.about-item__td-text 1 месяц
+									td.about-item__td-body(data-label='Медленные сжатия') 10 по 5
+									td.about-item__td-body(data-label='Сокращения') 5 по 5
+									td.about-item__td-body(data-label='Выталкивания') 10 по 5
+								tr.about-item__tr-body
+									td.about-item__td-body(data-label='Сокращения')
+										span.about-item__td-text 2 месяц
+									td.about-item__td-body(data-label='Медленные сжатия') 10 по 10
+									td.about-item__td-body(data-label='Сокращения') 5 по 10
+									td.about-item__td-body(data-label='Выталкивания') 10 по 10
+								tr.about-item__tr-body
+									td.about-item__td-body(data-label='Выталкивания')
+										span.about-item__td-text 3 месяц
+									td.about-item__td-body(data-label='Медленные сжатия') 10 по 10
+									td.about-item__td-body(data-label='Сокращения') 10 по 10
+									td.about-item__td-body(data-label='Выталкивания') 15 по 10
+						p.about-item__text Если у вас нет противопоказаний к выполнению упражнений Кегеля, то стоит приступить к ним как можно скорее. А пока мышцы еще не натренированы, уверенность в себе вам обеспечат современные урологические прокладки Depend, которые отлично справятся с проявлениями недержания мочи с функциональной и эстетической точек зрения.
+						.about-item__content
+							h3.about-item__content-title.about-item__content-title--fz Ссылки на источники:
+							ol.about-item__ol-links
+								li.about-item__item-link
+									a.about-item__ol-link(href="#", target="_blank", rel="noopener noreferrer") Упражнения Кегеля. Что это и зачем они нужны. Советы хирурга-гинеколога Слободянюка Б. А.
+								li.about-item__item-link
+									a.about-item__ol-link(href="#", target="_blank", rel="noopener noreferrer") Как выполнять упражнения Кегеля для женщин в домашних условиях
+								li.about-item__item-link
+									a.about-item__ol-link(href="#", target="_blank", rel="noopener noreferrer") Система Вагитон. Ю. Корнев, – М., издательская группа «Ва- гитон», 2012.
+					.about-item__social
+						span.about-item__likes
+							svg.about-item__icon(width="28" height="25")
+								use(href=`${baseDir}/img/sprite.svg#b-heart`)
+						.about-item__social-wrap
+							span.about-item__social-text
+							ul.about-item__social-list
+								li.about-item__social-item
+									a.about-item__social-link.about-item__social-link--fb(href="#", target="_blank", rel="noopener noreferrer")
+								li.about-item__social-item
+									a.about-item__social-link.about-item__social-link--ok(href="#", target="_blank", rel="noopener noreferrer")
+								li.about-item__social-item
+									a.about-item__social-link.about-item__social-link--vk(href="#", target="_blank", rel="noopener noreferrer")
