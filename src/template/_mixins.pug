@@ -1,5 +1,5 @@
 mixin breadcrumb(items, last)
-    .breadcrumb
+    .breadcrumb(class=`${page}__breadcrumb`)
         ul.breadcrumb__list&attributes(attributes)
             each item in items
                 li.breadcrumb__item

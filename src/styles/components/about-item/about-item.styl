@@ -1,8 +1,25 @@
 .about-item
 	width 100%
 
+	&__breadcrumb
+		& .breadcrumb__list
+			padding-left: 0
+			padding-right 0
+
+		& .breadcrumb__link,
+		& .breadcrumb__link-current
+			color: $m-black
+
+		& .breadcrumb__item
+			&:not(:last-child)
+				&::after
+					background-image: url("data:image/svg+xml,%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.4' clip-path='url(%23clip0_126:418)'%3E%3Cpath d='M0.75 8.65332L4.91667 5.19178L0.75 1.73024' stroke='%234D4D4D' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_126:418'%3E%3Crect width='6' height='9' fill='white' transform='translate(0 0.5)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+
 	&__wrap
 		width 100%
+
+		@media $xxl
+			max-width: 1165px
 
 	&__title
 		fz-24()
@@ -20,6 +37,11 @@
 		flex-wrap wrap
 		padding-bottom 30px
 
+		@media $lg
+			max-width: 787px
+			justify-content: space-between
+			align-items: center
+
 	&__avatar-box
 		width 100%
 		padding-bottom 20px
@@ -28,10 +50,18 @@
 		flex-wrap: wrap
 		align-items center
 
+		@media $lg
+			width 40%
+			padding-bottom 0
+
 	&__avatar-img
 		border-radius: 50%
 		max-width 50px
 		margin-right 10px
+
+		@media $lg
+			width: 100%
+			max-width: 60px
 
 		& img,
 		& picture
@@ -74,10 +104,19 @@
 		color: $green
 		margin-left 5px
 
+	&__content-wrap
+		@media $xxl
+			display: grid
+			grid-template-columns: 1fr 287px
+			column-gap: 90px
+
 	&__title-img
 		max-width: 787px
 		border-radius: 12px
 		margin-bottom 30px
+
+		@media $xxl
+			grid-column: 1
 
 		& img,
 		& picture
@@ -86,6 +125,15 @@
 	&__maintenance
 		width 100%
 		padding-bottom 30px
+
+		@media $xxl
+			position: sticky
+			right: 0
+			top: 0
+			max-width: 295px
+			height: min-content
+			grid-column: 2
+			padding-bottom 40px
 
 	&__list-title
 		fz-18()
@@ -99,6 +147,11 @@
 		padding 0
 		margin 0
 		list-style-position inside
+
+		@media $xxl
+			border 1px solid $border-footer
+			border-radius: 12px
+			padding: 25px 30px
 
 		&:not(:last-child)
 			padding-bottom 30px
@@ -116,6 +169,10 @@
 			font-weight 600
 			font-family $Noto
 
+			@media $xxl
+				font-size: 14px
+				color $m-black
+
 	&__item--ul
 		padding 0
 		padding-top 10px
@@ -131,6 +188,10 @@
 		text-align: left
 		text-decoration: none
 
+		@media $xxl
+			font-size: 14px
+			color $m-black
+
 	&__ul-list
 		padding 0
 		padding-left 15px
@@ -144,6 +205,9 @@
 		font-family $Noto
 		font-weight 400
 		padding-bottom 30px
+
+		@media $xxl
+			grid-column: 1
 
 	&__content-title
 		fz-22()
@@ -206,6 +270,9 @@
 	&__content
 		width 100%
 
+		@media $xxl
+			grid-column: 1
+
 	&__content-list
 		margin 0
 		padding 0
@@ -230,6 +297,7 @@
 
 		&.swiper
 			padding-bottom 30px
+			margin: 0
 
 	&__slder-wrap
 		width 100%
@@ -237,6 +305,9 @@
 	&__slide
 		width 100%
 		max-width: 345px
+
+		@media $md
+			max-width: 787px
 
 		&.swiper-slide
 			height auto
@@ -251,6 +322,9 @@
 			height 228px
 			object-fit: cover
 			border-radius: inherit
+
+			@media $md
+				height 350px
 
 	&__pagination
 		text-align: center
@@ -418,3 +492,29 @@
 	&__td-text
 		@media $md
 			display none
+
+	&__ol-links
+		fz-12()
+		padding 0
+		margin 0
+		list-style-position: inside
+		font-family $Noto
+		color $m-black
+		padding-bottom 40px
+
+	&__item-link
+		&:not(:last-child)
+			padding-bottom 15px
+
+	&__ol-link
+		fz-12()
+		line-height 18px
+		font-family $Noto
+		color $purple
+
+	&__ol-link--no-link
+		fz-12()
+		line-height 18px
+		text-decoration: none
+		color: $m-black
+		font-family $Noto

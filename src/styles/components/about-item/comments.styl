@@ -1,0 +1,122 @@
+.comments
+	width 100%
+	padding-bottom 60px
+
+	&__wrap
+		@media $xxl
+			max-width: 767px
+
+	&__title
+		fz-22()
+		line-height 26px
+		font-weight 700
+		color $l-black
+		text-align: center
+		padding-bottom 20px
+		font-family $Noto
+
+		@media $lg
+			text-align: left
+
+	&__main-btn
+		border 0
+		background 0
+		background-color $purple
+		border-radius: 20px
+		padding: 10px 20px 11px
+		cursor pointer
+		text-align: center
+		margin 0 auto
+		margin-bottom 20px
+		display block
+
+	&__btn-text
+		fz-14()
+		line-height 15px
+		font-weight 500
+		font-family $Noto
+		color $white
+		text-align: center
+
+	&__list
+		list-style: none
+		padding 0
+		padding-bottom 20px
+		margin 0
+
+	&__item
+		border 1px solid $border-footer
+		border-radius: 12px
+		padding: 20px
+
+		&:not(:last-child)
+			margin-bottom 10px
+
+	&__user-name
+		fz-18()
+		line-height 21px
+		color: $m-black
+		padding-bottom 10px
+		font-family $Noto
+		font-weight 700
+
+	&__text
+		fz-14()
+		line-height 21px
+		color: $m-black
+		font-family $Noto
+		font-weight normal
+		padding-bottom 15px
+
+	&__btns
+		display flex
+		flex-direction: row
+		justify-content: flex-start
+
+	&__btn
+		background: 0
+		border: 0
+		cursor pointer
+		display flex
+		align-items: center
+
+		&:hover .comments__icon
+			fill: $purple
+
+		&:not(:last-child)
+			margin-right 10px
+
+	&__icon
+		fill: $border-footer
+		margin-right 8px
+
+	&__icon--rotate
+		transform: scale(1, -1)
+		align-self: flex-end
+
+	&__btn-counter
+		fz-14()
+		font-family $Noto
+		color: $green
+		line-height 21px
+		font-weight 600
+
+	&__more-btn
+		display block
+		margin: 0 auto
+		background: 0
+		border: 1px solid $purple
+		border-radius: 20px
+		padding: 10px 20px 11px
+		cursor pointer
+
+		&:not(:last-child)
+			margin-bottom 20px
+
+	&__more-text
+		fz-14()
+		line-height 16px
+		font-weight 500
+		font-family $Noto
+		color: $purple
+		text-align: center

@@ -49,6 +49,8 @@ var getMainPageSliders = function getMainPageSliders() {
 
 var getItemSliders = function getItemSliders() {
   var mainSlider = document.querySelector('.js-about-item-slider');
+  var adviseSlider = document.querySelector('.js-advise-slider');
+  var otherSlider = document.querySelector('.js-other-slider');
 
   if (mainSlider) {
     new Swiper(mainSlider, {
@@ -58,6 +60,24 @@ var getItemSliders = function getItemSliders() {
       },
       slidesPerView: 'auto',
       spaceBetween: 15,
+      watchSlidesProgress: true
+    });
+  }
+
+  if (adviseSlider) {
+    new Swiper(adviseSlider, {
+      lazy: true,
+      slidesPerView: 'auto',
+      spaceBetween: 20,
+      watchSlidesProgress: true
+    });
+  }
+
+  if (otherSlider) {
+    new Swiper(otherSlider, {
+      lazy: true,
+      slidesPerView: 'auto',
+      spaceBetween: 20,
       watchSlidesProgress: true
     });
   }
