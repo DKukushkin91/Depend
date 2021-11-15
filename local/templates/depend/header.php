@@ -30,7 +30,7 @@ $isCatalog = "false";
 	<link rel="shortcut icon" type="image/x-icon" href="/local/templates/depend/img/favicon.ico">
     <link rel="shortcut icon" type="image/png" href="/local/templates/depend/img/android-chrome-512x512.png">
 
-    <link rel="canonical" href="<?echo "https://".$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];?>">
+    <link rel="canonical" href="<?echo "https://".$_SERVER['SERVER_NAME'].$_SERVER['REDIRECT_URL'];?>">
 	<!-- Google Tag Manager -->
 	<script>
 		(function(w,d,s,l,i){

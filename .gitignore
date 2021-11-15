@@ -17,5 +17,6 @@
 /robots.txt
 /web.config
 
-sitemap.xml
-sitemap.xml.gz
+.htaccess
+*.xml
+*.xml.gz
