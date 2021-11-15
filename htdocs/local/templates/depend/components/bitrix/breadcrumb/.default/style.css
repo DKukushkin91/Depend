@@ -1,0 +1,110 @@
+.breadcrumbs {
+    padding: 15px 0;
+    color: #000000;
+    font-size: 14px;
+}
+
+.breadcrumbs .g-pagewidth {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  max-width: 1280px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.breadcrumbs-inner {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.breadcrumbs__item.active {
+  border: none;
+}
+
+.breadcrumbs__item.active a{
+  pointer-events: none;
+  cursor: default;
+}
+
+@media only screen and (max-width: 1229px) {
+  .breadcrumbs {
+    padding: 15px 0px;
+  }
+
+  .breadcrumbs__item:first-child {
+    margin-left: 40px;
+  }
+}
+
+.breadcrumbs__item {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  color: #242121;
+}
+.breadcrumbs__item.active .breadcrumbs__text {
+  font-family: 'MuseoCyrl';
+  font-size: 14px;
+  color: #000000;
+}
+.breadcrumbs__link {
+    text-decoration: none;
+    color: #000000;
+    font-family: 'MuseoCyrl';
+    font-size: 14px;
+    font-weight: normal;
+}
+.breadcrumbs__arr {
+  width: 29px;
+  height: 11px;
+  margin: 0 10px;
+  display: inline-block;
+  vertical-align: middle;
+  background: url(images/breadcrumbs-arr.svg) no-repeat 50% 50%;
+}
+
+@media only screen and (max-width: 768px) {
+  .breadcrumbs-inner {
+    flex-wrap: wrap;
+  }
+
+  .breadcrumbs__arr {
+    margin: 0;
+  }
+
+  .breadcrumbs__item:first-child {
+    margin-left: 18px;
+  }
+
+  .breadcrumbs__item.active .breadcrumbs__text {
+    font-size: 12px !important;
+  }
+
+  .breadcrumbs__link {
+    font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .breadcrumbs__item.active .breadcrumbs__text {
+    font-size: 24px;
+  }
+}

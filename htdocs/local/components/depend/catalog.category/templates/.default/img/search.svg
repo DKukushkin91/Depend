@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>Basket Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-101.000000, -94.000000)" fill="#FFFFFF">
+            <g id="Basket-Copy" transform="translate(101.000000, 93.000000)">
+                <path d="M12,7 C12.003,3.686 9.318,0.998 6.005,0.995 C2.691,0.992 0.003,3.677 1.77635684e-15,6.99 C-0.003,10.304 2.682,12.992 5.995,12.995 C7.24,12.996 8.454,12.61 9.47,11.89 L13.04,15.45 L14.45,14.04 L10.89,10.48 C11.616,9.465 12.005,8.248 12,7 Z M2,7 C2,4.791 3.791,3 6,3 C8.209,3 10,4.791 10,7 C9.992,7.882 9.693,8.736 9.15,9.43 L8.43,10.15 C7.736,10.693 6.882,10.992 6,11 C3.791,11 2,9.209 2,7 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
