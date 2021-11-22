@@ -14,8 +14,9 @@ export const getActiveItem = () => {
 
 			for(i in sections) {
 				if(sections[i] <= scrollPosition) {
+					let elements = document.querySelector('a[href*='+ i +']');
 					document.querySelector('.about-item__link--active').classList.remove('about-item__link--active');
-					document.querySelector('a[href*='+ i +']').classList.add('about-item__link--active');
+					elements.classList.add('about-item__link--active');
 				}
 			}
 		})

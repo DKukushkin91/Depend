@@ -32,3 +32,10 @@ block top
 						.top__img
 							img(src=`${baseDir}/img/about-img.jpg`, alt="", width='1280', height='440')
 						h1.top__title=title
+			if (page == 'products')
+				.container(class=`${page}__container`)
+					.top__wrap
+						+breadcrumb(['Продукция'], 'Для женщин')
+						.top__img
+							img(src=`${baseDir}/img/for-woman.jpg`, alt="", width='1280', height='440')
+						h1.top__title=title

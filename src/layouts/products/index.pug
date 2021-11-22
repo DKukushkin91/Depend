@@ -1,0 +1,22 @@
+extends ../../template/_layout
+
+block pageVar
+	-
+		page = 'products';
+
+block path
+	-
+		baseDir = '/f';
+
+block title
+	-
+		title = 'Продукция для женщин';
+
+block page
+	section.products
+		.container
+			ul.products__btn-list
+				each val in ['Все продукты', 'Прокладки', 'Впитывающее белье', 'После родов']
+					li.products__btn-item
+						button.products__btn=val
+			ul.products__list.js-products-wrap

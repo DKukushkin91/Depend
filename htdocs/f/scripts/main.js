@@ -96,11 +96,68 @@ var getActiveItem = function getActiveItem() {
 
       for (i in sections) {
         if (sections[i] <= scrollPosition) {
+          var elements = document.querySelector('a[href*=' + i + ']');
           document.querySelector('.about-item__link--active').classList.remove('about-item__link--active');
-          document.querySelector('a[href*=' + i + ']').classList.add('about-item__link--active');
+          elements.classList.add('about-item__link--active');
         }
       }
     });
+  }
+};
+
+var getSalesSlider = function getSalesSlider() {
+  if (document.querySelector('.js-sales-slider')) {
+    var salesSlider = document.querySelector('.js-sales-slider');
+
+    if (salesSlider) {
+      new Swiper(salesSlider, {
+        lazy: {
+          loadPrevNext: true
+        },
+        watchSlidesProgress: true,
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+        breakpoints: {
+          1280: {
+            spaceBetween: 30
+          },
+          1366: {
+            navigation: {
+              nextEl: '.js-sales-next',
+              prevEl: '.js-sales-prev'
+            }
+          }
+        }
+      });
+    }
+  }
+}; //создание елемента из template
+
+
+var createElement = function createElement(element, fragment) {
+  return element.appendChild(fragment);
+}; //удаление всех дочерних элементов
+
+
+var getProductsList = function getProductsList() {
+  if (document.querySelector('.js-products-wrap')) {
+    var productsWrap = document.querySelector('.js-products-wrap');
+    var template = document.querySelector('.js-products-template').content.querySelectorAll('.js-products-item');
+
+    var getElement = function getElement(tmp) {
+      return tmp.cloneNode(true);
+    };
+
+    var appendElement = function appendElement(tmp) {
+      var fragment = document.createDocumentFragment();
+      tmp.forEach(function (el) {
+        var element = getElement(el);
+        fragment.appendChild(element);
+      });
+      createElement(productsWrap, fragment);
+    };
+
+    appendElement(template);
   }
 };
 
@@ -109,4 +166,6 @@ document.addEventListener('DOMContentLoaded', function () {
   getMainPageSliders();
   getItemSliders();
   getActiveItem();
+  getSalesSlider();
+  getProductsList();
 });
