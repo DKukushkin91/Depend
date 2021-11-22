@@ -13,7 +13,7 @@ block page
 		.container
 			+breadcrumb(['О недержании', 'Для женщин'], 'Что такое упражнения Кегеля, и зачем они нужны')
 			.about-item__wrap
-				h1.about-item__title Что такое упражнения Кегеля, и зачем они нужны
+				h1#preamble.about-item__title.js-title-item Что такое упражнения Кегеля, и зачем они нужны
 				.about-item__avatar-wrap
 					.about-item__avatar-box
 						.about-item__avatar-img
@@ -31,20 +31,20 @@ block page
 						h2.about-item__list-title Содержание:
 						ol.about-item__list
 							li.about-item__item
-								a(href='#').about-item__link Предисловие
+								a(href='#preamble').about-item__link.about-item__link--active Предисловие
 								ul.about-item__ul-list
 									li.about-item__item.about-item__item--ul
-										a(href='#').about-item__link Интимные мышцы
+										a(href='#muscle').about-item__link Интимные мышцы
 							li.about-item__item
-								a(href='#').about-item__link Упражнения Кегеля
+								a(href='#kegel').about-item__link Упражнения Кегеля
 								ul.about-item__ul-list
 									li.about-item__item.about-item__item--ul
-										a(href='#').about-item__link Правила выполнения упражнений
+										a(href='#rules').about-item__link Правила выполнения упражнений
 									li.about-item__item.about-item__item--ul
-										a(href='#').about-item__link Таблица упражнений
+										a(href='#table').about-item__link Таблица упражнений
 					p.about-item__text Большинство женщин мечтают об идеальной фигуре. Многие из них упорно занимаются спортом и добиваются поразительных результатов. Однако важно тренировать не только те группы мышц, которые отвечают за внешнюю красоту, но и те, которые не видны, ведь они не менее важны для женского здоровья, красоты и уверенности в себе, чем красивые ноги и рельефный пресс. Речь идет об интимных мышцах.
 					.about-item__content
-						h3.about-item__content-title.about-item__content-title--fz Интимные мышцы
+						h3#muscle.about-item__content-title.about-item__content-title--fz.js-title-item Интимные мышцы
 						p.about-item__text Интимные мышцы или мышцы тазового дна отвечают за расположение внутренних половых органов и прямой кишки, контролируют деятельность мочевого пузыря и препятствуют опущению матки. Состояние мышц таза влияет не только на физическое здоровье женщины, но и на ее уверенность в себе, ведь недержание мочи и болезненные неудобства во время полового акта сильно влияют на ее психологическое состояние.
 						blockquote.about-item__blockquote
 							p.about-item__bq-text Известно, что около 40% женщин испытывают дискомфорт из-за такой деликатной проблемы, как недержание мочи. Оно, несомненно, требует обращения к врачу и внимательного наблюдения, но есть и меры, которые каждая женщина может принять самостоятельно.
@@ -52,7 +52,7 @@ block page
 								span.about-item__cite-text Александра Новикова
 								span.about-item__cite-text.about-item__cite-text--font Врач-уролог
 					.about-item__content
-						h2.about-item__content-title Упражнения Кегеля
+						h2#kegel.about-item__content-title.js-title-item Упражнения Кегеля
 						p.about-item__text Чтобы избавиться от дискомфорта или избежать проблем в будущем, каждой женщине стоит включить в свой распорядок дня несколько простых упражнений, разработанных доктором-гинекологом Арнольдом Кегелем. Их цель — укрепление мышц таза. Упражнения Кегеля не являются панацеей, но точно помогут вам при:
 						ul.about-item__content-list
 							each val in ['расстройствах мочеиспускания;', 'недержании мочи при кашле, смехе или чихании;', 'внезапных и резких порывах к мочеиспусканию;', 'умеренном недержании газов и кала;', 'а также улучшат качество сексуальной жизни.']
@@ -72,7 +72,7 @@ block page
 								button.about-item__slider-prev-btn.js-about-item-prev
 								button.about-item__slider-next-btn.js-about-item-next
 						.about-item__content
-							h3.about-item__content-title.about-item__content-title--fz Правила выполнения упражнений
+							h3#rules.about-item__content-title.about-item__content-title--fz.js-title-item Правила выполнения упражнений
 							p.about-item__text Известно, что около 40% женщин испытывают дискомфорт из-за такой деликатной проблемы, как недержание мочи. Оно, несомненно, требует обращения к врачу и внимательного наблюдения, но есть и меры, которые каждая женщина может принять самостоятельно.
 							p.about-item__text Вот несколько упражнений, которые вы сможете выполнять где угодно: дома, на работе и в дороге. Они помогут укрепить мышцы мочевого пузыря и вернуть им тонус в случае легкого недержания:
 							ol.about-item__ol-list
@@ -81,7 +81,7 @@ block page
 								li.about-item__ol-item Сожмите интимные мышцы со средней силой. Постарайтесь продержать их в напряжении одну минуту. Если с первого раза у вас не получилось продержаться минуту, продолжайте тренировки, постепенно увеличивая время сжатия.
 								li.about-item__ol-item В положении стоя поставьте ноги на ширине плеч, немного наклонитесь вперед, руки положите на ягодицы. Держите ноги прямыми и активно сжимайте и расслабляйте мышцы таза.
 						.about-item__content
-							h3.about-item__content-title.about-item__content-title--fz Таблица упражнений
+							h3#table.about-item__content-title.about-item__content-title--fz.js-title-item Таблица упражнений
 							p.about-item__text При регулярных тренировках результат не заставит себя ждать. Если делать упражнения 3 раза в день, 4 дня в неделю, то через пару месяцев вы увидите результат. Одна тренировка займет у вас всего 5 минут.
 							table.about-item__table
 								thead.about-item__thead
