@@ -37,7 +37,8 @@ html(lang='ru')
 			.box__content
 				include ./_header
 
-				include ./_top
+				if (page != 'products-item')
+					include ./_top
 
 				main.main
 					block page

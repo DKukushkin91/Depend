@@ -1,5 +1,11 @@
-.advise
+.items
 	width 100%
+
+	&--bg
+		background-color: $l-gray
+		padding-top: 30px
+		padding-bottom 15px
+		margin-bottom 40px
 
 	&__title
 		fz-20()
@@ -13,6 +19,10 @@
 		@media $lg
 			text-align: left
 
+		&--border
+			border-top: 1px solid #E5E5E5
+			padding-top: 30px
+
 	&__slider
 		width 100%
 
@@ -22,11 +32,15 @@
 		padding-bottom 60px
 		margin 0
 
+		&--products-item
+			padding-bottom 20px
+
 	&__slider-item
 		max-width: 308px
 		border: 1px solid $border-footer
 		border-radius: 12px
 		position relative
+		background-color: $white
 
 		@media $laptop
 			width 100%
@@ -58,23 +72,6 @@
 			border-top-right-radius: inherit
 			max-width 183px
 
-	&__icons
-		padding: 0 20px
-		padding-bottom 15px
-
-	&__icon
-		fill: $border-footer
-
-		&:not(:last-child)
-			margin-right 4px
-
-		&:first-child
-			fill: $purple
-
-	//////////////////////// for js ///////////////////////////
-	&__icon--active
-		fill: $purple
-
 	&__item-content
 		padding: 0 20px
 		padding-bottom 20px
@@ -95,3 +92,44 @@
 		font-weight 400
 		text-align: left
 		color: $m-black
+
+	&__icons
+		margin-bottom 20px
+		padding: 0 20px
+
+	&__icon
+		fill: $border-footer
+
+	// change fill drops
+	&__slider-item[data-drops='1'] .items__icon:first-child
+		fill: $purple
+	&__slider-item[data-drops='2'] .items__icon:nth-child(-n+2)
+		fill: $purple
+	&__slider-item[data-drops='3'] .items__icon:nth-child(-n+3)
+		fill: $purple
+	&__slider-item[data-drops='4'] .items__icon:nth-child(-n+4)
+		fill: $purple
+	&__slider-item[data-drops='5'] .items__icon:nth-child(-n+5)
+		fill: $purple
+	&__slider-item[data-drops='6'] .items__icon:nth-child(-n+6)
+		fill: $purple
+	&__slider-item[data-drops='7'] .items__icon
+		fill: $purple
+	//
+
+	&__more-link
+		fz-14()
+		line-height 16px
+		border-radius: 20px
+		background-color: $purple
+		padding: 10px 24.5px 11px
+		text-decoration: none
+		font-family $Noto
+		color $white
+		font-weight 500
+		display block
+		text-align: center
+		width 220px
+		max-width: 260px
+		margin 0 auto
+		margin-bottom 15px

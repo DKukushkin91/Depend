@@ -49,7 +49,6 @@ var getMainPageSliders = function getMainPageSliders() {
 
 var getItemSliders = function getItemSliders() {
   var mainSlider = document.querySelector('.js-about-item-slider');
-  var adviseSlider = document.querySelector('.js-advise-slider');
   var otherSlider = document.querySelector('.js-other-slider');
 
   if (mainSlider) {
@@ -60,15 +59,6 @@ var getItemSliders = function getItemSliders() {
       },
       slidesPerView: 'auto',
       spaceBetween: 15,
-      watchSlidesProgress: true
-    });
-  }
-
-  if (adviseSlider) {
-    new Swiper(adviseSlider, {
-      lazy: true,
-      slidesPerView: 'auto',
-      spaceBetween: 20,
       watchSlidesProgress: true
     });
   }
@@ -161,6 +151,35 @@ var getProductsList = function getProductsList() {
   }
 };
 
+var getItemSlider = function getItemSlider() {
+  if (document.querySelector('.js-p-item-slider')) {
+    var itemSlider = document.querySelector('.js-p-item-slider');
+    var sliderPagination = itemSlider.querySelector('.js-item-pagination');
+    new Swiper(itemSlider, {
+      slidePerView: 'auto',
+      spaceBetween: 10,
+      watchSlidesProgress: true,
+      pagination: {
+        el: sliderPagination
+      }
+    });
+  }
+};
+
+var getItemsSlider = function getItemsSlider() {
+  if (document.querySelector('.js-items-slider')) {
+    var itemsSlider = document.querySelectorAll('.js-items-slider');
+    itemsSlider.forEach(function (e) {
+      new Swiper(e, {
+        lazy: true,
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        watchSlidesProgress: true
+      });
+    });
+  }
+};
+
 document.addEventListener('DOMContentLoaded', function () {
   getBurgerMenu();
   getMainPageSliders();
@@ -168,4 +187,6 @@ document.addEventListener('DOMContentLoaded', function () {
   getActiveItem();
   getSalesSlider();
   getProductsList();
+  getItemSlider();
+  getItemsSlider();
 });
