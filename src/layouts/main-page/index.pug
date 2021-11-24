@@ -8,6 +8,10 @@ block path
 	-
 		baseDir = '/f';
 
+block articleVar
+	-
+		article = 'О недержании'
+
 block page
 	section.preview-catalog
 		.container
@@ -23,73 +27,9 @@ block page
 							a.preview-catalog__link(href="#") Для женщин
 						li.preview-catalog__item
 							a.preview-catalog__link(href="#") После родов
-	section.preview-info
-		.container.preview-info__container
-			.preview-info__wrap
-				h2.preview-info__title О недержании
-				.preview-info__slider.swiper.js-info-slider
-					ul.preview-info__slider-list.swiper-wrapper
-						li.preview-info__item.swiper-slide
-							a.preview-info__link(href="#")
-							.preview-info__inner
-								.preview-info__img
-									img.swiper-lazy(loading='lazy' data-src=`${baseDir}/img/preview-1.jpg`, alt="", width='373', height='200')
-									.lazy-preloader.swiper-lazy-preloader
-								.preview-info__content
-									h3.preview-info__s-title Почему полезно пить при недержании
-									p.preview-info__text Когда речь заходит о здоровом образе жизни, большинство сразу думает о питании. Но как часто вы задумываетесь о том, что пьете? Оказывается, это важно для того, чтобы держать мочевой пузырь под контролем
-									a.preview-info__p-link(href="#") Читать полностью
-						li.preview-info__item.swiper-slide
-							a.preview-info__link(href="#")
-							.preview-info__inner
-								.preview-info__img
-									img.swiper-lazy(loading='lazy' data-src=`${baseDir}/img/preview-2.jpg`, alt="", width='373', height='200')
-									.lazy-preloader.swiper-lazy-preloader
-								.preview-info__content
-									h3.preview-info__s-title Урологические прокладки: в чем отличие и как выбрать
-									p.preview-info__text С проблемой недержания уже давно справляется взрослая гигиена. Однако немногие до сих пор понимают отличие урологической прокладки от обычной женской для критических дней. А разница ощутимая.
-									a.preview-info__p-link(href="#") Читать полностью
-						li.preview-info__item.swiper-slide
-							a.preview-info__link(href="#")
-							.preview-info__inner
-								.preview-info__img
-									img.swiper-lazy(loading='lazy' data-src=`${baseDir}/img/preview-3.jpg`, alt="", width='373', height='200')
-									.lazy-preloader.swiper-lazy-preloader
-								.preview-info__content
-									h3.preview-info__s-title Как справиться с недержанием: 5 ежедневных хитростей
-									p.preview-info__text Избавить свою жизнь от дополнительного стресса можно с помощью новых привычек, связанных с контролем недержания.
-									a.preview-info__p-link(href="#") Читать полностью
-						li.preview-info__item.swiper-slide
-							a.preview-info__link(href="#")
-							.preview-info__inner
-								.preview-info__img
-									img.swiper-lazy(loading='lazy' data-src=`${baseDir}/img/preview-3.jpg`, alt="", width='373', height='200')
-									.lazy-preloader.swiper-lazy-preloader
-								.preview-info__content
-									h3.preview-info__s-title Как справиться с недержанием: 5 ежедневных хитростей
-									p.preview-info__text Избавить свою жизнь от дополнительного стресса можно с помощью новых привычек, связанных с контролем недержания.
-									a.preview-info__p-link(href="#") Читать полностью
-						li.preview-info__item.swiper-slide
-							a.preview-info__link(href="#")
-							.preview-info__inner
-								.preview-info__img
-									img.swiper-lazy(loading='lazy' data-src=`${baseDir}/img/preview-3.jpg`, alt="", width='373', height='200')
-									.lazy-preloader.swiper-lazy-preloader
-								.preview-info__content
-									h3.preview-info__s-title Как справиться с недержанием: 5 ежедневных хитростей
-									p.preview-info__text Избавить свою жизнь от дополнительного стресса можно с помощью новых привычек, связанных с контролем недержания.
-									a.preview-info__p-link(href="#") Читать полностью
-						li.preview-info__item.swiper-slide
-							a.preview-info__link(href="#")
-							.preview-info__inner
-								.preview-info__img
-									img.swiper-lazy(loading='lazy' data-src=`${baseDir}/img/preview-3.jpg`, alt="", width='373', height='200')
-									.lazy-preloader.swiper-lazy-preloader
-								.preview-info__content
-									h3.preview-info__s-title Как справиться с недержанием: 5 ежедневных хитростей
-									p.preview-info__text Избавить свою жизнь от дополнительного стресса можно с помощью новых привычек, связанных с контролем недержания.
-									a.preview-info__p-link(href="#") Читать полностью
-				a.preview-info__b-link(href="#") Все статьи
+
+	include ../../template/_article
+
 	section.preview-shops
 		.container
 			.preview-shops__wrap

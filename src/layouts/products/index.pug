@@ -12,6 +12,10 @@ block title
 	-
 		title = 'Продукция для женщин';
 
+block articleVar
+	-
+		article = 'Читайте статьи наших экспертов'
+
 block page
 	section.products
 		.container
@@ -20,3 +24,5 @@ block page
 					li.products__btn-item
 						button.products__btn=val
 			ul.products__list.js-products-wrap
+
+	include ../../template/_article
