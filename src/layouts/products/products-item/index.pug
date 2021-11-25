@@ -15,37 +15,39 @@ block articleVar
 block page
 	section.products-item
 		.container
-			+breadcrumb(['Продукция', 'Для женщин'], 'Впитывающее нижнее белье Depend® для Женщин M\L')
+			+breadcrumb(['Продукция', 'Для женщин'], 'Впитывающее нижнее белье Depend® для Женщин M/L')
 			.products-item__wrap
 				h1.products-item__title Впитывающее нижнее белье Depend<sup class="reg">&reg;</sup> для женщин M\L
+				.products-item__main-img.js-main-img-wrap
 				.products-item__slider-container
 					.products-item__slider.swiper.js-p-item-slider
-						.products-item__slider-wrapper.swiper-wrapper
-							.products-item__slide.swiper-slide
-								img(src=`${baseDir}/img/main-item.png`, alt="", width='351', height='400')
-							.products-item__slide.swiper-slide
-								img(src=`${baseDir}/img/main-item2.png`, alt="", width='351', height='400')
-							.products-item__slide.swiper-slide
-								img(src=`${baseDir}/img/main-item3.png`, alt="", width='351', height='400')
-							.products-item__slide.swiper-slide
-								img(src=`${baseDir}/img/main-item4.png`, alt="", width='351', height='400')
+						.products-item__slider-wrapper.swiper-wrapper.js-p-item-wrap
+							.products-item__slide.swiper-slide.js-p-item-slide
+								img.js-thumbs-img(src=`${baseDir}/img/main-item.png`, alt="", width='351', height='400')
+							.products-item__slide.swiper-slide.js-p-item-slide
+								img.js-thumbs-img(src=`${baseDir}/img/main-item2.png`, alt="", width='351', height='400')
+							.products-item__slide.swiper-slide.js-p-item-slide
+								img.js-thumbs-img(src=`${baseDir}/img/main-item3.png`, alt="", width='351', height='400')
+							.products-item__slide.swiper-slide.js-p-item-slide
+								img.js-thumbs-img(src=`${baseDir}/img/main-item4.png`, alt="", width='351', height='400')
 						.products-item__pagination.js-item-pagination
 				.products-item__content
 					table.products-item__table
-						tr.products-item__row
-							td.products-item__cell.products-item__cell--width
-								span.products-item__term Размер
-								p.products-item__text M/L 44-50
-							td.products-item__cell.products-item__cell--width
-								span.products-item__term Объем бедер
-								p.products-item__text 96-108 см
-						tr.products-item__row.products-item__row--padding
-							td.products-item__cell
-								span.products-item__term Макс. впитываемость
-								.products-item__icons
-									- for (var x = 0; x < 7; x++)
-											svg.products-item__icon(width="9" height="12")
-												use(href=`${baseDir}/img/sprite.svg#drops`)
+						tbody.products-item__tbody
+							tr.products-item__row
+								td.products-item__cell.products-item__cell--width
+									span.products-item__term Размер
+									p.products-item__text M/L 44-50
+								td.products-item__cell.products-item__cell--width
+									span.products-item__term Объем бедер
+									p.products-item__text 96-108 см
+							tr.products-item__row.products-item__row--padding
+								td.products-item__cell
+									span.products-item__term Макс. впитываемость
+									.products-item__icons
+										- for (var x = 0; x < 7; x++)
+												svg.products-item__icon(width="9" height="12")
+													use(href=`${baseDir}/img/sprite.svg#drops`)
 					p.products-item__feature Наше впитывающее белье Depend® создано специально для женщин с учетом анатомических особенностей тела. Оно способно не только защитить Вас в течение всего дня, но и подарить комфорт в ношении как у нижнего белья.
 					button.products-item__btn
 						span.products-item__btn-text Купить

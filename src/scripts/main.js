@@ -4,7 +4,7 @@ import {getItemSliders} from './modules/about-item-sliders';
 import {getActiveItem} from './modules/about-item-nav';
 import {getSalesSlider} from './modules/sales-slider';
 import { getProductsList } from './modules/products-list';
-import { getItemSlider } from './modules/products-item';
+import { getItemSlider, getMainImage } from './modules/products-item';
 import { getItemsSlider } from './modules/items-slider';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,4 +16,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	getProductsList();
 	getItemSlider();
 	getItemsSlider();
+	getMainImage();
 });
