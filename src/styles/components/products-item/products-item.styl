@@ -5,6 +5,18 @@
 	border-bottom-right-radius: 20px
 	margin-bottom 40px
 
+	&__breadcrumb
+		& .breadcrumb__link,
+		& .breadcrumb__link-current
+			color: #474747
+
+		& .breadcrumb__list
+			padding: 20px 0 30px 0
+
+		& .breadcrumb__item
+			&::after
+				background-image: url("data:image/svg+xml,%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.4' clip-path='url(%23clip0_22_421)'%3E%3Cpath d='M0.75 8.65381L4.91667 5.19227L0.75 1.73073' stroke='%23474747' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_22_421'%3E%3Crect width='6' height='9' fill='white' transform='translate(0 0.5)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+
 	&__wrap
 		width 100%
 		padding 20px 0 40px
