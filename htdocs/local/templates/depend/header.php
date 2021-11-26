@@ -91,10 +91,7 @@ $isCatalog = "false";
     <?
 	$APPLICATION->SetAdditionalCSS('/f/css/main.css');
     $APPLICATION->SetAdditionalCSS('/f/css/vendor.css');
-
 	$APPLICATION->ShowHead();
-	$APPLICATION->AddHeadScript('/f/js/main.js');
-    $APPLICATION->AddHeadScript('/f/js/vendor.js');
     ?>
 
 	<? $APPLICATION->AddHeadString('<meta property="og:site_name" content="'.$arSite['SITE_NAME'].'">');?>

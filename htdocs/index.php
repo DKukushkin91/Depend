@@ -26,7 +26,6 @@
 		<div class="container article__container">
 			<div class="article__wrap">
 				<h2 class="article__title">О недержании</h2>
-				<div class="article__slider swiper js-info-slider">
 					<?$APPLICATION->IncludeComponent(
 					"bitrix:news.list",
 					"advices-main",
@@ -44,7 +43,6 @@
 						"SORT_ORDER1" => "ASC"
 					)
 					);?>
-				</div>
 				<a class="article__b-link" href="#">Все статьи</a>
 			</div>
 		</div>
