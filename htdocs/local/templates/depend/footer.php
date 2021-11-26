@@ -1,5 +1,7 @@
-<? $APPLICATION->IncludeFile('includes/footer.php', [], []); ?>
 </main>
 </div>
+<? $APPLICATION->IncludeFile('includes/footer.php', [], []); ?>
+</div>
 </body>
+
 </html>

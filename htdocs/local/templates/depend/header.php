@@ -9,7 +9,7 @@ global $isCatalog;
 $isCatalog = "false";
 ?>
 <!DOCTYPE html>
-<html lang="ru-RU" prefix="og: https://ogp.me/ns#">
+<html lang="ru-RU" prefix="og:https://ogp.me/ns#">
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134188906-1"></script>
@@ -89,30 +89,12 @@ $isCatalog = "false";
     ?>
 <div itemscope= "https://schema.org/">
     <?
-	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/main.css');
-    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/styles.css');
-    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/products.css');
-    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/search.css');
-    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/advices.css');
-    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/feedback.css');
-    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/normalize.css');
-    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/jquery.fancybox.css');
-    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/detailed-article.css');
-    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/shops.css');
-    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/about.css');
-    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/magnific-popup.css');
-    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/incontinence-block.css');
-    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/product-card.css');
-    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/slick.css');
-    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/slick-theme.css');
+	$APPLICATION->SetAdditionalCSS('/f/css/main.css');
+    $APPLICATION->SetAdditionalCSS('/f/css/vendor.css');
+
 	$APPLICATION->ShowHead();
-	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/main.js');
-    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/menu.js');
-    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/jquery.fancybox.js');
-    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/incontinence-slider.js');
-    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/jquery.mask.js');
-    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/slick.min.js');
-    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/jquery.magnific-popup.min.js');
+	$APPLICATION->AddHeadScript('/f/js/main.js');
+    $APPLICATION->AddHeadScript('/f/js/vendor.js');
     ?>
 
 	<? $APPLICATION->AddHeadString('<meta property="og:site_name" content="'.$arSite['SITE_NAME'].'">');?>
@@ -138,8 +120,8 @@ $isCatalog = "false";
 <div class="bx-panel">
 	<?$APPLICATION->ShowPanel()?>
 </div>
-<div class="page-inner">
+<div class="box">
+    <div class="box__content">
 	<? $APPLICATION->IncludeFile('includes/header.php', [], []) ?>
-    <main>
     
     
