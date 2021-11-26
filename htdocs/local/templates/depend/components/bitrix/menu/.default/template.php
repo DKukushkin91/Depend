@@ -13,9 +13,7 @@
             if($arParams["MAX_LEVEL"] == 1 && $arItem["DEPTH_LEVEL"] > 1)
                 continue;
             ?>
-		    <li class="nav__item"><a class="<?if($arItem["SELECTED"]==true):?> active
-				<?else:?>
-				<? endif;?>" href="<?=$arItem["LINK"]?>" <?=$onClickMenuArray[$arItem["TEXT"]]?>><?=$arItem["TEXT"]?></a>
+		    <li class="nav__item"><a class="nav__link<?if($arItem["SELECTED"]==true):?> active<?endif;?>" href="<?=$arItem["LINK"]?>" <?=$onClickMenuArray[$arItem["TEXT"]]?>><?=$arItem["TEXT"]?></a>
             </li>
 		<?endforeach?>
 	</ul>
