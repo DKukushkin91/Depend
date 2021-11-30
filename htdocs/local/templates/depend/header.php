@@ -119,6 +119,8 @@ $isCatalog = "false";
 </div>
 <div class="box">
     <div class="box__content">
-	<? $APPLICATION->IncludeFile('includes/header.php', [], []) ?>
+        <main class="main">
+	    <? $APPLICATION->IncludeFile('includes/top-section.php', [], []) ?>
+	    <? $APPLICATION->IncludeFile('includes/header.php', [], []) ?>
     
     

@@ -2,9 +2,7 @@
 	<ul class="sales__list swiper-wrapper">
 		<? foreach ($arResult['ITEMS'] as $index => $item):?>
 		<?if($item['PREVIEW_PICTURE']['SRC']){$img=$item['PREVIEW_PICTURE']['SRC'];}else{$img='/f/img/ya-item2.jpg';}?>
-		<?
-			$logo = CFile::ResizeImageGet($value['PROPERTIES']['LOGO']['VALUE'], array(), BX_RESIZE_IMAGE_EXACT, false);
-		?>
+		<?$logo = CFile::ResizeImageGet($value['PROPERTIES']['LOGO']['VALUE'], array(), BX_RESIZE_IMAGE_EXACT, false);?>
 		<li class="sales__item swiper-slide">
 			<div class="sales__images">
 				<div class="sales__img"><img class="swiper-lazy" data-src="<?=$img?>" alt="<?=$item['NAME'];?>" width="373"
