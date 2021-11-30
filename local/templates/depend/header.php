@@ -22,6 +22,7 @@ $isCatalog = "false";
     </script>
     <meta name="yandex-verification" content="46a6b60cc0f981dd" />
     <meta name="yandex-verification" content="2b81a85614dc3c81" />
+    <meta name="google-site-verification" content="yU22vulyMVaxA6P2zaoJG23bg9K0lc5jnG1v9xJwCt4" />
     <meta name="viewport" content="width=device-width, initial-scale=1">  
 
     <link rel="icon" type="image/x-icon" sizes="32x32" href="/local/templates/depend/img/favicon32.ico">
