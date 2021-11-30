@@ -197,48 +197,50 @@ var getItemSlider = function getItemSlider() {
 };
 
 var getMainImage = function getMainImage() {
-  var imgWrap = document.querySelector('.js-main-img-wrap');
-  var thumbsImages = document.querySelectorAll('.js-thumbs-img');
-  var testing = document.querySelector('.js-p-item-wrap');
-  var template = document.querySelector('.js-main-img-template').content.querySelector('.js-main-img');
+  if (document.querySelector('.js-main-img-wrap')) {
+    var imgWrap = document.querySelector('.js-main-img-wrap');
+    var thumbsImages = document.querySelectorAll('.js-thumbs-img');
+    var testing = document.querySelector('.js-p-item-wrap');
+    var template = document.querySelector('.js-main-img-template').content.querySelector('.js-main-img');
 
-  var getElement = function getElement() {
-    var clone = template.cloneNode(true);
+    var getElement = function getElement() {
+      var clone = template.cloneNode(true);
 
-    var removeClass = function removeClass() {
+      var removeClass = function removeClass() {
+        thumbsImages.forEach(function (e) {
+          e.parentNode.classList.remove('products-item__slide--active');
+        });
+      };
+
+      clone.src = thumbsImages[0].src;
       thumbsImages.forEach(function (e) {
-        e.parentNode.classList.remove('products-item__slide--active');
+        if (clone.src === e.src) e.parentNode.classList.add('products-item__slide--active');
       });
+      testing.addEventListener('click', function (evt) {
+        evt.preventDefault();
+
+        if (evt.target.hasAttribute('src')) {
+          removeClass();
+          evt.target.parentNode.classList.add('products-item__slide--active');
+          clone.src = evt.target.src;
+        } else {
+          removeClass();
+          evt.target.classList.add('products-item__slide--active');
+          clone.src = evt.target.querySelector('img').src;
+        }
+      });
+      return clone;
     };
 
-    clone.src = thumbsImages[0].src;
-    thumbsImages.forEach(function (e) {
-      if (clone.src === e.src) e.parentNode.classList.add('products-item__slide--active');
-    });
-    testing.addEventListener('click', function (evt) {
-      evt.preventDefault();
+    var appendElement = function appendElement() {
+      var fragment = document.createDocumentFragment();
+      var element = getElement();
+      fragment.appendChild(element);
+      createElement(imgWrap, fragment);
+    };
 
-      if (evt.target.hasAttribute('src')) {
-        removeClass();
-        evt.target.parentNode.classList.add('products-item__slide--active');
-        clone.src = evt.target.src;
-      } else {
-        removeClass();
-        evt.target.classList.add('products-item__slide--active');
-        clone.src = evt.target.querySelector('img').src;
-      }
-    });
-    return clone;
-  };
-
-  var appendElement = function appendElement() {
-    var fragment = document.createDocumentFragment();
-    var element = getElement();
-    fragment.appendChild(element);
-    createElement(imgWrap, fragment);
-  };
-
-  appendElement();
+    appendElement();
+  }
 };
 
 var getItemsSlider = function getItemsSlider() {
