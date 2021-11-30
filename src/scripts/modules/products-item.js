@@ -35,7 +35,6 @@ export const getItemSlider = () => {
 				itemSlider.classList.remove('swiper');
 				itemSliderWrap.classList.remove('swiper-wrapper');
 				itemSlides.forEach(e => e.classList.remove('swiper-slide'))
-				// slider.destroy();
 			}
 		})
 	}

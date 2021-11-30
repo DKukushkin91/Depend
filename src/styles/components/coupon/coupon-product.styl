@@ -7,12 +7,40 @@
 		border-radius 12px
 		padding: 30px 15px
 
+		@media $lg
+			display flex
+			flex-direction: row-reverse
+			align-items: center
+
+		@media $laptop
+			max-width: 984px
+			margin: 0 auto
+
+		@media $xl
+			padding: 40px
+
 	&__img
 		width 100%
-		margin-bottom: -30px
+		margin-bottom 36px
+		display flex
+		justify-content: center
+
+		& img
+			max-width: 213px
+			filter: drop-shadow(5px 45px 14px rgba(0,0,0,0.2))
+
+			@media $xl
+				max-width: 272px
 
 	&__content
 		width 100%
+		text-align: center
+
+		@media $lg
+			margin-right: 15px
+
+		@media $xl
+			text-align: left
 
 	&__title
 		fz-24()
@@ -21,7 +49,6 @@
 		font-family $Noto
 		font-weight 700
 		padding-bottom 20px
-		text-align: center
 
 	&__text
 		fz-14()
@@ -30,7 +57,10 @@
 		padding-bottom 30px
 		font-family $Noto
 		font-weight 400
-		text-align: center
+
+		@media $laptop
+			font-size 16px
+			line-height 24px
 
 	&__link
 		fz-14()
@@ -46,3 +76,6 @@
 		color $purple
 		width: fit-content
 		margin: 0 auto
+
+		@media $lg
+			margin: 0

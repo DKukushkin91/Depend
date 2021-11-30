@@ -45,8 +45,11 @@ block top
 				.container(class=`${page}__container`)
 					.top__wrap(class=`${page}__top-wrap`)
 						+breadcrumb(['Главная'], 'Дарим купон на скидку 50%!')
-						.top__img
-							img(src=`${baseDir}/img/coupon-bg.jpg`, alt="", width='1280', height='440')
+						.top__img(class=`${page}__top-img`)
+							picture
+								source(media="(min-width: 575px)", srcset=`${baseDir}/img/coupon-bg.jpg`)
+								img(src=`${baseDir}/img/coupon-bg-mob.jpg`, alt="", width='1280', height='440')
 						.top__text-content
-							h1.top__title(class=`${page}__top-title`)=title
-							p.top__text Получите купон на дополнительную скидку 50% на первую покупку впитывающего нижнего белья от Depend. Не упустите свою выгоду!
+							.top__text-wrap
+								h1.top__title(class=`${page}__top-title`)=title
+								p.top__text Получите купон на дополнительную скидку 50% на первую покупку впитывающего нижнего белья от Depend. Не упустите свою выгоду!

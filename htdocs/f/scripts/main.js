@@ -190,7 +190,7 @@ var getItemSlider = function getItemSlider() {
         itemSliderWrap.classList.remove('swiper-wrapper');
         itemSlides.forEach(function (e) {
           return e.classList.remove('swiper-slide');
-        }); // slider.destroy();
+        });
       }
     });
   }
@@ -257,6 +257,52 @@ var getItemsSlider = function getItemsSlider() {
   }
 };
 
+var getCouponPopup = function getCouponPopup() {
+  if (document.querySelector('.js-coupon-open')) {
+    var button = document.querySelector('.js-coupon-open');
+    var body = document.querySelector('body');
+    var template = document.querySelector('.js-coupon-template').content.querySelector('.js-coupon-popup');
+
+    var escPressHandler = function escPressHandler(evt) {
+      if (evt.key === 'Escape') {
+        evt.preventDefault();
+        elementRemoveHandler();
+      }
+    };
+
+    var elementRemoveHandler = function elementRemoveHandler() {
+      var wrap = document.querySelector('.js-coupon-popup');
+
+      if (wrap) {
+        wrap.remove();
+        document.removeEventListener('keydown', escPressHandler);
+        body.classList.remove('lock-scroll--popup');
+      }
+    };
+
+    var getElement = function getElement() {
+      var clone = template.cloneNode(true);
+      var closeBtn = clone.querySelector('.js-coupon-close');
+      closeBtn.addEventListener('click', elementRemoveHandler);
+      body.classList.add('lock-scroll--popup');
+      return clone;
+    };
+
+    var appendElement = function appendElement() {
+      var fragment = document.createDocumentFragment();
+      var element = getElement();
+      fragment.appendChild(element);
+      document.addEventListener('keydown', escPressHandler);
+      createElement(body, fragment);
+    };
+
+    button.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      appendElement();
+    });
+  }
+};
+
 document.addEventListener('DOMContentLoaded', function () {
   getBurgerMenu();
   getMainPageSliders();
@@ -267,4 +313,5 @@ document.addEventListener('DOMContentLoaded', function () {
   getItemSlider();
   getItemsSlider();
   getMainImage();
+  getCouponPopup();
 });
