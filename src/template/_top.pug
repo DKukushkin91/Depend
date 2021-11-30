@@ -32,6 +32,7 @@ block top
 						.top__img
 							img(src=`${baseDir}/img/about-img.jpg`, alt="", width='1280', height='440')
 						h1.top__title=title
+
 			if (page == 'products')
 				.container(class=`${page}__container`)
 					.top__wrap
@@ -39,3 +40,13 @@ block top
 						.top__img
 							img(src=`${baseDir}/img/for-woman.jpg`, alt="", width='1280', height='440')
 						h1.top__title=title
+
+			if (page == 'coupon')
+				.container(class=`${page}__container`)
+					.top__wrap(class=`${page}__top-wrap`)
+						+breadcrumb(['Главная'], 'Дарим купон на скидку 50%!')
+						.top__img
+							img(src=`${baseDir}/img/coupon-bg.jpg`, alt="", width='1280', height='440')
+						.top__text-content
+							h1.top__title(class=`${page}__top-title`)=title
+							p.top__text Получите купон на дополнительную скидку 50% на первую покупку впитывающего нижнего белья от Depend. Не упустите свою выгоду!

@@ -42,53 +42,55 @@ export const getItemSlider = () => {
 }
 
 export const getMainImage = () => {
-	const imgWrap = document.querySelector('.js-main-img-wrap');
-	const thumbsImages = document.querySelectorAll('.js-thumbs-img');
-	const testing = document.querySelector('.js-p-item-wrap');
-	const template = document.querySelector('.js-main-img-template')
-		.content
-		.querySelector('.js-main-img');
+	if(document.querySelector('.js-main-img-wrap')){
+		const imgWrap = document.querySelector('.js-main-img-wrap');
+		const thumbsImages = document.querySelectorAll('.js-thumbs-img');
+		const testing = document.querySelector('.js-p-item-wrap');
+		const template = document.querySelector('.js-main-img-template')
+			.content
+			.querySelector('.js-main-img');
 
-	const getElement = () => {
-		const clone = template.cloneNode(true);
-		const removeClass = () => {
-			thumbsImages.forEach(e => {
-				e.parentNode.classList.remove('products-item__slide--active')
-			})
-		}
-
-		clone.src = thumbsImages[0].src;
-
-		thumbsImages.forEach(e => {
-			if(clone.src === e.src)
-				e.parentNode.classList.add('products-item__slide--active')
-		})
-
-		testing.addEventListener('click', (evt) => {
-			evt.preventDefault();
-			if(evt.target.hasAttribute('src')){
-				removeClass();
-				evt.target.parentNode.classList.add('products-item__slide--active');
-				clone.src = evt.target.src;
-			} else {
-				removeClass();
-				evt.target.classList.add('products-item__slide--active');
-				clone.src = evt.target.querySelector('img').src;
+		const getElement = () => {
+			const clone = template.cloneNode(true);
+			const removeClass = () => {
+				thumbsImages.forEach(e => {
+					e.parentNode.classList.remove('products-item__slide--active')
+				})
 			}
 
+			clone.src = thumbsImages[0].src;
 
-		})
+			thumbsImages.forEach(e => {
+				if(clone.src === e.src)
+					e.parentNode.classList.add('products-item__slide--active')
+			})
 
-		return clone;
-	};
+			testing.addEventListener('click', (evt) => {
+				evt.preventDefault();
+				if(evt.target.hasAttribute('src')){
+					removeClass();
+					evt.target.parentNode.classList.add('products-item__slide--active');
+					clone.src = evt.target.src;
+				} else {
+					removeClass();
+					evt.target.classList.add('products-item__slide--active');
+					clone.src = evt.target.querySelector('img').src;
+				}
 
-	const appendElement = () => {
-		const fragment = document.createDocumentFragment();
-		const element = getElement();
 
-		fragment.appendChild(element);
-		createElement(imgWrap, fragment);
+			})
+
+			return clone;
+		};
+
+		const appendElement = () => {
+			const fragment = document.createDocumentFragment();
+			const element = getElement();
+
+			fragment.appendChild(element);
+			createElement(imgWrap, fragment);
+		}
+
+		appendElement();
 	}
-
-	appendElement();
 }
