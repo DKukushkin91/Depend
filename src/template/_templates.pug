@@ -156,17 +156,17 @@ block templates
 
 	template.js-coupon-template
 		.coupon-popup.js-coupon-popup
-			form.coupon-popup__form
+			form.coupon-popup__form.js-coupon-form
 				.coupon-popup__form-inner
 					button.coupon-popup__close-btn.js-coupon-close
 						svg.coupon-poup__icon(width="16" height="16")
 							use(href=`${baseDir}/img/sprite.svg#cross`)
 					h2.coupon-popup__title Получить купон
 					label.coupon-popup__label
-						input.coupon-popup__input(type="text", name="name", placeholder='Введите ваше имя *', required)
+						input.coupon-popup__input.js-coupon-input(type="text", name="name", placeholder='Введите ваше имя *', required)
 						span.coupon-popup__sub-text * Обязательно для заполнения
 					label.coupon-popup__label
-						input.coupon-popup__input(type="email", name="email", placeholder='Введите ваш E-mail *', required)
+						input.coupon-popup__input.js-coupon-input(type="email", name="email", placeholder='Введите ваш E-mail *', required)
 						span.coupon-popup__sub-text * Обязательно для заполнени
 					.coupon-popup__checkbox-wrap
 						input.coupon-popup__checkbox#coupon-checkbox(type="checkbox", name="checkbox", required)

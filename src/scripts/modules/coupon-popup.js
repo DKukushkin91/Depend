@@ -31,11 +31,27 @@ export const getCouponPopup = () => {
 
 		const getElement = (temp) => {
 			const clone = temp.cloneNode(true);
-			const closeBtn = clone.querySelector('.js-coupon-close')
+			const closeBtn = clone.querySelector('.js-coupon-close');
+			const inputs = clone.querySelectorAll('.js-coupon-input');
 
 			if(clone.querySelector('.js-coupon-sbmt')){
 				const submitBtn = clone.querySelector('.js-coupon-sbmt');
-				submitBtn.addEventListener('click', getSuccess)
+				const form = clone.querySelector('.js-coupon-form');
+
+				submitBtn.setAttribute('disabled', true);
+
+				inputs.forEach(input => {
+					input.addEventListener('input', () => {
+						[...inputs].filter(el => {
+							if(el.checkValidity()){
+								submitBtn.removeAttribute('disabled');
+								submitBtn.addEventListener('click', getSuccess);
+							}else{
+								submitBtn.setAttribute('disabled', true);
+							}
+						})
+					})
+				})
 			}
 
 			if(clone.querySelector('.js-coupon-link')){
