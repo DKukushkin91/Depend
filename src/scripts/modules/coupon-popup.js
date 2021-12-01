@@ -8,6 +8,10 @@ export const getCouponPopup = () => {
 			.content
 			.querySelector('.js-coupon-popup');
 
+		const successTemplate = document.querySelector('.js-coupon-suc-template')
+			.content
+			.querySelector('.js-coupon-popup');
+
 		const escPressHandler = (evt) => {
 			if (evt.key === 'Escape') {
 				evt.preventDefault();
@@ -25,27 +29,42 @@ export const getCouponPopup = () => {
 			}
 		};
 
-		const getElement = () => {
-			const clone = template.cloneNode(true);
+		const getElement = (temp) => {
+			const clone = temp.cloneNode(true);
 			const closeBtn = clone.querySelector('.js-coupon-close')
+
+			if(clone.querySelector('.js-coupon-sbmt')){
+				const submitBtn = clone.querySelector('.js-coupon-sbmt');
+				submitBtn.addEventListener('click', getSuccess)
+			}
+
+			if(clone.querySelector('.js-coupon-link')){
+				const link = clone.querySelector('.js-coupon-link');
+				link.addEventListener('click', elementRemoveHandler);
+			}
 
 			closeBtn.addEventListener('click', elementRemoveHandler);
 			body.classList.add('lock-scroll--popup');
 			return clone
 		}
 
-		const appendElement = () => {
+		const appendElement = (temp) => {
 			const fragment = document.createDocumentFragment();
-			const element = getElement();
+			const element = getElement(temp);
 
 			fragment.appendChild(element);
 			document.addEventListener('keydown', escPressHandler);
 			createElement(body, fragment);
 		}
 
+		const getSuccess = () => {
+			elementRemoveHandler();
+			appendElement(successTemplate);
+		}
+
 		button.addEventListener('click', (evt) => {
 			evt.preventDefault();
-			appendElement();
+			appendElement(template);
 		})
 	}
 }

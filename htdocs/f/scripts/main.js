@@ -262,6 +262,7 @@ var getCouponPopup = function getCouponPopup() {
     var button = document.querySelector('.js-coupon-open');
     var body = document.querySelector('body');
     var template = document.querySelector('.js-coupon-template').content.querySelector('.js-coupon-popup');
+    var successTemplate = document.querySelector('.js-coupon-suc-template').content.querySelector('.js-coupon-popup');
 
     var escPressHandler = function escPressHandler(evt) {
       if (evt.key === 'Escape') {
@@ -280,25 +281,41 @@ var getCouponPopup = function getCouponPopup() {
       }
     };
 
-    var getElement = function getElement() {
-      var clone = template.cloneNode(true);
+    var getElement = function getElement(temp) {
+      var clone = temp.cloneNode(true);
       var closeBtn = clone.querySelector('.js-coupon-close');
+
+      if (clone.querySelector('.js-coupon-sbmt')) {
+        var submitBtn = clone.querySelector('.js-coupon-sbmt');
+        submitBtn.addEventListener('click', getSuccess);
+      }
+
+      if (clone.querySelector('.js-coupon-link')) {
+        var link = clone.querySelector('.js-coupon-link');
+        link.addEventListener('click', elementRemoveHandler);
+      }
+
       closeBtn.addEventListener('click', elementRemoveHandler);
       body.classList.add('lock-scroll--popup');
       return clone;
     };
 
-    var appendElement = function appendElement() {
+    var appendElement = function appendElement(temp) {
       var fragment = document.createDocumentFragment();
-      var element = getElement();
+      var element = getElement(temp);
       fragment.appendChild(element);
       document.addEventListener('keydown', escPressHandler);
       createElement(body, fragment);
     };
 
+    var getSuccess = function getSuccess() {
+      elementRemoveHandler();
+      appendElement(successTemplate);
+    };
+
     button.addEventListener('click', function (evt) {
       evt.preventDefault();
-      appendElement();
+      appendElement(template);
     });
   }
 };

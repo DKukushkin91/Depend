@@ -176,5 +176,18 @@ block templates
 							| &nbsp;в соответствии с&nbsp;
 							a.coupon-popup__link(href="#", target="_blank", rel="noopener noreferrer") «Политикой по персональным данным»
 							| .
-				button.coupon-popup__btn
+				button.coupon-popup__btn.js-coupon-sbmt
 					span.coupon-popup__btn-text Получить
+
+	template.js-coupon-suc-template
+		.coupon-popup.js-coupon-popup
+			.coupon-popup__form
+				button.coupon-popup__close-btn.js-coupon-close
+					svg.coupon-poup__icon(width="16" height="16")
+						use(href=`${baseDir}/img/sprite.svg#cross`)
+				.coupon-popup__icon-wrap
+					svg.coupon-popup__icon-top(width="48" height="36")
+						use(href=`${baseDir}/img/sprite.svg#success`)
+				h2.coupon-popup__title.coupon-popup__title--padding Готово
+				p.coupon-popup__text Мы отправили Вам на почту письмо с промокодом. Вы можете уже сейчас воспользоваться промокодом при оформлении покупки в интернет-магазине!
+				a(href="#").coupon-popup__redirect-link.js-coupon-link В магазин
