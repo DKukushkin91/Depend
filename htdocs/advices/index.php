@@ -1,103 +1,84 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetPageProperty("description", "Узнайте, как себя поддержать, если вы столкнулись с проблемой недержании мочи. Материалы о полезных тренировках, как жить с болезнью недержания мочи | Depend.ru");
-$APPLICATION->SetPageProperty("title", "Полезные рекомендации, советы и помощь при недержании мочи | Depend.ru");
-$res = CIBlockSection::GetList([], [
-	'IBLOCK_ID' => 4,
-	'ACTIVE' => 'Y'
-], false, [], false);
-while ($ob = $res->GetNext()) {
-	$sections[] = $ob;
-}
 ?>
-<?$APPLICATION->AddHeadString('<meta property="og:description" content="Узнайте, как себя поддержать, если вы столкнулись с проблемой недержании мочи. Материалы о полезных тренировках, как жить с болезнью недержания мочи | Depend.ru"/>');?>
-<?$APPLICATION->AddHeadString('<meta property="og:image" content="https://www.depend.ru/local/templates/depend/img/depend-logo.png"/>');?>
-<?$APPLICATION->AddHeadString('<meta property="og:title" content="Полезные рекомендации, советы и помощь при недержании мочи | Depend.ru">');?>
-<?$APPLICATION->AddHeadString('<meta property="og:type" content="website">');?>
-<section class="advices">
-	<section class="content-top-banner">
-		<div class="banner-text">
-			<h1>О недержании</h1>
-		</div>
-	</section>
-	<?
-	$APPLICATION->IncludeComponent("bitrix:breadcrumb","",Array(
-			"START_FROM" => '0',
-			"PATH" => "",
-			"SITE_ID" => "s1"
-		)
-	);
-	?>
-	<article>
-		<section class="advices-tabs tabs">
-			<nav class="tabs-inner">
-				<div class="mobile-arrow"></div>
-                <a href="/advices/zabota-o-blizkom/" class="tabs__item" onclick="ga('send','event','DP','DPZOB','zabota');">Забота о близком</a>
-                <a href="/advices/poleznye-sovety/" class="tabs__item" onclick="ga('send','event','DP','DPSOV','sovet');">Полезные советы</a>
-                <a href="/advices/" class="tabs__item active top" onclick="ga('send','event','DP','DPALLART','allarticle');">Все статьи</a>
-			</nav>
-		</section>
-		<? $APPLICATION->IncludeComponent("bitrix:news.list","advices-list",Array(
-				"DISPLAY_DATE" => "Y",
-				"DISPLAY_NAME" => "Y",
-				"DISPLAY_PICTURE" => "Y",
-				"DISPLAY_PREVIEW_TEXT" => "Y",
-				"AJAX_MODE" => "Y",
-				"IBLOCK_TYPE" => "",
-				"IBLOCK_ID" => "4",
-				"NEWS_COUNT" => "200",
-				"SORT_BY1" => "ID",
-				"SORT_ORDER1" => "ASC",
-				"SORT_BY2" => "ACTIVE_FROM",
-				"SORT_ORDER2" => "DESC",
-				"FILTER_NAME" => "",
-				"FIELD_CODE" => array(
-					0 => "ID",
-					1 => "DETAIL_PICTURE",
-					2 => "",
-					3 => "",
-					4 => "",
-				),
-				"PROPERTY_CODE" => Array("LIKES", 'VIEWS', 'COMMENTS', 'TAGS', 'DATE_START', 'DATE_FINISH'),
-				"CHECK_DATES" => "Y",
-				"DETAIL_URL" => "",
-				"PREVIEW_TRUNCATE_LEN" => "",
-				"ACTIVE_DATE_FORMAT" => "d.m.Y",
-				"SET_TITLE" => "Y",
-				"SET_BROWSER_TITLE" => "Y",
-				"SET_META_KEYWORDS" => "Y",
-				"SET_META_DESCRIPTION" => "Y",
-				"SET_LAST_MODIFIED" => "Y",
-				"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
-				"ADD_SECTIONS_CHAIN" => "Y",
-				"HIDE_LINK_WHEN_NO_DETAIL" => "Y",
-				"PARENT_SECTION" => '',
-				"PARENT_SECTION_CODE" => "",
-				"INCLUDE_SUBSECTIONS" => "Y",
-				"CACHE_TYPE" => "A",
-				"CACHE_TIME" => "3600",
-				"CACHE_FILTER" => "Y",
-				"CACHE_GROUPS" => "Y",
-				"DISPLAY_TOP_PAGER" => "Y",
-				"DISPLAY_BOTTOM_PAGER" => "Y",
-				"PAGER_TITLE" => "Партнеры",
-				"PAGER_SHOW_ALWAYS" => "Y",
-				"PAGER_TEMPLATE" => "",
-				"PAGER_DESC_NUMBERING" => "Y",
-				"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
-				"PAGER_SHOW_ALL" => "Y",
-				"PAGER_BASE_LINK_ENABLE" => "Y",
-				"SET_STATUS_404" => "Y",
-				"SHOW_404" => "Y",
-				"MESSAGE_404" => "",
-				"PAGER_BASE_LINK" => "",
-				"PAGER_PARAMS_NAME" => "arrPager",
-				"AJAX_OPTION_JUMP" => "N",
-				"AJAX_OPTION_STYLE" => "Y",
-				"AJAX_OPTION_HISTORY" => "N",
-				"AJAX_OPTION_ADDITIONAL" => ""
-			)
-		);?>
-	</article>
-</section>
+
+<?$APPLICATION->IncludeComponent(
+	"bitrix:news",
+	"advices",
+	Array(
+		"ADD_ELEMENT_CHAIN" => "N",
+		"ADD_SECTIONS_CHAIN" => "Y",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"BROWSER_TITLE" => "-",
+		"CACHE_FILTER" => "N",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "A",
+		"CHECK_DATES" => "Y",
+		"DETAIL_ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"DETAIL_DISPLAY_BOTTOM_PAGER" => "Y",
+		"DETAIL_DISPLAY_TOP_PAGER" => "N",
+		"DETAIL_FIELD_CODE" => array("",""),
+		"DETAIL_PAGER_SHOW_ALL" => "Y",
+		"DETAIL_PAGER_TEMPLATE" => "",
+		"DETAIL_PAGER_TITLE" => "Страница",
+		"DETAIL_PROPERTY_CODE" => [
+			'AUTHOR',
+			'PRODUCT_RECOM',
+			'CONTENTS'
+		],
+		"DETAIL_SET_CANONICAL_URL" => "N",
+		"DISPLAY_BOTTOM_PAGER" => "Y",
+		"DISPLAY_DATE" => "Y",
+		"DISPLAY_NAME" => "Y",
+		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"DISPLAY_TOP_PAGER" => "N",
+		"FILE_404" => "",
+		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+		"IBLOCK_ID" => CIBlockTools::GetIBlockId('advices'),
+		"IBLOCK_TYPE" => "common",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"LIST_FIELD_CODE" => array("",""),
+		"LIST_PROPERTY_CODE" => array("",""),
+		"MESSAGE_404" => "",
+		"META_DESCRIPTION" => "-",
+		"META_KEYWORDS" => "-",
+		"NEWS_COUNT" => "6",
+		"PAGER_BASE_LINK_ENABLE" => "N",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+		"PAGER_SHOW_ALL" => "N",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_TEMPLATE" => ".default",
+		"PAGER_TITLE" => "Новости",
+		"PREVIEW_TRUNCATE_LEN" => "",
+		"SEF_FOLDER" => "/advices/",
+		"SEF_MODE" => "Y",
+		"SEF_URL_TEMPLATES" => Array("detail"=>"#SECTION_CODE_PATH#/#ELEMENT_ID#/","news"=>"","search"=>"search/","section"=>"#SECTION_CODE_PATH#/"),
+		"SET_LAST_MODIFIED" => "N",
+		"SET_STATUS_404" => "Y",
+		"SET_TITLE" => "Y",
+		"SHOW_404" => "Y",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER1" => "DESC",
+		"SORT_ORDER2" => "ASC",
+		"STRICT_SECTION_CHECK" => "N",
+		"USE_CATEGORIES" => "N",
+		"USE_FILTER" => "N",
+		"USE_PERMISSIONS" => "N",
+		"USE_RATING" => "N",
+		"USE_REVIEW" => "N",
+		"USE_RSS" => "N",
+		"USE_SEARCH" => "N",
+		"USE_SHARE" => "N"
+	)
+);?>
+
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
