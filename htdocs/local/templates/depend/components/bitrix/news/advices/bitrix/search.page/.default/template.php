@@ -143,7 +143,7 @@ endif;?>
 		<p><?echo $arItem["BODY_FORMATED"]?></p>
 		<?if (
 			$arParams["SHOW_RATING"] == "Y"
-			&& $arItem["RATING_TYPE_ID"] <> ''
+			&& strlen($arItem["RATING_TYPE_ID"]) > 0
 			&& $arItem["RATING_ENTITY_ID"] > 0
 		):?>
 			<div class="search-item-rate"><?

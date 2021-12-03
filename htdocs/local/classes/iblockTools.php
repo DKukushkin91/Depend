@@ -16,14 +16,20 @@ class CIBlockTools
 	 * Init service
 	 * @return CIBlockTools
 	 */
-	private static function Init(){
-		if(!self::$tools) self::$tools = new CIBlockTools();
+	private static function Init()
+	{
+		if (!self::$tools) {
+			self::$tools = new CIBlockTools();
+		}
 		return self::$tools;
 	}
 
-	public static function Clear(){
+	public static function Clear()
+	{
 		self::Update();
-		if(self::$tools) self::$tools = null;
+		if (self::$tools) {
+			self::$tools = null;
+		}
 		return true;
 	}
 
@@ -32,7 +38,8 @@ class CIBlockTools
 	 * @param string $iblockCode IBlock CODE
 	 * @return integer|null
 	 */
-	public static function GetIBlockId($iblockCode){
+	public static function GetIBlockId($iblockCode)
+	{
 		return self::Init()->GetIBlockIdPr($iblockCode);
 	}
 
@@ -42,7 +49,8 @@ class CIBlockTools
 	 * @param string $propCode Property CODE
 	 * @return integer|null
 	 */
-	public static function GetPropertyId($iblockCode, $propCode){
+	public static function GetPropertyId($iblockCode, $propCode)
+	{
 		return self::Init()->GetPropertyIdPr($iblockCode, $propCode);
 	}
 
@@ -53,7 +61,8 @@ class CIBlockTools
 	 * @param string $xmlId Property value XML_ID
 	 * @return integer|null
 	 */
-	public static function GetPropertyEnumValueId($iblockCode, $propCode, $xmlId){
+	public static function GetPropertyEnumValueId($iblockCode, $propCode, $xmlId)
+	{
 		return self::Init()->GetPropertyEnumValueIdPr($iblockCode, $propCode, $xmlId);
 	}
 
@@ -61,143 +70,159 @@ class CIBlockTools
 	 * Clear service cache
 	 * @return boolean
 	 */
-	public static function Update(){
+	public static function Update()
+	{
 		$cache = new CPHPCache();
-		$cache_path = '/'.self::$cacheKey.'/';
+		$cache_path = '/' . self::$cacheKey . '/';
 		$cache->CleanDir($cache_path);
 		return true;
 	}
 
-	private function __construct() {
+	private function __construct()
+	{
 		$cache = new CPHPCache();
 		$cache_time = 2592000; // month
-		$cache_id = $_SERVER["HTTP_HOST"]."|".self::$cacheKey;
-		$cache_path = '/'.self::$cacheKey.'/';
+		$cache_id = $_SERVER['HTTP_HOST'] . '|' . self::$cacheKey;
+		$cache_path = '/' . self::$cacheKey . '/';
 
-		if($cache->InitCache($cache_time, $cache_id, $cache_path))
-		{
+		if ($cache->InitCache($cache_time, $cache_id, $cache_path)) {
 			$vars = $cache->GetVars();
 			$this->arIBlockIds = $vars['arIBlockIds'];
 			$this->arPropertyIds = $vars['arPropertyIds'];
 			$this->arPropertyValueIds = $vars['arPropertyValueIds'];
-		}
-		else
-		{
-			if($cache->StartDataCache())
-			{
+		} else {
+			if ($cache->StartDataCache()) {
 				$this->SetIBlocks();
 				$this->SetProperties();
 
-				$cache->EndDataCache(array(
+				$cache->EndDataCache([
 					'arIBlockIds' => $this->arIBlockIds,
 					'arPropertyIds'  => $this->arPropertyIds,
 					'arPropertyValueIds' => $this->arPropertyValueIds,
-				));
+				]);
 			}
 		}
 	}
 
-	private function SetIBlocks(){
-		$this->arIBlockIds = array();
+	private function SetIBlocks()
+	{
+		$this->arIBlockIds = [];
 
-		if(!CModule::IncludeModule("iblock")) return;
+		if (!CModule::IncludeModule('iblock')) {
+			return;
+		}
 
 		$db = CIBlock::GetList(
-			array('ID' => 'ASC'),
-			array(
-				// 'ACTIVE' => 'Y',
-			)
+			['ID' => 'ASC' ],
+			[
+				// ACTIVE => 'Y',
+				'CHECK_PERMISSIONS' => 'N'
+			]
 		);
-		while($arr = $db->Fetch()){
-			if($arr['CODE']){
+		while($arr = $db->Fetch()) {
+			if ($arr['CODE']) {
 				$this->arIBlockIds[$arr['CODE']] = intval($arr['ID']);
 			}
 		}
 	}
 
-	private function SetProperties(){
-		$this->arPropertyIds = array();
-		$this->arPropertyValueIds = array();
+	private function SetProperties()
+	{
+		$this->arPropertyIds = [];
+		$this->arPropertyValueIds = [];
 
-		if(!CModule::IncludeModule("iblock")) return;
+		if (!CModule::IncludeModule('iblock')) {
+			return;
+		}
 
 		$db = CIBlockProperty::GetList(
-			array(),
-			array(
-				// 'ACTIVE' => 'Y'
-			)
+			[],
+			[
+				// ACTIVE => 'Y',
+				'CHECK_PERMISSIONS' => 'N'
+			]
 		);
-		while($arr = $db->Fetch()){
-			if(is_null($this->arPropertyIds[$arr['IBLOCK_ID']]))
-				$this->arPropertyIds[$arr['IBLOCK_ID']] = array();
+		while($arr = $db->Fetch()) {
+			if (is_null($this->arPropertyIds[$arr['IBLOCK_ID']])) {
+				$this->arPropertyIds[$arr['IBLOCK_ID']] = [];
+			}
 
-			if($arr['CODE']){
+			if ($arr['CODE']) {
 				$this->arPropertyIds[$arr['IBLOCK_ID']][$arr['CODE']] = intval($arr['ID']);
 
-				if($arr['PROPERTY_TYPE'] == 'L'){
-					if(is_null($this->arPropertyValueIds[$arr['ID']]))
-						$this->arPropertyValueIds[$arr['ID']] = array();
-
-					$resProp = CIBlockPropertyEnum::GetList(
-						array(),
-						array('PROPERTY_ID' => $arr['ID'])
-					);
-					while($arrProp=$resProp->Fetch()){
-						if($arrProp['XML_ID']){
-							$this->arPropertyValueIds[$arr['ID']][$arrProp['XML_ID']] = intval($arrProp['ID']);
-						}
+				if ($arr['PROPERTY_TYPE'] == 'L') {
+					if (is_null($this->arPropertyValueIds[$arr['ID']])) {
+						$this->arPropertyValueIds[$arr['ID']] = [];
 					}
 				}
 			}
 		}
+		$resProp = CIBlockPropertyEnum::GetList(
+			[],
+			[
+				'=PROPERTY_ID' => array_keys($this->arPropertyValueIds),
+				'!=XML_ID' => false
+			]
+		);
+		while($arrProp=$resProp->fetch()) {
+			$this->arPropertyValueIds[$arrProp['PROPERTY_ID']][$arrProp['XML_ID']] = intval($arrProp['ID']);
+		}
 	}
 
-	private function GetIBlockIdPr($iblockCode){
-		if(isset($this->arIBlockIds[$iblockCode]))
+	private function GetIBlockIdPr($iblockCode)
+	{
+		if (isset($this->arIBlockIds[$iblockCode])) {
 			return $this->arIBlockIds[$iblockCode];
+		}
 
 		return null;
 	}
 
-	private function GetPropertyIdPr($iblockCode, $propCode){
+	private function GetPropertyIdPr($iblockCode, $propCode)
+	{
 		$iblockId = $this->GetIBlockId($iblockCode);
-		if(!$iblockId) return null;
+		if (!$iblockId) {
+			return null;
+		}
 
-		if(isset($this->arPropertyIds[$iblockId]) && isset($this->arPropertyIds[$iblockId][$propCode]))
+		if (isset($this->arPropertyIds[$iblockId]) && isset($this->arPropertyIds[$iblockId][$propCode])) {
 			return $this->arPropertyIds[$iblockId][$propCode];
+		}
 
 		return null;
 	}
 
-	private function GetPropertyEnumValueIdPr($iblockCode, $propCode, $xmlId){
+	private function GetPropertyEnumValueIdPr($iblockCode, $propCode, $xmlId)
+	{
 		$propId = $this->GetPropertyId($iblockCode, $propCode);
-		if(!$propId) return null;
+		if (!$propId) {
+			return null;
+		}
 
-		if(isset($this->arPropertyValueIds[$propId]) && isset($this->arPropertyValueIds[$propId][$xmlId]))
+		if (isset($this->arPropertyValueIds[$propId]) && isset($this->arPropertyValueIds[$propId][$xmlId])) {
 			return $this->arPropertyValueIds[$propId][$xmlId];
+		}
 
 		return null;
 	}
 }
 
-
 $oEventManager = \Bitrix\Main\EventManager::getInstance();
 
 // IBlock events
-$oEventManager->addEventHandler('iblock', '\Bitrix\Iblock\Iblock::OnAfterAdd', array('CIBlockTools', 'Update'));
-$oEventManager->addEventHandler('iblock', '\Bitrix\Iblock\Iblock::OnAfterUpdate', array('CIBlockTools', 'Update'));
-$oEventManager->addEventHandler('iblock', '\Bitrix\Iblock\Iblock::OnBeforeDelete', array('CIBlockTools', 'Update'));
-AddEventHandler('iblock', 'OnAfterIBlockAdd', array('CIBlockTools', 'Update'));
-AddEventHandler('iblock', 'OnAfterIBlockUpdate', array('CIBlockTools', 'Update'));
-AddEventHandler('iblock', 'OnBeforeIBlockDelete', array('CIBlockTools', 'Update'));
+$oEventManager->addEventHandler('iblock', '\Bitrix\Iblock\Iblock::OnAfterAdd', ['CIBlockTools', 'Update']);
+$oEventManager->addEventHandler('iblock', '\Bitrix\Iblock\Iblock::OnAfterUpdate', ['CIBlockTools', 'Update']);
+$oEventManager->addEventHandler('iblock', '\Bitrix\Iblock\Iblock::OnBeforeDelete', ['CIBlockTools', 'Update']);
+AddEventHandler('iblock', 'OnAfterIBlockAdd', ['CIBlockTools', 'Update']);
+AddEventHandler('iblock', 'OnAfterIBlockUpdate', ['CIBlockTools', 'Update']);
+AddEventHandler('iblock', 'OnBeforeIBlockDelete', ['CIBlockTools', 'Update']);
 
 // IBlock property events
-$oEventManager->addEventHandler('iblock', '\Bitrix\Iblock\Property::OnAfterAdd', array('CIBlockTools', 'Update'));
-$oEventManager->addEventHandler('iblock', '\Bitrix\Iblock\Property::OnAfterUpdate', array('CIBlockTools', 'Update'));
-$oEventManager->addEventHandler('iblock', '\Bitrix\Iblock\Property::OnBeforeDelete', array('CIBlockTools', 'Update'));
-AddEventHandler('iblock', 'OnAfterIBlockPropertyAdd', array('CIBlockTools', 'Update'));
-AddEventHandler('iblock', 'OnAfterIBlockPropertyUpdate', array('CIBlockTools', 'Update'));
-AddEventHandler('iblock', 'OnBeforeIBlockPropertyDelete', array('CIBlockTools', 'Update'));
+$oEventManager->addEventHandler('iblock', '\Bitrix\Iblock\Property::OnAfterAdd', ['CIBlockTools', 'Update']);
+$oEventManager->addEventHandler('iblock', '\Bitrix\Iblock\Property::OnAfterUpdate', ['CIBlockTools', 'Update']);
+$oEventManager->addEventHandler('iblock', '\Bitrix\Iblock\Property::OnBeforeDelete', ['CIBlockTools', 'Update']);
+AddEventHandler('iblock', 'OnAfterIBlockPropertyAdd', ['CIBlockTools', 'Update']);
+AddEventHandler('iblock', 'OnAfterIBlockPropertyUpdate', ['CIBlockTools', 'Update']);
+AddEventHandler('iblock', 'OnBeforeIBlockPropertyDelete', ['CIBlockTools', 'Update']);
 
 unset($oEventManager);
-?>

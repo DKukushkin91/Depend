@@ -4,7 +4,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news",
-	"advices",
+	"",
 	Array(
 		"ADD_ELEMENT_CHAIN" => "N",
 		"ADD_SECTIONS_CHAIN" => "Y",
@@ -40,7 +40,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 		"DISPLAY_TOP_PAGER" => "N",
 		"FILE_404" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => CIBlockTools::GetIBlockId('advices'),
+        "IBLOCK_ID" => CIBlockTools::GetIBlockId('advices'),
 		"IBLOCK_TYPE" => "common",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
 		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
@@ -49,7 +49,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 		"MESSAGE_404" => "",
 		"META_DESCRIPTION" => "-",
 		"META_KEYWORDS" => "-",
-		"NEWS_COUNT" => "6",
+		"NEWS_COUNT" => "20",
 		"PAGER_BASE_LINK_ENABLE" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
@@ -58,7 +58,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 		"PAGER_TEMPLATE" => ".default",
 		"PAGER_TITLE" => "Новости",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"SEF_FOLDER" => "/advices/",
+		"SEF_FOLDER" => "/articles/",
 		"SEF_MODE" => "Y",
 		"SEF_URL_TEMPLATES" => Array("detail"=>"#SECTION_CODE_PATH#/#ELEMENT_ID#/","news"=>"","search"=>"search/","section"=>"#SECTION_CODE_PATH#/"),
 		"SET_LAST_MODIFIED" => "N",
@@ -76,7 +76,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 		"USE_RATING" => "N",
 		"USE_REVIEW" => "N",
 		"USE_RSS" => "N",
-		"USE_SEARCH" => "N",
+		"USE_SEARCH" => "Y",
 		"USE_SHARE" => "N"
 	)
 );?>

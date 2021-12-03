@@ -32,3 +32,14 @@ function translate($s) {
 	$s = str_replace(" ", "-", $s); // заменяем пробелы знаком минус
 	return $s; // возвращаем результат
 }
+
+function d($mixed = '', $showLine = false) {
+	echo '<pre>';
+	if ($showLine) {
+		$trace = debug_backtrace();
+		echo 'file => ' . $trace[0]['file'] . PHP_EOL;
+		echo 'line => ' . $trace[0]['line'] . PHP_EOL;
+	}
+	print_r($mixed);
+	echo '</pre>';
+}
