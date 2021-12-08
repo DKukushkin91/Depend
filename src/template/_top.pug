@@ -65,3 +65,15 @@ block top
 						.top__text-content(class=`${page}__top-text-content`)
 							.top__text-wrap(class=`${page}__top-text-wrap`)
 								h1.top__title(class=`${page}__top-title`)=title
+
+			if (page == 'partners')
+				.container(class=`${page}__container`)
+					.top__wrap(class=`${page}__top-wrap`)
+						+breadcrumb(['Главная'], 'Акции от партнеров')
+						.top__img(class=`${page}__top-img`)
+							picture
+								source(media="(min-width: 575px)", srcset=`${baseDir}/img/partners-top.jpg`)
+								img(src=`${baseDir}/img/partners-top-m.jpg`, alt="", width='1280', height='440')
+						.top__text-content(class=`${page}__top-text-content`)
+							.top__text-wrap(class=`${page}__top-text-wrap`)
+								h1.top__title(class=`${page}__top-title`)=title

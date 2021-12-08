@@ -36,6 +36,9 @@
 				min-height: 175px
 				background-position: 70% 0
 
+			@media $laptop
+				min-height 240px
+
 	&__top-img
 		border-radius: inherit
 
@@ -68,15 +71,16 @@
 		margin 0
 		display: grid
 		justify-content: center
-		grid-template-columns: repeat(auto-fill, 158px)
+		grid-template-columns: repeat(auto-fill, minmax(1px, 158px))
 		grid-row-gap: 20px
 		grid-column-gap: 20px
 
 		@media $lg
-			grid-template-columns: repeat(auto-fill, 280px)
+			grid-template-columns: repeat(auto-fill, minmax(1px, 280px))
 
 	&__item
 		width 100%
+		max-width: 100%
 		min-height: 80px
 		border 1px solid $border-footer
 		border-radius 12px
