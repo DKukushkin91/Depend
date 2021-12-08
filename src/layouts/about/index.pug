@@ -16,16 +16,7 @@ block page
 	section.about
 		.container
 			.about__wrap
-				ul.about__btn-list.js-about-btns
-					li.about__btn-item
-						button.about__btn.about__btn--active
-							span.about__btn-text Все статьи
-					li.about__btn-item
-						button.about__btn
-							span.about__btn-text Для мужчин
-					li.about__btn-item
-						button.about__btn
-							span.about__btn-text Для женщин
+				+itemsFilter(['Все статьи', 'Для мужчин', 'Для женщин'])
 				ul.about__list
 					each img in ['1', '2', '3', '4', '5', '6']
 						li.about__item

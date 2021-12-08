@@ -1,31 +1,40 @@
 .coupon-popup
-	display block
+	display flex
+	justify-content: center
+	align-items: center
 	text-align center
-	background-color: rgba(0,0,0,0.3);
+	background-color: $white;
 	position: fixed;
 	z-index 99999999999999
 	width: 100%;
 	height: 100%;
-	top: 0;
+	top: 0
 	right: 0
 	bottom: 0
 	left 0
 
-	&:before
-		content: ''
-		display: inline-block
-		vertical-align: middle
-		height 100%
+	@media $md
+		display: block
+		background-color: rgba(0,0,0,0.3)
+
+		&:before
+			content: ''
+			display: inline-block
+			vertical-align: middle
+			height 100%
 
 	&__form
-		display: inline-block
-		vertical-align: middle
 		background-color: $white
-		position relative
 		width 100%
 		max-width: 514px
 		border-radius: 20px
-		padding: 40px 60px
+		padding: 60px 16px
+
+		@media $md
+			padding: 40px 60px
+			display: inline-block
+			vertical-align: middle
+			position relative
 
 	&__form-inner
 		display: flex
@@ -38,22 +47,34 @@
 		border: 0
 		cursor: pointer
 		position: absolute
-		top: 32px
-		right: 32px
+		top 20px
+		right 20px
+
+		@media $md
+			top: 32px
+			right: 32px
 
 	&__icon
 		fill: $l-black
 
 	&__title
-		font-size: 30px
-		line-height 36px
+		font-size: 24px
+		line-height 28px
 		font-family $Noto
 		font-weight 700
-		padding-bottom 40px
+		padding-bottom 30px
 		width 100%
 
+		@media $md
+			font-size: 30px
+			line-height 36px
+			padding-bottom 40px
+
 	&__title--padding
-		padding-bottom 15px
+		padding-bottom 10px
+
+		@media $md
+			padding-bottom 15px
 
 	&__label
 		width 100%
@@ -166,9 +187,12 @@
 		cursor pointer
 		display block
 		width fit-content
-		padding: 16px 40px 17px
+		padding: 10px 40px 12px
 		margin: 0 auto
 		opacity: 1
+
+		@media $md
+			padding: 16px 40px 17px
 
 		&:disabled
 			opacity: 0.5
@@ -212,8 +236,11 @@
 		border 1px solid $purple
 		text-decoration: none
 		color: $purple
-		padding: 16px 40px 17px
+		padding: 10px 40px 12px
 		display block
 		max-width: 172px
 		margin: 0 auto
 		border-radius: 100px
+
+		@media $md
+			padding:  16px 40px 17px

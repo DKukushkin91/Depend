@@ -346,31 +346,6 @@ var getCouponPopup = function getCouponPopup() {
   }
 };
 
-var getLoadMoreBtn = function getLoadMoreBtn() {
-  var loadMoreBtn = document.querySelector('.js-load-more-btn');
-  if (loadMoreBtn) {
-    loadMoreBtn.addEventListener('click', function () {
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', loadMoreBtn.dataset.href);
-      xhr.send();
-      xhr.onload = function() {
-        if (xhr.status === 200) {
-          var loadMoreTarget = document.querySelector(loadMoreBtn.dataset.target);
-          if (loadMoreTarget) {
-            var response = JSON.parse(xhr.response);console.log(response);
-            loadMoreTarget.insertAdjacentHTML('beforeend', response.html);
-            if (response.href) {
-              loadMoreBtn.dataset.href = response.href;
-            } else {
-              loadMoreBtn.parentNode.removeChild(loadMoreBtn);
-            }
-          }
-        }
-      };
-    });
-  }
-};
-
 document.addEventListener('DOMContentLoaded', function () {
   getBurgerMenu();
   getMainPageSliders();
@@ -380,7 +355,6 @@ document.addEventListener('DOMContentLoaded', function () {
   getProductsList();
   getItemSlider();
   getItemsSlider();
-  // getMainImage();
+  getMainImage();
   getCouponPopup();
-  getLoadMoreBtn();
 });

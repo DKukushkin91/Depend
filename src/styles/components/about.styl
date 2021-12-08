@@ -8,51 +8,6 @@
 		width: 100%
 		padding-bottom 80px
 
-	&__btn-list
-		list-style: none
-		padding 0
-		padding-bottom 40px
-		margin 0
-		display flex
-		flex-direction: row
-		flex-wrap: wrap
-		align-items: center
-		justify-content: center
-
-	&__btn-item
-		&:not(:last-child)
-			margin-right 20px
-
-	&__btn
-		background 0
-		border: 0
-		border-radius: 0
-		cursor pointer
-		display: block
-		color $m-gray
-
-		&--active
-			color: $green
-			position relative
-
-			@media $laptop
-				&:before
-					content: ''
-					position absolute
-					width: 5px
-					height: 5px
-					border-radius: 50%
-					background: $purple
-					top: -8px
-					left: calc(50% - 2.5px)
-
-	&__btn-text
-		fz-13()
-		display: block
-		font-weight 500
-		line-height 120%
-		color inherit
-
 	&__list
 		width: 100%
 		list-style: none

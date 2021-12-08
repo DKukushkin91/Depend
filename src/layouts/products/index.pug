@@ -19,10 +19,7 @@ block articleVar
 block page
 	section.products
 		.container
-			ul.products__btn-list
-				each val in ['Все продукты', 'Прокладки', 'Впитывающее белье', 'После родов']
-					li.products__btn-item
-						button.products__btn=val
+			+itemsFilter(['Все продукты', 'Прокладки', 'Впитывающее белье', 'После родов'])
 			ul.products__list.js-products-wrap
 
 	include ../../template/_article

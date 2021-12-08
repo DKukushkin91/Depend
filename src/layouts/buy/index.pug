@@ -1,0 +1,51 @@
+extends ../../template/_layout
+
+block pageVar
+	-
+		page = 'buy';
+
+block path
+	-
+		baseDir = '/f';
+
+block title
+	-
+		title = 'Где купить';
+
+block page
+	section.buy
+		.container
+			+itemsFilter(['Национальные сети', 'Интернет магазины', 'Регионы', 'Аптеки'])
+			ul.buy__list
+				li.buy__item
+					a.buy__link(href="#", target="_blank", rel="noopener noreferrer")
+						.buy__img
+							img(src=`${baseDir}/img/5.png`, alt="Пятёрочка", width='193', height='44')
+				li.buy__item
+					a.buy__link(href="#", target="_blank", rel="noopener noreferrer")
+						.buy__img
+							img(src=`${baseDir}/img/lenta.png`, alt="Лента", width='184', height='50')
+				li.buy__item
+					a.buy__link(href="#", target="_blank", rel="noopener noreferrer")
+						.buy__img
+							img(src=`${baseDir}/img/auchan.png`, alt="Ашан", width='148', height='42')
+				li.buy__item
+					a.buy__link(href="#", target="_blank", rel="noopener noreferrer")
+						.buy__img
+							img(src=`${baseDir}/img/metro.png`, alt="Metro", width='164', height='44')
+				li.buy__item
+					a.buy__link(href="#", target="_blank", rel="noopener noreferrer")
+						.buy__img
+							img(src=`${baseDir}/img/ok.png`, alt="Окей", width='136', height='64')
+				li.buy__item
+					a.buy__link(href="#", target="_blank", rel="noopener noreferrer")
+						.buy__img
+							img(src=`${baseDir}/img/dm.png`, alt="Детский мир", width='154', height='54')
+				li.buy__item
+					a.buy__link(href="#", target="_blank", rel="noopener noreferrer")
+						.buy__img
+							img(src=`${baseDir}/img/perekrestok.png`, alt="Перекрёсток Впрок", width='185', height='41')
+				li.buy__item
+					a.buy__link(href="#", target="_blank", rel="noopener noreferrer")
+						.buy__img
+							img(src=`${baseDir}/img/karusel.png`, alt="Карусель", width='176', height='36')

@@ -4,59 +4,6 @@
 	&__container
 		padding 0
 
-	&__btn-list
-		list-style: none
-		padding 0
-		margin 0
-		display flex
-		flex-direction: row
-		justify-content: space-between
-		flex-wrap: wrap
-		padding-bottom 50px
-		align-items: flex-start
-
-		@media $xxl
-			justify-content: center
-
-	&__btn-item
-		flex: 1
-		display: flex
-		flex-direction: row
-		justify-content: center
-
-		&:not(:last-child)
-			margin-right 20px
-
-		@media $xxl
-			flex: 0 0 auto
-
-	&__btn
-		fz-13()
-		font-weight 500
-		line-height 15px
-		color $m-gray
-		text-align: center
-		font-family $Noto
-		border: 0
-		cursor pointer
-		background: none
-		display block
-
-	&__btn--active
-		color: $green
-		position relative
-
-		@media $xxl
-			&::before
-				content: ''
-				position: absolute
-				width 5px
-				height 5px
-				border-radius: 50%
-				background-color: $purple
-				top: -8px
-				left: calc(50% - 2.5px)
-
 	&__list
 		list-style: none
 		padding 0
