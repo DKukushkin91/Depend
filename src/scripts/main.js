@@ -6,7 +6,7 @@ import {getSalesSlider} from './modules/sales-slider';
 import {getProductsList} from './modules/products-list';
 import {getItemSlider, getMainImage} from './modules/products-item';
 import {getItemsSlider} from './modules/items-slider';
-import {getCouponPopup} from './modules/coupon-popup';
+import {getPopups} from './modules/popups';
 
 document.addEventListener('DOMContentLoaded', () => {
 	getBurgerMenu();
@@ -18,5 +18,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	getItemSlider();
 	getItemsSlider();
 	getMainImage();
-	getCouponPopup();
+	getPopups();
 });

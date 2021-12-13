@@ -361,46 +361,67 @@
     </template>
     <template class="js-main-img-template"><img class="js-main-img" src="" alt="" width="351" height="400"></template>
     <template class="js-coupon-template">
-      <div class="coupon-popup js-coupon-popup">
-        <form class="coupon-popup__form js-coupon-form">
-          <div class="coupon-popup__form-inner">
-            <button class="coupon-popup__close-btn js-coupon-close">
-              <svg class="coupon-poup__icon" width="16" height="16">
+      <div class="popup js-coupon-popup">
+        <form class="popup__form js-coupon-form">
+          <div class="popup__form-inner">
+            <button class="popup__close-btn js-popup-close">
+              <svg class="popup__icon" width="16" height="16">
                 <use href="/f/img/sprite.svg#cross"></use>
               </svg>
             </button>
-            <h2 class="coupon-popup__title">Получить купон</h2>
-            <label class="coupon-popup__label">
-              <input class="coupon-popup__input js-coupon-input" type="text" name="name" placeholder="Введите ваше имя *" required><span class="coupon-popup__sub-text">* Обязательно для заполнения</span>
+            <h2 class="popup__title">Получить купон</h2>
+            <label class="popup__label">
+              <input class="popup__input js-popup-input" type="text" name="name" placeholder="Введите ваше имя *" required><span class="popup__sub-text">* Обязательно для заполнения</span>
             </label>
-            <label class="coupon-popup__label">
-              <input class="coupon-popup__input js-coupon-input" type="email" name="email" placeholder="Введите ваш E-mail *" required><span class="coupon-popup__sub-text">* Обязательно для заполнени</span>
+            <label class="popup__label">
+              <input class="popup__input js-popup-input" type="email" name="email" placeholder="Введите ваш E-mail *" required><span class="popup__sub-text">* Обязательно для заполнени</span>
             </label>
-            <div class="coupon-popup__checkbox-wrap">
-              <input class="coupon-popup__checkbox" id="coupon-checkbox" type="checkbox" name="checkbox" required>
-              <label class="coupon-popup__label-check" for="coupon-checkbox">* Я даю ООО «Кимберли-Кларк»&nbsp;<a class="coupon-popup__link" href="#" target="_blank" rel="noopener noreferrer">согласие на обработку моих персональных данных</a>&nbsp;в соответствии с&nbsp;<a class="coupon-popup__link" href="#" target="_blank" rel="noopener noreferrer">«Политикой по персональным данным»</a>.</label>
+            <div class="popup__checkbox-wrap">
+              <input class="popup__checkbox" id="coupon-checkbox" type="checkbox" name="checkbox" required>
+              <label class="popup__label-check" for="coupon-checkbox">* Я даю ООО «Кимберли-Кларк»&nbsp;<a class="popup__link" href="#" target="_blank" rel="noopener noreferrer">согласие на обработку моих персональных данных</a>&nbsp;в соответствии с&nbsp;<a class="popup__link" href="#" target="_blank" rel="noopener noreferrer">«Политикой по персональным данным»</a>.</label>
             </div>
           </div>
-          <button class="coupon-popup__btn js-coupon-sbmt"><span class="coupon-popup__btn-text">Получить</span></button>
+          <button class="popup__btn js-coupon-sbmt"><span class="popup__btn-text">Получить</span></button>
         </form>
       </div>
     </template>
     <template class="js-coupon-suc-template">
-      <div class="coupon-popup js-coupon-popup">
-        <div class="coupon-popup__form">
-          <button class="coupon-popup__close-btn js-coupon-close">
-            <svg class="coupon-poup__icon" width="16" height="16">
+      <div class="popup js-coupon-popup">
+        <div class="popup__form">
+          <button class="popup__close-btn js-popup-close">
+            <svg class="popup__icon" width="16" height="16">
               <use href="/f/img/sprite.svg#cross"></use>
             </svg>
           </button>
-          <div class="coupon-popup__icon-wrap">
-            <svg class="coupon-popup__icon-top" width="48" height="36">
+          <div class="popup__icon-wrap">
+            <svg class="popup__icon-top" width="48" height="36">
               <use href="/f/img/sprite.svg#success"></use>
             </svg>
           </div>
-          <h2 class="coupon-popup__title coupon-popup__title--padding">Готово</h2>
-          <p class="coupon-popup__text">Мы отправили Вам на почту письмо с промокодом. Вы можете уже сейчас воспользоваться промокодом при оформлении покупки в интернет-магазине!</p><a class="coupon-popup__redirect-link js-coupon-link" href="#">В магазин</a>
+          <h2 class="popup__title coupon-popup__title--padding">Готово</h2>
+          <p class="popup__text">Мы отправили Вам на почту письмо с промокодом. Вы можете уже сейчас воспользоваться промокодом при оформлении покупки в интернет-магазине!</p><a class="popup__redirect-link js-coupon-link" href="#">В магазин</a>
         </div>
+      </div>
+    </template>
+    <template class="js-comment-template">
+      <div class="popup js-comment-popup">
+        <form class="popup__form" action="" method="post">
+          <div class="popup__inner">
+            <button class="popup__close-btn js-popup-close">
+              <svg class="popup__icon" width="16" height="16">
+                <use href="/f/img/sprite.svg#cross"></use>
+              </svg>
+            </button>
+            <h2 class="popup__title">Оставить комментарий</h2>
+            <input class="popup__input popup__input--width js-popup-input" type="text" name="name" placeholder="Введите ваше имя *" required>
+            <textarea class="popup__text-area js-popup-input" name="comment" placeholder="Напишите свой комментарий *" required></textarea><span class="popup__sub-text popup__sub-text--font">* Обязательно для заполнения</span>
+            <div class="popup__checkbox-wrap">
+              <input class="popup__checkbox" id="coupon-checkbox" type="checkbox" name="checkbox" required>
+              <label class="popup__label-check" for="coupon-checkbox">* Я даю ООО «Кимберли-Кларк»&nbsp;<a class="popup__link" href="#" target="_blank" rel="noopener noreferrer">согласие на обработку моих персональных данных</a>&nbsp;в соответствии с&nbsp;<a class="popup__link" href="#" target="_blank" rel="noopener noreferrer">«Политикой по персональным данным»</a>.</label>
+            </div>
+          </div>
+          <button class="popup__btn js-comment-sbmt"><span class="popup__btn-text">Отправить</span></button>
+        </form>
       </div>
     </template>
     <script src="/f/scripts/vendor.js" type="text/javascript"></script>

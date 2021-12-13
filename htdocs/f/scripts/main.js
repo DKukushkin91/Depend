@@ -269,12 +269,14 @@ var getItemsSlider = function getItemsSlider() {
   }
 };
 
-var getCouponPopup = function getCouponPopup() {
-  if (document.querySelector('.js-coupon-open')) {
+var getPopups = function getPopups() {
+  if (document.querySelector('.js-coupon-open') || document.querySelector('.js-comment-btn')) {
     var button = document.querySelector('.js-coupon-open');
+    var commentBtn = document.querySelector('.js-comment-btn');
     var body = document.querySelector('body');
     var template = document.querySelector('.js-coupon-template').content.querySelector('.js-coupon-popup');
     var successTemplate = document.querySelector('.js-coupon-suc-template').content.querySelector('.js-coupon-popup');
+    var commentTemplate = document.querySelector('.js-comment-template').content.querySelector('.js-comment-popup');
 
     var escPressHandler = function escPressHandler(evt) {
       if (evt.key === 'Escape') {
@@ -285,9 +287,10 @@ var getCouponPopup = function getCouponPopup() {
 
     var elementRemoveHandler = function elementRemoveHandler() {
       var wrap = document.querySelector('.js-coupon-popup');
+      var commentWrap = document.querySelector('.js-comment-popup');
 
-      if (wrap) {
-        wrap.remove();
+      if (wrap || commentWrap) {
+        wrap ? wrap.remove() : commentWrap.remove();
         document.removeEventListener('keydown', escPressHandler);
         body.classList.remove('lock-scroll--popup');
       }
@@ -295,19 +298,21 @@ var getCouponPopup = function getCouponPopup() {
 
     var getElement = function getElement(temp) {
       var clone = temp.cloneNode(true);
-      var closeBtn = clone.querySelector('.js-coupon-close');
-      var inputs = clone.querySelectorAll('.js-coupon-input');
+      var closeBtn = clone.querySelector('.js-popup-close');
+      var inputs = clone.querySelectorAll('.js-popup-input');
 
-      if (clone.querySelector('.js-coupon-sbmt')) {
-        var submitBtn = clone.querySelector('.js-coupon-sbmt');
-        var form = clone.querySelector('.js-coupon-form');
+      if (clone.querySelector('.js-coupon-sbmt') || clone.querySelector('.js-comment-sbmt')) {
+        var submitBtn = clone.querySelector('.js-coupon-sbmt') || clone.querySelector('.js-comment-sbmt');
         submitBtn.setAttribute('disabled', true);
         inputs.forEach(function (input) {
           input.addEventListener('input', function () {
             _toConsumableArray(inputs).filter(function (el) {
               if (el.checkValidity()) {
                 submitBtn.removeAttribute('disabled');
-                submitBtn.addEventListener('click', getSuccess);
+
+                if (clone.querySelector('.js-coupon-sbmt')) {
+                  submitBtn.addEventListener('click', getSuccess);
+                }
               } else {
                 submitBtn.setAttribute('disabled', true);
               }
@@ -339,10 +344,17 @@ var getCouponPopup = function getCouponPopup() {
       appendElement(successTemplate);
     };
 
-    button.addEventListener('click', function (evt) {
-      evt.preventDefault();
-      appendElement(template);
-    });
+    if (button) {
+      button.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        appendElement(template);
+      });
+    } else {
+      commentBtn.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        appendElement(commentTemplate);
+      });
+    }
   }
 };
 
@@ -356,5 +368,5 @@ document.addEventListener('DOMContentLoaded', function () {
   getItemSlider();
   getItemsSlider();
   getMainImage();
-  getCouponPopup();
+  getPopups();
 });

@@ -155,39 +155,61 @@ block templates
 		img.js-main-img(src="", alt="", width='351', height='400')
 
 	template.js-coupon-template
-		.coupon-popup.js-coupon-popup
-			form.coupon-popup__form.js-coupon-form
-				.coupon-popup__form-inner
-					button.coupon-popup__close-btn.js-coupon-close
-						svg.coupon-poup__icon(width="16" height="16")
+		.popup.js-coupon-popup
+			form.popup__form.js-coupon-form
+				.popup__form-inner
+					button.popup__close-btn.js-popup-close
+						svg.popup__icon(width="16" height="16")
 							use(href=`${baseDir}/img/sprite.svg#cross`)
-					h2.coupon-popup__title Получить купон
-					label.coupon-popup__label
-						input.coupon-popup__input.js-coupon-input(type="text", name="name", placeholder='Введите ваше имя *', required)
-						span.coupon-popup__sub-text * Обязательно для заполнения
-					label.coupon-popup__label
-						input.coupon-popup__input.js-coupon-input(type="email", name="email", placeholder='Введите ваш E-mail *', required)
-						span.coupon-popup__sub-text * Обязательно для заполнени
-					.coupon-popup__checkbox-wrap
-						input.coupon-popup__checkbox#coupon-checkbox(type="checkbox", name="checkbox", required)
-						label.coupon-popup__label-check(for="coupon-checkbox")
+					h2.popup__title Получить купон
+					label.popup__label
+						input.popup__input.js-popup-input(type="text", name="name", placeholder='Введите ваше имя *', required)
+						span.popup__sub-text * Обязательно для заполнения
+					label.popup__label
+						input.popup__input.js-popup-input(type="email", name="email", placeholder='Введите ваш E-mail *', required)
+						span.popup__sub-text * Обязательно для заполнени
+					.popup__checkbox-wrap
+						input.popup__checkbox#coupon-checkbox(type="checkbox", name="checkbox", required)
+						label.popup__label-check(for="coupon-checkbox")
 							| * Я даю ООО «Кимберли-Кларк»&nbsp;
-							a.coupon-popup__link(href="#", target="_blank", rel="noopener noreferrer") согласие на обработку моих персональных данных
+							a.popup__link(href="#", target="_blank", rel="noopener noreferrer") согласие на обработку моих персональных данных
 							| &nbsp;в соответствии с&nbsp;
-							a.coupon-popup__link(href="#", target="_blank", rel="noopener noreferrer") «Политикой по персональным данным»
+							a.popup__link(href="#", target="_blank", rel="noopener noreferrer") «Политикой по персональным данным»
 							| .
-				button.coupon-popup__btn.js-coupon-sbmt
-					span.coupon-popup__btn-text Получить
+				button.popup__btn.js-coupon-sbmt
+					span.popup__btn-text Получить
 
 	template.js-coupon-suc-template
-		.coupon-popup.js-coupon-popup
-			.coupon-popup__form
-				button.coupon-popup__close-btn.js-coupon-close
-					svg.coupon-poup__icon(width="16" height="16")
+		.popup.js-coupon-popup
+			.popup__form
+				button.popup__close-btn.js-popup-close
+					svg.popup__icon(width="16" height="16")
 						use(href=`${baseDir}/img/sprite.svg#cross`)
-				.coupon-popup__icon-wrap
-					svg.coupon-popup__icon-top(width="48" height="36")
+				.popup__icon-wrap
+					svg.popup__icon-top(width="48" height="36")
 						use(href=`${baseDir}/img/sprite.svg#success`)
-				h2.coupon-popup__title.coupon-popup__title--padding Готово
-				p.coupon-popup__text Мы отправили Вам на почту письмо с промокодом. Вы можете уже сейчас воспользоваться промокодом при оформлении покупки в интернет-магазине!
-				a(href="#").coupon-popup__redirect-link.js-coupon-link В магазин
+				h2.popup__title.coupon-popup__title--padding Готово
+				p.popup__text Мы отправили Вам на почту письмо с промокодом. Вы можете уже сейчас воспользоваться промокодом при оформлении покупки в интернет-магазине!
+				a(href="#").popup__redirect-link.js-coupon-link В магазин
+
+	template.js-comment-template
+		.popup.js-comment-popup
+			form.popup__form(action="", method="post")
+				.popup__inner
+					button.popup__close-btn.js-popup-close
+						svg.popup__icon(width="16" height="16")
+							use(href=`${baseDir}/img/sprite.svg#cross`)
+					h2.popup__title Оставить комментарий
+					input.popup__input.popup__input--width.js-popup-input(type="text", name="name", placeholder='Введите ваше имя *' required)
+					textarea.popup__text-area.js-popup-input(name="comment", placeholder="Напишите свой комментарий *" required)
+					span.popup__sub-text.popup__sub-text--font * Обязательно для заполнения
+					.popup__checkbox-wrap
+						input.popup__checkbox#coupon-checkbox(type="checkbox", name="checkbox", required)
+						label.popup__label-check(for="coupon-checkbox")
+							| * Я даю ООО «Кимберли-Кларк»&nbsp;
+							a.popup__link(href="#", target="_blank", rel="noopener noreferrer") согласие на обработку моих персональных данных
+							| &nbsp;в соответствии с&nbsp;
+							a.popup__link(href="#", target="_blank", rel="noopener noreferrer") «Политикой по персональным данным»
+							| .
+				button.popup__btn.js-comment-sbmt
+					span.popup__btn-text Отправить

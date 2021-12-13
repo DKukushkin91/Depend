@@ -1,8 +1,9 @@
 import {createElement} from '../utils/utils';
 
-export const getCouponPopup = () => {
-	if(document.querySelector('.js-coupon-open')) {
+export const getPopups = () => {
+	if(document.querySelector('.js-coupon-open') || document.querySelector('.js-comment-btn')) {
 		const button = document.querySelector('.js-coupon-open');
+		const commentBtn = document.querySelector('.js-comment-btn');
 		const body = document.querySelector('body');
 		const template = document.querySelector('.js-coupon-template')
 			.content
@@ -11,6 +12,10 @@ export const getCouponPopup = () => {
 		const successTemplate = document.querySelector('.js-coupon-suc-template')
 			.content
 			.querySelector('.js-coupon-popup');
+
+		const commentTemplate = document.querySelector('.js-comment-template')
+			.content
+			.querySelector('.js-comment-popup');
 
 		const escPressHandler = (evt) => {
 			if (evt.key === 'Escape') {
@@ -21,9 +26,11 @@ export const getCouponPopup = () => {
 
 		const elementRemoveHandler = () => {
 			const wrap = document.querySelector('.js-coupon-popup');
+			const commentWrap = document.querySelector('.js-comment-popup');
 
-			if (wrap) {
-				wrap.remove();
+			if (wrap || commentWrap) {
+				wrap ? wrap.remove() : commentWrap.remove();
+
 				document.removeEventListener('keydown', escPressHandler);
 				body.classList.remove('lock-scroll--popup');
 			}
@@ -31,12 +38,11 @@ export const getCouponPopup = () => {
 
 		const getElement = (temp) => {
 			const clone = temp.cloneNode(true);
-			const closeBtn = clone.querySelector('.js-coupon-close');
-			const inputs = clone.querySelectorAll('.js-coupon-input');
+			const closeBtn = clone.querySelector('.js-popup-close');
+			const inputs = clone.querySelectorAll('.js-popup-input');
 
-			if(clone.querySelector('.js-coupon-sbmt')){
-				const submitBtn = clone.querySelector('.js-coupon-sbmt');
-				const form = clone.querySelector('.js-coupon-form');
+			if(clone.querySelector('.js-coupon-sbmt') || clone.querySelector('.js-comment-sbmt')){
+				const submitBtn = clone.querySelector('.js-coupon-sbmt') || clone.querySelector('.js-comment-sbmt');
 
 				submitBtn.setAttribute('disabled', true);
 
@@ -45,7 +51,11 @@ export const getCouponPopup = () => {
 						[...inputs].filter(el => {
 							if(el.checkValidity()){
 								submitBtn.removeAttribute('disabled');
-								submitBtn.addEventListener('click', getSuccess);
+
+								if(clone.querySelector('.js-coupon-sbmt')) {
+									submitBtn.addEventListener('click', getSuccess);
+								}
+
 							}else{
 								submitBtn.setAttribute('disabled', true);
 							}
@@ -78,9 +88,16 @@ export const getCouponPopup = () => {
 			appendElement(successTemplate);
 		}
 
-		button.addEventListener('click', (evt) => {
-			evt.preventDefault();
-			appendElement(template);
-		})
+		if(button) {
+			button.addEventListener('click', (evt) => {
+				evt.preventDefault();
+				appendElement(template);
+			})
+		} else {
+			commentBtn.addEventListener('click', (evt) => {
+				evt.preventDefault();
+				appendElement(commentTemplate);
+			})
+		}
 	}
 }
