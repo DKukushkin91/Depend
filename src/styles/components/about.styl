@@ -30,6 +30,8 @@
 		width: 100%
 		border-radius: 12px
 		position relative
+		display flex
+		flex-direction: column
 
 	&__link
 		position: absolute
@@ -52,9 +54,13 @@
 		padding: 20px
 		border-bottom-left-radius: inherit
 		border-bottom-right-radius: inherit
+		flex: 1
+		display flex
+		flex-direction: column
 
 	&__text-wrap
 		text-align: left
+		flex: 1
 
 		&:not(:last-child)
 			padding-bottom 10px
@@ -88,6 +94,7 @@
 		flex-wrap: wrap
 		align-items: flex-start
 		width: 100%
+		flex: 0
 
 	&__info
 		display: flex
