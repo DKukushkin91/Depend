@@ -1,0 +1,81 @@
+.social
+	border-top: 1px solid $border-gray
+	padding-top 20px
+	padding-bottom 60px
+	width 100%
+
+	&__wrap
+		display flex
+		flex-direction row
+		flex-wrap: wrap
+		justify-content: space-between
+
+		@media $xxl
+			max-width: 767px
+
+	&__likes
+		display flex
+		flex-direction: row
+		align-items: center
+
+	&__btn
+		background: 0
+		border: 0
+		cursor pointer
+		width 28px
+		height 25px
+		margin-right 10px
+
+		&:hover .social__icon
+			stroke: $purple
+
+	&__icon
+		fill: none
+		stroke: $m-gray
+		width 100%
+		height 100%
+
+	&__text
+		fz-14()
+		line-height 16px
+		font-weight 600
+		font-family $Noto
+		color $m-black
+		display block
+
+	&__wrap
+		display flex
+		flex-direction: row
+		flex-wrap: wrap
+		align-items: center
+
+	&__list
+		list-style: none
+		padding 0
+		margin 0
+		display flex
+		flex-direction: row
+		padding-left 10px
+
+	&__item
+		width 28px
+		height 28px
+
+		&:not(:last-child)
+			margin-right 10px
+
+	&__link
+		display block
+		text-decoration: none
+		width 100%
+		height 100%
+		background-repeat: no-repeat
+
+	&__link--fb
+		background: url('/f/img/sprite.png') -10px -10px
+
+	&__link--ok
+		background: url('/f/img/sprite.png') -58px -10px
+
+	&__link--vk
+		background: url('/f/img/sprite.png') -106px -10px

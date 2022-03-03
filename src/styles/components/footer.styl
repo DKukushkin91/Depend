@@ -1,0 +1,95 @@
+.footer
+	width: 100%
+	background-color: $bg-footer
+
+	&__container
+		padding-top 20px
+		padding-bottom 20px
+
+		@media $xl
+			padding-top 40px
+			padding-bottom 50px
+
+	&__list
+		list-style: none
+		padding 0
+		margin 0
+		display flex
+		flex-direction: column
+		justify-content flex-start
+		padding-bottom 30px
+		margin-bottom 20px
+		border-bottom: 1px solid $border-footer
+
+		@media $md
+			flex-direction: row
+			flex-wrap: wrap
+
+		@media $xl
+			justify-content: space-between
+			padding-bottom 50px
+			margin-bottom 40px
+
+	&__item
+		flex: 1
+
+		&:not(:last-child)
+			margin-bottom 30px
+			margin-right 10px
+
+			@media $xl
+				margin: 0
+				margin-right 60px
+
+	&__sub-title
+		fz-14()
+		font-family: $Noto
+		font-weight bold
+		color: $text-footer
+		padding-bottom 10px
+
+		@media $xl
+			padding-bottom 20px
+
+	&__sub-list
+		padding 0
+		margin 0
+		list-style: none
+
+	&__sub-item
+		&:not(:last-child)
+			margin-bottom 15px
+
+			@media $xl
+				margin-bottom 30px
+
+	&__sub-link
+		fz-12()
+		font-family $Noto
+		line-height 21px
+		display block
+		text-decoration: none
+		color: $text-footer
+
+.politics
+	width: 100%
+
+	&__logo
+		max-width: 214.68px
+		margin-bottom 30px
+
+	&__text
+		fz-10()
+		font-family $Noto
+		color: $text-footer
+		font-weight: normal
+
+		&:not(:last-child)
+			margin-bottom 15px
+
+	&__link
+		fz-10()
+		text-decoration: none
+		font-family $Noto
+		color: $green
+		font-weight normal

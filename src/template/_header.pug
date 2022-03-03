@@ -1,0 +1,24 @@
+header.header
+	.container
+		.header__wrap
+			button.header__burger-btn.js-burger-btn
+			.header__logo-wrap
+				if (page != 'main-page')
+					a.header__link(href=`../main-page/index.html`)
+						img(src=`/f/img/depend-logo.png`, alt="depend", width='93', height='50')
+				if (page == 'main-page')
+					a.header__link
+						img(src=`/f/img/depend-logo.png`, alt="depend", width='93', height='50')
+			.header__menu.js-burger-menu
+				nav.nav
+					ul.nav__list
+						li.nav__item
+							a.nav__link(href='#') Продукция
+						li.nav__item
+							a.nav__link(href='#') О недержании
+						li.nav__item
+							a.nav__link(href='#') Купить
+				a.header__tel-link(href="tel:+78002005757") 8&nbsp;(800)&nbsp;200&nbsp;-&nbsp;57&nbsp;-&nbsp;57
+			button.header__search-btn
+				svg(width="17" height="17").header__search-icon
+					use(href="/f/img/sprite.svg#search")

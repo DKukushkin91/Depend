@@ -1,0 +1,43 @@
+extends ../../template/_layout
+
+block pageVar
+	-
+		page = 'about';
+
+block path
+	-
+		baseDir = '/f';
+
+block title
+	-
+		title = 'О недержании';
+
+block page
+	section.about
+		.container
+			.about__wrap
+				+itemsFilter(['Все статьи', 'Для мужчин', 'Для женщин'])
+				ul.about__list
+					each img in ['1', '2', '3', '4', '5', '6']
+						li.about__item
+							a.about__link(href="#")
+							.about__img
+								img(src=`${baseDir}/img/preview-${img}.jpg`, alt="")
+							.about__content
+								.about__text-wrap
+									p.about__sub-title Почему полезно пить при недержании
+									p.about__text Когда речь заходит о здоровом образе жизни, большинство сразу думает о питании. Но как часто вы задумываетесь о том, что пьете? Оказывается, это важно для того, чтобы держать мочевой пузырь под контролем
+								.about__info-wrap
+									.about__info
+										svg.about__icon(width="18" height="16")
+											use(href=`${baseDir}/img/sprite.svg#heart`)
+										span.about__info-text 5
+									.about__info
+										svg.about__icon(width="18" height="18")
+											use(href=`${baseDir}/img/sprite.svg#chat`)
+										span.about__info-text 10
+									.about__info.about__info--align
+										span.about__info-text.about__info-text--weight Читать:
+										span.about__info-text 10 мин
+				button.about__preview-btn
+					span.about__preview-btn-text Показать еще

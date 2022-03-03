@@ -1,0 +1,28 @@
+block items
+	.items
+		.items__slider.swiper.js-items-slider
+			ul.items__slider-list(class=`items__slider-list--${page}`).swiper-wrapper
+				li.items__slider-item.swiper-slide(data-drops='5')
+					a.items__link(href="#")
+					.items__img
+						img.swiper-lazy(loading='lazy' data-src=`${baseDir}/img/depend-prod1.jpg`, alt="", width='183', height='206')
+						.lazy-preloader.swiper-lazy-preloader
+					.items__icons
+						- for (var x = 0; x < 7; x++)
+							svg.items__icon(width="9" height="12")
+								use(href=`${baseDir}/img/sprite.svg#drops`)
+					.items__item-content
+						p.items__item-subtitle Прокладки при недержании Depend® Ultra Mini (12 штук)
+						p.items__item-text Специально разработанные прокладки Active-Fit (Эктив Фит) помогают обеспечить незаметную и комфортную защиту даже когда вы активны.
+				li.items__slider-item.swiper-slide(data-drops='7')
+					a.items__link(href="#")
+					.items__img
+						img.swiper-lazy(loading='lazy' data-src=`${baseDir}/img/depend-prod2.jpg`, alt="", width='183', height='190')
+						.lazy-preloader.swiper-lazy-preloader
+					.items__icons
+						- for (var x = 0; x < 7; x++)
+							svg.items__icon(width="9" height="12")
+								use(href=`${baseDir}/img/sprite.svg#drops`)
+					.items__item-content
+						p.items__item-subtitle Впитывающее нижнее белье Depend® для Женщин L\XL
+						p.items__item-text Наше впитывающее белье Depend® создано специально для женщин с учетом анатомических особенностей тела.

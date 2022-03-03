@@ -1,0 +1,80 @@
+extends ../../template/_layout
+
+block pageVar
+	-
+		page = 'partners';
+
+block path
+	-
+		baseDir = '/f';
+
+block title
+	-
+		title = 'Акции от партнеров';
+
+block page
+	section.partners
+		.container
+			ul.partners__list
+				li.partners__item
+					.partners__imgs
+						.partners__img
+							img(src=`${baseDir}/img/partner-item1.jpg`, alt="", width='373', height='190')
+						.partners__logo
+							img(src=`${baseDir}/img/ya-logo.jpg`, alt="", width='60', height='60')
+					.partners__content
+						h2.partners__item-title Скидки до 40% на сайте Яндекс Маркет
+						p.partners__text C 01.10.2021 по 21.10.2021 скидки до 40% на прокладки Depend!
+						a.partners__link(href="#", target="_blank", rel="noopener noreferrer") В магазин
+				li.partners__item
+					.partners__imgs
+						.partners__img
+							img(src=`${baseDir}/img/partner-item2.jpg`, alt="", width='373', height='190')
+						.partners__logo
+							img(src=`${baseDir}/img/ozon-logo.jpg`, alt="", width='60', height='60')
+					.partners__content
+						h2.partners__item-title Распродажа на Ozon.ru. Скидки до 80%!
+						p.partners__text Успейте приобрести белье от Depend со скидкой до 80%
+						a.partners__link(href="#", target="_blank", rel="noopener noreferrer") В магазин
+				li.partners__item
+					.partners__imgs
+						.partners__img
+							img(src=`${baseDir}/img/partner-item3.jpg`, alt="", width='373', height='190')
+						.partners__logo
+							img(src=`${baseDir}/img/ya-logo.jpg`, alt="", width='60', height='60')
+					.partners__content
+						h2.partners__item-title Скидки до 40% на сайте Яндекс Маркет
+						p.partners__text C 01.10.2021 по 21.10.2021 скидки до 40% на прокладки Depend!
+						a.partners__link(href="#", target="_blank", rel="noopener noreferrer") В магазин
+				li.partners__item
+					.partners__imgs
+						.partners__img
+							img(src=`${baseDir}/img/partner-item4.jpg`, alt="", width='373', height='190')
+						.partners__logo
+							img(src=`${baseDir}/img/wb-logo.jpg`, alt="", width='60', height='60')
+					.partners__content
+						h2.partners__item-title Скидки до 40% на Wildberries
+						p.partners__text C 01.10.2021 по 21.10.2021 скидки до 40% на весь ассортимен Depend!
+						a.partners__link(href="#", target="_blank", rel="noopener noreferrer") В магазин
+				li.partners__item
+					.partners__imgs
+						.partners__img
+							img(src=`${baseDir}/img/partner-item5.jpg`, alt="", width='373', height='190')
+						.partners__logo
+							img(src=`${baseDir}/img/ozon-logo.jpg`, alt="", width='60', height='60')
+					.partners__content
+						h2.partners__item-title Скидки 20% на Ozon.ru
+						p.partners__text Скидки на мужской ассортимент нижнего белья Depend
+						a.partners__link(href="#", target="_blank", rel="noopener noreferrer") В магазин
+				li.partners__item
+					.partners__imgs
+						.partners__img
+							img(src=`${baseDir}/img/partner-item6.jpg`, alt="", width='373', height='190')
+						.partners__logo
+							img(src=`${baseDir}/img/ya-logo.jpg`, alt="", width='60', height='60')
+					.partners__content
+						h2.partners__item-title Скидки до 40% на сайте Яндекс Маркет
+						p.partners__text C 01.10.2021 по 21.10.2021 скидки до 40% на прокладки Depend!
+						a.partners__link(href="#", target="_blank", rel="noopener noreferrer") В магазин
+			button.partners__btn
+				span.partners__btn-text Показать еще

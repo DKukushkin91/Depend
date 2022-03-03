@@ -1,0 +1,74 @@
+.preview-shops
+	width: 100%
+	padding-bottom 40px
+
+	@media $laptop
+		padding-bottom 80px
+
+	&__wrap
+		width: 100%
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		border-radius: 20px
+
+	&__img
+		flex: 1 1 590px
+		max-width: 590px
+		min-height: 227px
+		border-radius: inherit
+
+		& img
+			object-fit: cover
+			border-radius: inherit
+			min-height: inherit
+
+			@media $md
+				height: 100%
+
+		@media $md
+			flex: 1 1 50%
+
+	&__content
+		flex: 1 0 30%
+		border-radius: inherit
+		width: 100%
+		background-color: $buy-gray
+		padding: 40px 30px
+		text-align: center
+
+		@media $md
+			flex 1 1 50%
+
+		@media $laptop
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: center
+
+	&__title
+		fz-24()
+		font-family: $Noto
+		line-height: 120%
+		padding-bottom 20px
+		color: $l-black
+		font-weight bold
+
+	&__text
+		fz-14()
+		font-family $Noto
+		line-height 140%
+		padding-bottom 20px
+		color: $m-black
+		font-weight normal
+
+	&__link
+		fz-14()
+		text-decoration: none
+		line-height 120%
+		color: $white
+		font-family $Noto
+		font-weight 500
+		padding: 10px 20px 11px
+		background-color: $purple
+		border-radius: 20px

@@ -1,0 +1,77 @@
+.recomendation
+	width: 100%
+
+	&__container
+		padding: 0
+		padding: 40px 33px
+		background-image: url('/f/img/m-losung-bg.jpg')
+		background-position: left
+		background-size: cover
+		background-repeat: no-repeat
+		position: relative
+		text-align: center
+		min-height: 614px
+		margin-bottom: 40px
+
+		@media $laptop
+			min-height: auto
+			margin-bottom 80px
+			padding 112px 64px
+			background-image: url('/f/img/losung-bg.jpg')
+			background-position 0 0
+			max-width 1180px
+			border-radius: 20px
+
+		&:before
+			content: ''
+			background: $black
+			opacity: 0.3
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			z-index 0
+			border-radius: inherit
+
+	&__title
+		fz-24()
+		font-family: $Noto
+		color: $white
+		font-weight 500
+		line-height 140%
+		padding-bottom 20px
+		position relative
+
+		@media $laptop
+			max-width: 455px
+
+	&__text
+		fz-13()
+		font-family $Noto
+		color: $white
+		font-weight normal
+		position relative
+		padding 0 25px
+
+		@media $laptop
+			max-width: 455px
+
+		&::before
+			content: ''
+			position: absolute
+			left: 0
+			top: 0
+			width: 22px
+			height: 18px
+			background-image: url("data:image/svg+xml,%3Csvg width='22' height='18' viewBox='0 0 22 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.24 9.2V17.52H0V11.68C0 9.44 0.373333 7.38666 1.12 5.52C1.86667 3.6 3.12 1.76 4.88 0L7.92 2.4C5.84 4.64 4.66667 6.90666 4.4 9.2H8.24ZM21.68 9.2V17.52H13.44V11.68C13.44 9.44 13.8133 7.38666 14.56 5.52C15.3067 3.6 16.56 1.76 18.32 0L21.36 2.4C19.28 4.64 18.1067 6.90666 17.84 9.2H21.68Z' fill='white'/%3E%3C/svg%3E");
+
+		&::after
+			content: ''
+			position: absolute
+			right: 0
+			top: 0
+			width: 22px
+			height: 18px
+			background-image: url("data:image/svg+xml,%3Csvg width='22' height='18' viewBox='0 0 22 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.24 9.2V17.52H0V11.68C0 9.44 0.373333 7.38666 1.12 5.52C1.86667 3.6 3.12 1.76 4.88 0L7.92 2.4C5.84 4.64 4.66667 6.90666 4.4 9.2H8.24ZM21.68 9.2V17.52H13.44V11.68C13.44 9.44 13.8133 7.38666 14.56 5.52C15.3067 3.6 16.56 1.76 18.32 0L21.36 2.4C19.28 4.64 18.1067 6.90666 17.84 9.2H21.68Z' fill='white'/%3E%3C/svg%3E");
+			transform: rotate(-180deg)

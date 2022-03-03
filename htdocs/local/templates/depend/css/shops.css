@@ -1,0 +1,119 @@
+.shops article {
+    width: 90%;
+    max-width: 1040px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.shops-tabs {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.shops-tabs nav {
+    height: auto;
+}
+
+.shops-tile {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px;
+    padding-top: 10px;
+    margin-bottom: 80px;
+    background: #fff2f6;
+    box-shadow: 0 0 30px 0 rgba(93, 107, 120, .08);
+    border-radius: 6px;
+}
+
+.shops-tile.active {
+    display: flex;
+}
+
+.shop-card {
+    display: flex;
+    width: 49%;
+    max-width: 480px;
+    height: 211px;
+    margin-top: 20px;
+    background: #FFFFFF;
+    box-shadow: 0 4px 10px 0 rgba(93, 107, 120, .17);
+}
+
+.shop-card-logo {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.shop-card-logo img {
+    width: 100%;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.shop-card-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 40px;
+    border-left: 1px solid #F8F8F8;
+}
+
+.shop-card__title {
+    font-family: 'MuseoCyrl';
+    font-weight: 900;
+    font-size: 22px;
+    color: #5A5A5A;
+    letter-spacing: 0.31px;
+}
+
+.shop-card__link {
+    margin-top: 15px;
+    padding-right: 30px;
+    font-family: 'MuseoCyrl';
+    font-weight: 700;
+    font-size: 16px;
+    color: #5FB422;
+    letter-spacing: 0.44px;
+    background: url('../img/right-arrow.svg') 50% center no-repeat;
+    background-size: 19px 13px;
+}
+
+@media only screen and (max-width: 900px) {
+
+    .shop-card {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (max-width: 690px) {
+    .shop-card {
+        height: 110px;
+    }
+
+    .shops-tile {
+        padding-left: 0;
+        padding-right: 0;
+        box-shadow: none;
+    }
+
+    .shop-card-text {
+        padding-left: 20px;
+    }
+
+    .shop-card__title {
+        display: none;
+    }
+
+    .shop-card__link {
+        margin-top: 0;
+        background-position: 70% center;
+    }
+}

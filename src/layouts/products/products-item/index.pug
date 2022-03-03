@@ -1,0 +1,111 @@
+extends ../../../template/_layout
+
+block pageVar
+	-
+		page = 'products-item';
+
+block path
+	-
+		baseDir = '/f';
+
+block articleVar
+	-
+		article = 'Читайте статьи наших экспертов'
+
+block page
+	section.products-item
+		.container
+			+breadcrumb(['Продукция', 'Для женщин'], 'Впитывающее нижнее белье Depend® для Женщин M/L')
+			.products-item__wrap
+				h1.products-item__title Впитывающее нижнее белье Depend<sup class="reg">&reg;</sup> для женщин M\L
+				.products-item__main-img.js-main-img-wrap
+				.products-item__slider-container
+					.products-item__slider.swiper.js-p-item-slider
+						.products-item__slider-wrapper.swiper-wrapper.js-p-item-wrap
+							.products-item__slide.swiper-slide.js-p-item-slide
+								img.js-thumbs-img(src=`${baseDir}/img/main-item.png`, alt="", width='351', height='400')
+							.products-item__slide.swiper-slide.js-p-item-slide
+								img.js-thumbs-img(src=`${baseDir}/img/main-item2.png`, alt="", width='351', height='400')
+							.products-item__slide.swiper-slide.js-p-item-slide
+								img.js-thumbs-img(src=`${baseDir}/img/main-item3.png`, alt="", width='351', height='400')
+							.products-item__slide.swiper-slide.js-p-item-slide
+								img.js-thumbs-img(src=`${baseDir}/img/main-item4.png`, alt="", width='351', height='400')
+						.products-item__pagination.js-item-pagination
+				.products-item__content
+					table.products-item__table
+						tbody.products-item__tbody
+							tr.products-item__row
+								td.products-item__cell.products-item__cell--width
+									span.products-item__term Размер
+									p.products-item__text M/L 44-50
+								td.products-item__cell.products-item__cell--width
+									span.products-item__term Объем бедер
+									p.products-item__text 96-108 см
+							tr.products-item__row.products-item__row--padding
+								td.products-item__cell
+									span.products-item__term Макс. впитываемость
+									.products-item__icons
+										- for (var x = 0; x < 7; x++)
+												svg.products-item__icon(width="9" height="12")
+													use(href=`${baseDir}/img/sprite.svg#drops`)
+					p.products-item__feature Наше впитывающее белье Depend® создано специально для женщин с учетом анатомических особенностей тела. Оно способно не только защитить Вас в течение всего дня, но и подарить комфорт в ношении как у нижнего белья.
+					button.products-item__btn
+						span.products-item__btn-text Купить
+	section.features
+		.container
+			.features__wrap
+				.features__content
+					h2.features__title Преимущества продукта
+					p.features__text Depend® «Система защиты»: быстро впитывающие каналы и устраняющие запах фильтры разработаны специально, чтобы вы чувствовали себя надежно и уверенно как днем, так и ночью.
+					ul.features__list
+						li.features__item
+							.features__img
+								img(src=`${baseDir}/img/image98.png`, alt="", width='80', height='80')
+							.features__text-block
+								h3.features__sub-title Мягкие, удобные и отлично сидят
+								p.features__item-text Для полной свободы движения
+						li.features__item
+							.features__img
+								img(src=`${baseDir}/img/image97.png`, alt="", width='80', height='80')
+							.features__text-block
+								h3.features__sub-title Быстровпитывающие каналы
+								p.features__item-text Надежно запирают запах
+						li.features__item
+							.features__img
+								img(src=`${baseDir}/img/image99.png`, alt="", width='80', height='80')
+							.features__text-block
+								h3.features__sub-title Специальные фильтры
+								p.features__item-text Для уверенности в течение всего дня
+						li.features__item
+							.features__img
+								img(src=`${baseDir}/img/image96.png`, alt="", width='80', height='80')
+							.features__text-block
+								h3.features__sub-title Защита на всю ночь
+								p.features__item-text Максимальная впитываемость для комфорта и предотвращения запаха
+					.features__item-img
+						img(src=`${baseDir}/img/underwear.png`, alt='', width='559', height='551')
+	section.special
+		.container
+			.special__wrap
+				.special__img
+					img(src=`${baseDir}/img/image106.jpg`, alt="", width='590', height='300')
+				.special__content
+					h2.special__title Дарим купон на скидку 50%!
+					p.special__text На первую покупку продукции Depend
+					buttons.special__btn
+						span.special__btn-text Получить купон
+	section.items.items--bg
+		.container
+			h2.items__title Похожие товары
+
+			include ../../../template/_items
+
+			a.items__more-link(href='#') Все товары для женщин
+
+	include ../../../template/_article
+
+	section.items
+		.container
+			h2.items__title.items__title--border Вы интересовались
+
+			include ../../../template/_items

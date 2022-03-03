@@ -1,0 +1,111 @@
+// Box sizing rules
+*,
+*::before,
+*::after
+  box-sizing border-box
+
+// Remove default margin
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd
+  margin: 0
+
+// Set core body defaults
+body
+  line-height: 1.5
+
+// Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed
+ul[role='list'],
+ol[role='list']
+  list-style: none
+
+// A elements that don't have a class get default styles
+a:not([class])
+  text-decoration-skip-ink auto
+
+// Make images easier to work with
+img,
+picture
+	width 100%
+	height auto
+	display block
+
+// Inherit fonts for inputs and buttons
+input,
+button,
+textarea,
+select
+  font inherit
+
+// fix footer
+html,
+body
+	height 100%
+	font-family: $Noto
+
+// remove padding
+input,
+button
+	padding: 0
+
+// remove opacity
+input::placeholder
+	opacity: 1
+
+// fix footer
+.box
+	display flex
+	flex-direction column
+	height 100%
+
+	&__content
+		flex 1 0 auto
+
+.footer
+	flex 0 0 auto
+
+// breakpoint
+.container
+	padding 0 15px
+	margin 0 auto
+
+	@media $laptop
+		padding 0 50px
+
+	@media $xl
+		max-width 1280px
+
+//fix body
+.lock-scroll
+	overflow: hidden
+
+	&::before
+		content: ''
+		position absolute
+		width: 100%
+		height: 100%
+		background: $black
+		opacity 0.3
+		top 60px
+		z-index 99
+
+		@media $laptop
+			top 70px
+
+.lock-scroll--popup
+	overflow: hidden
+
+//custom preloader
+.lazy-preloader.swiper-lazy-preloader
+	top 50%
+	border-color: $green
+	border-top-color: transparent

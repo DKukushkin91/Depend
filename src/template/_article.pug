@@ -1,0 +1,22 @@
+block article
+	section.article
+		.container.article__container
+			.article__wrap
+				h2.article__title=article
+				.article__slider.swiper.js-info-slider
+					ul.article__slider-list.swiper-wrapper
+						each img in ['1', '2', '3', '4', '5', '6']
+							li.article__item.swiper-slide
+								if (page != 'main-page')
+									a.article__link(class=`article__link--${page}` href="#")
+								.article__inner
+									.article__img
+										img.swiper-lazy(loading='lazy' data-src=`${baseDir}/img/preview-${img}.jpg`, alt="", width='373', height='200')
+										.lazy-preloader.swiper-lazy-preloader
+									.article__content
+										h3.article__s-title Почему полезно пить при недержании
+										p.article__text Когда речь заходит о здоровом образе жизни, большинство сразу думает о питании. Но как часто вы задумываетесь о том, что пьете? Оказывается, это важно для того, чтобы держать мочевой пузырь под контролем
+
+										if (page == 'main-page')
+											a.article__p-link(href="#") Читать полностью
+				a.article__b-link(href="#") Все статьи

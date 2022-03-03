@@ -1,0 +1,41 @@
+extends ../../template/_layout
+
+block pageVar
+	-
+		page = 'coupon';
+
+block path
+	-
+		baseDir = '/f';
+
+block title
+	-
+		title = 'Дарим купон на скидку 50%!';
+
+block page
+	section.coupon
+		.container
+			.coupon__wrap
+				.coupon__content
+					h2.coupon__title Как получить скидку:
+					ul.coupon__list
+						li.coupon__item Зарегистрируйтесь за 1 минуту до 31 декабря
+						li.coupon__item Получите купон на дополнительную* скидку 200 рублей по электронной почте
+						li.coupon__item Суммируйте купон с другими скидками в выбранном вами магазине и покупайте с выгодой до 70%
+					.coupon__inner
+						button.coupon__btn.js-coupon-open
+							span.coupon__btn-text Получить купон
+						a.coupon__link(href="#") В магазин
+				.coupon__content
+					p.coupon__text С подробными условиями и сроком действия акции вы можете ознакомиться
+						a.coupon__r-link(href='#') здесь.
+					p.coupon__sub-text * Скидка 200 рублей суммируется с другими акциями на Впитывающее нижнее белье Depend всех размеров. Промокод действителен один раз и только на одну упаковку. Количество промокодов ограничено. Срок действия промокода — до 31 декабря 2021 года.
+	section.coupon-product
+		.container
+			.coupon-product__wrap
+				.coupon-product__img
+					img(src=`${baseDir}/img/item-shadow.png`, alt="", width='272', height='348')
+				.coupon-product__content
+					h2.coupon-product__title Впитывающее нижнее белье Depend для женщин
+					p.coupon-product__text Новое впитывающее белье "Depend", созданное специально для женщин, способно не только защитить вас в течение всего дня, но и подарить комфорт в ношении как у нижнего белья!
+					a(href='#').coupon-product__link Подробнее

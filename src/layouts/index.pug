@@ -1,0 +1,30 @@
+extends ../template/_layout
+
+block pageVar
+	-
+		page = 'index';
+
+block path
+	-
+		baseDir = '/f';
+
+block page
+	section.sub
+		.container.sub__container
+			ul.sub__list
+				li.sub__item
+					a(href="main-page/index.html").sub__link Главная страница
+				li.sub__item
+					a(href="about/index.html").sub__link О недержании
+				li.sub__item
+					a(href="about/about-item/index.html").sub__link Статья
+				li.sub__item
+					a(href="products/index.html").sub__link Продукция для женщин
+				li.sub__item
+					a(href="products/products-item/index.html").sub__link Впитывающее нижнее белье Depend® для Женщин M\L
+				li.sub__item
+					a(href="buy/index.html").sub__link Где купить
+				li.sub__item
+					a(href="coupon/index.html").sub__link Купон
+				li.sub__item
+					a(href="partners/index.html").sub__link Акции от партнеров

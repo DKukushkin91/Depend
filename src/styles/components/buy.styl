@@ -1,0 +1,97 @@
+.buy
+	width 100%
+
+	&__container
+		padding: 0
+
+	&__top-wrap
+		position relative
+		align-items: flex-end
+
+		&::after
+			content ''
+			left 0
+			top 0
+			position absolute
+			width 100%
+			height 100%
+			display: block
+			background-color: rgba(0,0,0,0.2)
+			border-radius: inherit
+
+		&::before
+			display: none
+
+	&__top-text-content
+		&::before
+			min-height 175px
+			background-position: 100%
+
+			@media $md
+				min-height: 256px
+				background-position: 0 0
+				border-radius: inherit
+
+			@media $lg
+				min-height: 175px
+				background-position: 70% 0
+
+			@media $laptop
+				min-height 240px
+
+	&__top-img
+		border-radius: inherit
+
+		& picture,
+		& img
+			border-radius inherit
+			object-fit: cover
+			object-position: 50% 20%
+			height 100%
+
+			@media $md
+				object-position: 25% 50%
+
+	&__top-text-wrap
+		justify-content flex-start
+
+		@media $md
+			justify-content: center
+
+	&__top-title
+		font-size: 24px
+
+		@media $lg
+			font-size: 42px
+
+	&__list
+		list-style: none
+		padding 0
+		padding-bottom 80px
+		margin 0
+		display: grid
+		justify-content: center
+		grid-template-columns: repeat(auto-fill, minmax(1px, 158px))
+		grid-row-gap: 20px
+		grid-column-gap: 20px
+
+		@media $lg
+			grid-template-columns: repeat(auto-fill, minmax(1px, 280px))
+
+	&__item
+		width 100%
+		max-width: 100%
+		min-height: 80px
+		border 1px solid $border-footer
+		border-radius 12px
+
+		@media $lg
+			min-height: 140px
+
+	&__link
+		width 100%
+		height 100%
+		display flex
+		align-items: center
+		justify-content: center
+		padding: 0 15px

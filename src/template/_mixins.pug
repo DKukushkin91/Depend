@@ -1,0 +1,17 @@
+mixin breadcrumb(items, last)
+	.breadcrumb(class=`${page}__breadcrumb`)
+		ul.breadcrumb__list&attributes(attributes)
+			each item in items
+				li.breadcrumb__item
+					a(href="#" title=item).breadcrumb__link=item
+
+			if last
+				li.breadcrumb__item
+					span.breadcrumb__link-current=last
+
+mixin itemsFilter(items)
+	.filter
+		ul.filter__btn-list
+			each item in items
+				li.filter__btn-item
+					button.filter__btn=item
